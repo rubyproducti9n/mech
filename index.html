@@ -19,7 +19,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
     @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
-    body{color: #000; background: #fff; user-select: none;}
+    body{ background: #fff; user-select: none;}
     .section-title{
       padding: 0 40px;
       color: rgb(43, 43, 43);
@@ -92,9 +92,9 @@ border: 0px #000 solid;}
 .card{
   display: inline-block;
   margin: 0 16px;
+  padding-bottom: 20px;
   width: 22%;
   height: 30%;
-  color: #000;
   background: rgba(255, 255, 255, 0);
   /* backdrop-filter: blur(14px); */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0);
@@ -102,7 +102,7 @@ border: 0px #000 solid;}
   border-radius: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: 0.5s ease;
 }
 .card:hover{
@@ -143,7 +143,7 @@ border: 0px #000 solid;}
   font-size: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
-  height: 20vh;
+  height: 100%;
 }
 .rating{
   margin: 10px 20px;
@@ -163,6 +163,42 @@ border: 0px #000 solid;}
 .profile-body{
   padding: 10px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mech-btn-fill{
+  color: #fff;
+  background: #460080;
+  border: 2px #460080 solid;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-family: 'Comfortaa', cursive;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.mech-btn-fill:hover{
+  color: #ffffff;
+  background: #7601d6;
+  border: 2px #7601d6 solid;
+  transition: 0.2s ease;
+}
+.mech-btn-outline{
+  color: #460080;
+  background: #46008000;
+  border: 2px #460080 solid;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-family: 'Comfortaa', cursive;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.mech-btn-outline:hover{
+  color: #ffffff;
+  background: #7601d6;
+  border: 2px #7601d6 solid;
+  transition: 0.2s ease;
 }
     .note{
         display: none;
@@ -232,7 +268,7 @@ footer{
   transition: 0.5s ease;
 }
 .card:hover{
-  background: rgba(0, 0, 0, 0);
+  background: #6b00a81c;
   transition: 0.5s ease;
 }
 .card-img{
@@ -254,7 +290,44 @@ footer{
   font-size: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
-  height: 10vh;
+  height: 100%;
+}
+.mech-btn-fill{
+  display: inline-block;
+  color: #fff;
+  background: #460080;
+  border: 2px #460080 solid;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-family: 'Comfortaa', cursive;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.mech-btn-fill:hover{
+  color: #ffffff;
+  background: #7601d6;
+  border: 2px #7601d6 solid;
+  transition: 0.2s ease;
+}
+.mech-btn-outline{
+  color: #460080;
+  background: #46008000;
+  border: 2px #460080 solid;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-family: 'Comfortaa', cursive;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.mech-btn-outline:hover{
+  color: #ffffff;
+  background: #7601d6;
+  border: 2px #7601d6 solid;
+  transition: 0.2s ease;
 }
 }
 </style>
@@ -342,32 +415,19 @@ footer{
 
  <br><hr width="95%"><br>
 
-  <h2 class="section-title"> <i class="fa fa-user-circle"></i> Profile Cards </h2>
+  <h2 class="section-title"> <i class="fa fa-user-circle"></i> Mechanical Engineering Students Association </h2>
 <div class="card">
   <center>
   <img class="profile-img" src="img/profile-avatar.png" draggable="false">
 </center>
 <div class="profile-body">
     <h3 class="dr-title">Title Goes Here </h3>
-  <h6 class="dr-details">Other details goes here</h6>
-</div>
-</div>
-<div class="card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-    <h3 class="dr-title">Title Goes Here </h3>
-  <h6 class="dr-details">Other details goes here</h6>
-</div>
-</div>
-<div class="card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-    <h3 class="dr-title">Title Goes Here </h3>
-  <h6 class="dr-details">Other details goes here</h6>
+  <h6 class="dr-details">
+    Class: F.Y B.TECH<br>
+    Div: <br>
+  </h6>
+  <a class="mech-btn-fill disabled">Contact Me</a>
+  <a class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -376,7 +436,40 @@ footer{
 </center>
 <div class="profile-body">
     <h3 class="dr-title">Title Goes Here </h3>
-  <h6 class="dr-details">Other details goes here</h6>
+  <h6 class="dr-details">
+    Class: F.Y B.TECH<br>
+    Div: <br>
+  </h6>
+  <a class="mech-btn-fill">Contact Me</a>
+  <a class="mech-btn-outline">Learn More</a><br>
+</div>
+</div>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+    <h3 class="dr-title">Title Goes Here </h3>
+  <h6 class="dr-details">
+    Class: F.Y B.TECH<br>
+    Div: <br>
+  </h6>
+  <a class="mech-btn-fill">Contact Me</a>
+  <a class="mech-btn-outline">Learn More</a><br>
+</div>
+</div>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+    <h3 class="dr-title">Title Goes Here </h3>
+  <h6 class="dr-details">
+    Class: F.Y B.TECH<br>
+    Div: <br>
+  </h6>
+  <a class="mech-btn-fill">Contact Me</a>
+  <a class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <br>
@@ -389,7 +482,11 @@ footer{
 </center>
 <div class="profile-body">
   <h3 class="dr-title">Sanjivani Mechanical  LMS</h3>
-  <h6 class="dr-details">Other details goes here</h6>
+  <h6 class="dr-details">
+    Subjects: BME & EG<br>
+  </h6>
+  <a class="mech-btn-fill">Open</a>
+  <a class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -398,7 +495,11 @@ footer{
 </center>
 <div class="profile-body">
   <h3 class="dr-title">Sanjivani Science LMS</h3>
-  <h6 class="dr-details">Other details goes here</h6>
+  <h6 class="dr-details">
+    Subjects: EM-1 & EP<br>
+  </h6>
+  <a class="mech-btn-fill">Open</a>
+  <a class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -407,7 +508,11 @@ footer{
 </center>
 <div class="profile-body">
   <h3 class="dr-title">Sanjivani BEEE LMS</h3>
-  <h6 class="dr-details">Other details goes here</h6>
+  <h6 class="dr-details">
+    Subjects: BEE<br>
+  </h6>
+  <a class="mech-btn-fill">Open</a>
+  <a class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -416,9 +521,15 @@ footer{
 </center>
 <div class="profile-body">
   <h3 class="dr-title">LMS Username & Passwords</h3>
-  <h6 class="dr-details">Other details goes here</h6>
+  <h6 class="dr-details">
+    Get your Username and password for LMS<br>
+  </h6>
+  <a class="mech-btn-fill">Open</a>
+  <a class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
+<br><br>
+<br><br>
 <br><br>
 <footer>
   Made by rubyproducti9n
@@ -429,5 +540,6 @@ footer{
         alert("This is for educational purpose, it won't function.")
     }
 </script>
+<script src="https://rubyproducti9n.github.io/concertera/mdb/js/global.min.js"></script>
 </body>
 </html>
