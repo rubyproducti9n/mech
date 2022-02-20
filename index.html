@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://rubyproducti9n.github.io/concertera/mdb/css/global.min.css" rel="stylesheet">
+    <link href="https://rubyproducti9n.github.io/concertera/css/room.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="icon" href="img/avatar.jpg" sizes="16x16 32x32" type="image/png">
+    <!-- <script src="https://kit.fontawesome.com/6a03609b76.js" crossorigin="anonymous"></script> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Unofficial</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
+    @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
+    body{color: #000; background: #fff; user-select: none;}
+    .section-title{
+      padding: 0 40px;
+      color: rgb(43, 43, 43);
+      font-size: 22px;
+      font-weight: 600;
+      font-family: 'Comfortaa', cursive;
+    }
+    .maintain-container{
+        display: none;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        z-index: 30;}
+    .main-container{display: block;
+    margin-top: 20px;
+border: 0px #000 solid;}
+    .hover:hover{
+        padding: 16px;
+        background: rgb(238, 238, 238);
+        border-radius: 100%;
+        transition: 0.5s ease;
+    }
+    .active:active{
+        padding: 16px;
+        background: rgb(173, 173, 173);
+        border-radius: 100%;
+        transition: 0.5s ease;
+    }
+    .custom-nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        color: rgb(32, 32, 32);
+        background: hsla(283, 100%, 37%, 0.631);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px hsla(283, 100%, 50%, 0.631) solid;
+        padding: 15px;
+        box-shadow: 0px 3px 10px rgba(68, 68, 68, 0.26);
+        z-index: 1;
+    }
+    .nav-menu{
+        padding: 16px;
+        transition: 0.5s ease;
+    }
+    .mech-avatar{
+      width: 3%;
+      border: 2px #fff solid;
+      border-radius: 50%;
+    }
+    .nav-title{
+      float: right;
+        color: rgb(255, 255, 255);
+        font-family: 'Comfortaa', cursive;
+        font-size: 22px;
+        font-weight: 900;
+        border-radius: 100%;
+        margin-left: 0px;
+    }
+.custom-card{
+  background: rgba(255, 255, 255, 0);
+  border: 1px rgba(0, 0, 0, 0) solid;
+  border-radius: 20px;
+  padding: 10px 0px;
+  margin: 10px 20px;
+  overflow: visible;
+  text-overflow: ellipsis;
+}
+.card{
+  display: inline-block;
+  margin: 0 16px;
+  width: 22%;
+  height: 30%;
+  color: #000;
+  background: rgba(255, 255, 255, 0);
+  /* backdrop-filter: blur(14px); */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  border: 0px rgb(199, 199, 199) solid;
+  border-radius: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.card:hover{
+  transform: scale(1.03);
+  color: rgb(27, 27, 27);
+  background: #6b00a81c;
+  box-shadow: 5px 5px 20px rgba(100, 100, 100, 0.274);
+  transition: 0.3s ease;
+}
+.card-img{
+  width: 100%;
+  border-radius: 0px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
+.tags{
+    color: rgb(0, 84, 211);
+    background: rgba(201, 32, 32, 0);
+    padding: 5px 10px;
+    width: fit-content;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.tags:hover{
+  text-decoration: underline;
+}
+.dr-title{
+  margin: 20px 0;
+  padding: 0 10px;
+  font-size: 15px;
+  font-family: 'Comfortaa', cursive;
+}
+.dr-details{
+  color: rgb(59, 59, 59);
+  overflow: scroll;
+  text-overflow: ellipsis;
+  line-height: 15px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 20vh;
+}
+.rating{
+  margin: 10px 20px;
+  cursor: default;
+  z-index: 13;
+}
+ .dr-details .card:hover {
+  color: #fff;
+}
+.profile-img{
+  width: 50%;
+  border-radius: 50%;
+  border: 2px #f50000a1 solid;
+  margin-top: 20px;
+  box-shadow: 5px 5px 20px #00000057;
+}
+.profile-body{
+  padding: 10px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    .note{
+        display: none;
+        position: fixed;
+        bottom: -5px;
+        width: 98.6%;
+        color: #fff;
+        background: rgb(180, 0, 0);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 20px 0;
+        border-radius: 20px 20px 0 0 ;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.308);
+    }
+    ::-webkit-scrollbar{
+        width: 0px;
+    }
+footer{
+  margin: -10px 0px;
+  padding: 10px 20px;
+  color: #fff;
+  background: #000;
+  font-family: 'Comfortaa', cursive;
+  font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+    .section-title{
+      padding: 0 20px;
+      color: rgb(43, 43, 43);
+      font-size: 18px;
+      font-weight: 800;
+      font-family: 'Comfortaa', cursive;
+    }
+    .mech-avatar{
+      width: 10%;
+      border: 2px #fff solid;
+      border-radius: 50%;
+    }
+    .nav-title{
+        color: rgb(255, 255, 255);
+        font-family: 'Comfortaa', cursive;
+        font-size: 14px;
+        font-weight: 900;
+        border-radius: 100%;
+        margin-left: 10px;
+    }
+.custom-card{
+  background: rgba(255, 255, 255, 0);
+  border: 1px rgba(0, 0, 0, 0) solid;
+  border-radius: 20px;
+  padding: 10px 0px;
+  margin: 10px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card{
+  display: inline-block;
+  margin: 20px 4px;
+  width: 47%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.card:hover{
+  background: rgba(0, 0, 0, 0);
+  transition: 0.5s ease;
+}
+.card-img{
+  width: 100%;
+  border-radius: 0px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
+.dr-title{
+  margin: 20px 0;
+  padding: 0 10px;
+  font-size: 11px;
+  font-family: 'Comfortaa', cursive;
+  color: #000;
+}
+.dr-details{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 10vh;
+}
+}
+</style>
+<script>
+
+</script>
+<body>
+    <div class="note">
+        <marquee>
+        Disclaimer: This web page is meant for educational purpose only. All copyrights to their official owner. Page was created by Om Lokhande.
+    </marquee>
+    </div>
+
+<center>
+    <div class="modern-navigation">
+    <div class="modern-dash"></div><br>
+    <span class="menu-tooltip disabled" onclick="back()">
+      <span class="menu-tooltiptext">Back</span>
+    <i class="material-icons modern-nav-ic">arrow_back</i>
+  </span>
+    <span class="menu-tooltip disabled" onclick="home()">
+      <span class="menu-tooltiptext">Home</span>
+      <i class="material-icons modern-nav-ic modern-nav-active">home</i>
+    </span>
+    <span class="menu-tooltip" onclick="search()">
+      <span class="menu-tooltiptext">Search</span>
+      <i class="material-icons modern-nav-ic">search</i>
+    </span>
+    <span class="menu-tooltip" onclick="select()">
+      <span class="menu-tooltiptext">Rooms</span>
+      <i class="material-icons modern-nav-ic">headphones</i>
+    </span>
+    <span class="menu-tooltip" onclick="info()">
+      <span class="menu-tooltiptext">Info</span>
+      <i class="material-icons modern-nav-ic">info</i>
+    </span>
+    </div></center>
+<nav class="custom-nav">
+    <a class="">
+      <img class="mech-avatar" src="img/avatar.jpg" draggable="false" /></span>  </a>
+</nav>
+<div class="maintain-container">
+    <center><br><br><br><br><img class="maintain-img" draggable="false" src="https://rubyproducti9n.github.io/concertera/maintenance/music.png"></center>
+    <center><p class="maintain-text">
+    <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Coming Soon</h2>
+    <br>
+</div>
+<div class="main-container">
+<br><br><br><br>
+  <h2 class="section-title">What's New!</h2>
+<div class="custom-card" onclick="">
+    <div class="card">
+    <img class="card-img" src="img/placeholder.png">
+    <h6 class="tags">#Tags</h6>
+    <h3 class="dr-title">Title Goes Here </h3>
+    <h6 class="dr-details">
+      Description Goes Here
+    </h6>
+  </div>
+  <div class="card">
+  <img class="card-img" src="img/placeholder.png">
+  <h6 class="tags">#Tags</h6>
+  <h3 class="dr-title">Title Goes Here </h3>
+  <h6 class="dr-details">
+    Description Goes Here
+  </h6>
+</div>
+<div class="card">
+<img class="card-img" src="img/placeholder.png">
+<h6 class="tags">#Tags</h6>
+<h3 class="dr-title">Title Goes Here </h3>
+<h6 class="dr-details">
+  Description Goes Here
+</h6>
+</div>
+<div class="card">
+<img class="card-img" src="img/placeholder.png">
+<h6 class="tags">#Tags</h6>
+<h3 class="dr-title">Title Goes Here </h3>
+<h6 class="dr-details">
+  Description Goes Here
+</h6>
+</div>
+  </div>
+
+ <br><hr width="95%"><br>
+
+  <h2 class="section-title"> <i class="fa fa-user-circle"></i> Profile Cards </h2>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+    <h3 class="dr-title">Title Goes Here </h3>
+  <h6 class="dr-details">Other details goes here</h6>
+</div>
+</div>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+    <h3 class="dr-title">Title Goes Here </h3>
+  <h6 class="dr-details">Other details goes here</h6>
+</div>
+</div>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+    <h3 class="dr-title">Title Goes Here </h3>
+  <h6 class="dr-details">Other details goes here</h6>
+</div>
+</div>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+    <h3 class="dr-title">Title Goes Here </h3>
+  <h6 class="dr-details">Other details goes here</h6>
+</div>
+</div>
+<br>
+<br><hr width="95%"><br>
+
+<h2 class="section-title">Useful Links <i class="fa fa-external-link-alt"></i> </h2>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+  <h3 class="dr-title">Sanjivani Mechanical  LMS</h3>
+  <h6 class="dr-details">Other details goes here</h6>
+</div>
+</div>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+  <h3 class="dr-title">Sanjivani Science LMS</h3>
+  <h6 class="dr-details">Other details goes here</h6>
+</div>
+</div>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+  <h3 class="dr-title">Sanjivani BEEE LMS</h3>
+  <h6 class="dr-details">Other details goes here</h6>
+</div>
+</div>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+  <h3 class="dr-title">LMS Username & Passwords</h3>
+  <h6 class="dr-details">Other details goes here</h6>
+</div>
+</div>
+<br><br>
+<footer>
+  Made by rubyproducti9n
+</footer>
+</div>
+<script>
+    function error(){
+        alert("This is for educational purpose, it won't function.")
+    }
+</script>
+</body>
+</html>
