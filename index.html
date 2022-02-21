@@ -55,9 +55,9 @@ border: 0px #000 solid;}
         right: 0;
         width: 100%;
         color: rgb(32, 32, 32);
-        background: hsla(283, 100%, 37%, 0.631);
+        background: hsla(0, 100%, 37%, 0.631);
         backdrop-filter: blur(16px);
-        border-bottom: 1px hsla(283, 100%, 50%, 0.631) solid;
+        border-bottom: 1px hsla(0, 100%, 50%, 0.631) solid;
         padding: 15px;
         box-shadow: 0px 3px 10px rgba(68, 68, 68, 0.26);
         z-index: 1;
@@ -99,7 +99,7 @@ border: 0px #000 solid;}
   /* backdrop-filter: blur(14px); */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0);
   border: 0px rgb(199, 199, 199) solid;
-  border-radius: 20px;
+  border-radius: 30px;
   overflow: hidden;
   text-overflow: ellipsis;
   /* cursor: pointer; */
@@ -108,8 +108,9 @@ border: 0px #000 solid;}
 .card:hover{
   transform: scale(1.03);
   color: rgb(27, 27, 27);
-  background: #6b00a81c;
-  box-shadow: 5px 5px 20px rgba(100, 100, 100, 0.274);
+  background: #e7013362;
+  box-shadow: 0 0 20px #e7013362;
+  /* box-shadow: 5px 5px 20px rgba(100, 100, 100, 0.274); */
   transition: 0.3s ease;
 }
 .card-img{
@@ -166,38 +167,47 @@ border: 0px #000 solid;}
 }
 .mech-btn-fill{
   color: #fff;
-  background: #460080;
-  border: 2px #460080 solid;
-  border-radius: 10px;
+  background: #800000;
+  border: 2px #800000 solid;
+  border-radius: 20px;
   margin: 20px 0;
   padding: 10px 20px;
   font-size: 11px;
   font-family: 'Comfortaa', cursive;
-  cursor: pointer;
+  outline: none;
   transition: 0.2s ease;
 }
 .mech-btn-fill:hover{
   color: #ffffff;
-  background: #7601d6;
-  border: 2px #7601d6 solid;
+  background: #d60101;
+  border: 2px #a0000000 solid;
+  box-shadow: 0 0 20px #ff0040ec;
+  transition: 0.2s ease;
+}
+.mech-btn-fill:active{
+  color: #ffffff;
+  background: #460000;
+  border: 2px #94000000 solid;
+  box-shadow: 0 0 20px #810101;
   transition: 0.2s ease;
 }
 .mech-btn-outline{
-  color: #460080;
+  color: #800000;
   background: #46008000;
-  border: 2px #460080 solid;
-  border-radius: 10px;
+  border: 2px #800000 solid;
+  border-radius: 20px;
   margin: 20px 0;
   padding: 10px 20px;
   font-size: 10px;
   font-family: 'Comfortaa', cursive;
-  cursor: pointer;
+  outline: none;
   transition: 0.2s ease;
 }
 .mech-btn-outline:hover{
   color: #ffffff;
-  background: #7601d6;
-  border: 2px #7601d6 solid;
+  background: #ff0040ec;
+  border: 2px #a0000000 solid;
+  box-shadow: 0 0 20px #ff0040ec;
   transition: 0.2s ease;
 }
     .note{
@@ -268,7 +278,6 @@ footer{
   transition: 0.5s ease;
 }
 .card:hover{
-  background: #6b00a81c;
   transition: 0.5s ease;
 }
 .card-img{
@@ -294,9 +303,6 @@ footer{
 }
 .mech-btn-fill{
   display: inline-block;
-  color: #fff;
-  background: #460080;
-  border: 2px #460080 solid;
   border-radius: 10px;
   margin: 10px 0;
   padding: 10px 20px;
@@ -306,15 +312,9 @@ footer{
   transition: 0.2s ease;
 }
 .mech-btn-fill:hover{
-  color: #ffffff;
-  background: #7601d6;
-  border: 2px #7601d6 solid;
   transition: 0.2s ease;
 }
 .mech-btn-outline{
-  color: #460080;
-  background: #46008000;
-  border: 2px #460080 solid;
   border-radius: 10px;
   margin: 20px 0;
   padding: 10px 20px;
@@ -324,9 +324,6 @@ footer{
   transition: 0.2s ease;
 }
 .mech-btn-outline:hover{
-  color: #ffffff;
-  background: #7601d6;
-  border: 2px #7601d6 solid;
   transition: 0.2s ease;
 }
 }
@@ -415,7 +412,7 @@ footer{
 
  <br><hr width="95%"><br>
 
-  <h2 class="section-title"> <i class="fa fa-user-circle"></i> Mechanical Engineering Students Association </h2>
+  <h2 class="section-title"> <i class="fa fa-user-circle"></i> Mechanical Engineering Students Association </h2><br>
 <div class="card">
   <center>
   <img class="profile-img" src="img/profile-avatar.png" draggable="false">
@@ -426,22 +423,8 @@ footer{
     Class: F.Y B.TECH<br>
     Div: <br>
   </h6>
-  <a class="mech-btn-fill disabled">Contact Me</a>
-  <a class="mech-btn-outline">Learn More</a><br>
-</div>
-</div>
-<div class="card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-    <h3 class="dr-title">Title Goes Here </h3>
-  <h6 class="dr-details">
-    Class: F.Y B.TECH<br>
-    Div: <br>
-  </h6>
-  <a class="mech-btn-fill">Contact Me</a>
-  <a class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill disabled">Contact Me</button>
+  <button class="mech-btn-outline">Learn More</button><br>
 </div>
 </div>
 <div class="card">
@@ -454,8 +437,8 @@ footer{
     Class: F.Y B.TECH<br>
     Div: <br>
   </h6>
-  <a class="mech-btn-fill">Contact Me</a>
-  <a class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill">Contact Me</button>
+  <button class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -468,8 +451,22 @@ footer{
     Class: F.Y B.TECH<br>
     Div: <br>
   </h6>
-  <a class="mech-btn-fill">Contact Me</a>
-  <a class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill">Contact Me</button>
+  <button class="mech-btn-outline">Learn More</a><br>
+</div>
+</div>
+<div class="card">
+  <center>
+  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+</center>
+<div class="profile-body">
+    <h3 class="dr-title">Title Goes Here </h3>
+  <h6 class="dr-details">
+    Class: F.Y B.TECH<br>
+    Div: <br>
+  </h6>
+  <button class="mech-btn-fill">Contact Me</button>
+  <button class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <br>
@@ -485,8 +482,8 @@ footer{
   <h6 class="dr-details">
     Subjects: BME & EG<br>
   </h6>
-  <a class="mech-btn-fill">Open</a>
-  <a class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill">Open</button>
+  <button class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -498,8 +495,8 @@ footer{
   <h6 class="dr-details">
     Subjects: EM-1 & EP<br>
   </h6>
-  <a class="mech-btn-fill">Open</a>
-  <a class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill">Open</button>
+  <button class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -511,8 +508,8 @@ footer{
   <h6 class="dr-details">
     Subjects: BEE<br>
   </h6>
-  <a class="mech-btn-fill">Open</a>
-  <a class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill">Open</button>
+  <button class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -522,10 +519,10 @@ footer{
 <div class="profile-body">
   <h3 class="dr-title">LMS Username & Passwords</h3>
   <h6 class="dr-details">
-    Get your Username and password for LMS<br>
+    Username and password for LMS<br>
   </h6>
-  <a class="mech-btn-fill">Open</a>
-  <a class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill disabled">Open</button>
+  <button class="mech-btn-outline">Learn More</a><br>
 </div>
 </div>
 <br><br>
