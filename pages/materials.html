@@ -26,7 +26,7 @@
     <title>Materials</title>
     <style>
         body{
-            background: #fff;
+            background: rgb(0, 0, 0);
         }
         a{color: #fff; text-decoration: none;}
         a:hover{color: #fff; text-decoration: none;}
@@ -35,11 +35,12 @@
             color: #ff002b;
         }
         .heading{
+            color: #fff;
             margin: 40px 40px;
         }
         .material-container{
             margin: 40px 20px;
-            background: #fff;
+            background: rgb(24, 24, 24);
             border: 2px #b8000000 solid;
             border-radius: 20px;
             height: 75vh;
@@ -47,14 +48,14 @@
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.192);
         }
         tr{
-            color: rgb(29, 29, 29);
+            color: rgb(221, 221, 221);
             background: #ffffff00;
             overflow: scroll;
             transition: 0.3s ease;
         }
         tr:hover{
             color: rgb(255, 255, 255);
-            background: #db131c;
+            background: #363636;
             transform: scale(1.0);
             transition: 0.3s ease;
         }
@@ -72,7 +73,7 @@
             top: 30px;
             right: 30px;
             color: #fff;
-            background: #ff0062bd;
+            background: #ff0077;
             padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
@@ -80,8 +81,9 @@
             transition: 0.5s ease;
         }
         .btn-upload:hover{
-            background: #ff0062;
-            box-shadow: 3px 3px 20px #ff00627c;
+            background: #ff0077;
+            text-shadow: 0px 0px 20px #ffffff;
+            box-shadow: 0px 0px 20px #ff0077;
             transition: 0.5s ease;
         }
 @media screen and (max-width: 768px) {
@@ -92,7 +94,7 @@
     }
         .material-container{
             margin: 0px 0px;
-            background: #fff;
+            background: rgb(34, 34, 34);
             border: 0px #ff0080 solid;
             border-radius: 0px;
             height: 80vh;
@@ -100,20 +102,25 @@
             box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.836);
         }
         tr{
-            color: rgb(29, 29, 29);
+            color: rgb(255, 255, 255);
             background: #ffffff00;
             overflow: scroll;
             transition: 0.1s ease;
         }
         tr:hover{
             color: #fff;
-            background: #be0020;
+            background: #ff0080;
             transform: scale(1.0);
             transition: 0.1s ease;
         }
         tr:active{
             transform: scale(0.97);
             transition: 0.1s ease;
+        }
+        .cover-class{
+            width: 8%;
+            border-radius: 50%;
+            margin-right: 10px;
         }
         .btn-upload{
             position: absolute;
@@ -150,13 +157,26 @@
     <div class="material-container">
  <table class="table table-borderless">
   <tbody id="Table">
+    <tr class="" onclick="tr2()">
+    <td class="main-title"><img src="../img/avatar.jpg" class="cover-class"> EM - 1 Tutorial-4  (Solved)
+    <br></td>
+    <td class="division">B</td>
+    <td class="provider">Provided by Om Lokhande</td>
+    <td class="date-time">Uploaded on 06 Mar 2021 at 10:50 PM</td>
+    </tr>
+    <tr class="" onclick="tr3()">
+    <td class="main-title"><img src="../img/avatar.jpg" class="cover-class"> EG Practical Sheet 02 (Solved)
+    <br></td>
+    <td class="division">B</td>
+    <td class="provider">Provided by Om Lokhande</td>
+    <td class="date-time">Uploaded on 06 Mar 2021 at 10:47 PM</td>
+    </tr>
   <tr class="" onclick="bmeExp7()">
   <td class="main-title"><img src="../img/avatar.jpg" class="cover-class"> BME Exp. 7 - 3D Printing (Solved)
   <br></td>
   <td class="division">B</td>
   <td class="provider">Provided by Keshav More</td>
-
-  <td class="date-time">Uploaded on 23rd Feb 2021 at 7:36 PM</td>
+  <td class="date-time">Uploaded on 23 Feb 2021 at 7:36 PM</td>
   </tr>
 </tbody>
 </table>

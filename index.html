@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- <link href="../rubproducti9n/mdb/css/global.min.css" rel="stylesheet"> -->
     <link href="https://rubyproducti9n.github.io/concertera/mdb/css/global.min.css" rel="stylesheet">
     <link href="https://rubyproducti9n.github.io/concertera/css/room.css" rel="stylesheet">
 
@@ -19,10 +20,43 @@
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
     @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
-    body{ background: #fff; user-select: none;}
+    body{ background: rgb(0, 0, 0); user-select: none;}
+    hr{background: rgb(75, 75, 75);}
+    .nav-bar{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 23%;
+  padding: 0px 0px;
+  background: #3535359c;
+  backdrop-filter: blur(14px);
+  border: 2px #2e2e2e00 solid;
+  border-radius: 150px;
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 0px #2a0035ab;
+  z-index: 12;
+  transition: 0.5s ease;
+    }
+    .nav-bar:hover{
+  background: #ff0055;
+  text-shadow: 0 0 20px #ffffff;
+  box-shadow: 0px 0px 20px #ff0055;
+    }
+    .brand-lg{
+      width: 25%;
+  margin-right: 5px;
+      border-radius: 100%;
+    }
+    .brand-name{
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+    }
     .section-title{
       padding: 0 40px;
-      color: rgb(43, 43, 43);
+      color: rgb(255, 255, 255);
       font-size: 22px;
       font-weight: 600;
       font-family: 'Comfortaa', cursive;
@@ -31,11 +65,20 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      padding: 20px 23px;
+      padding: 20px 26px;
       border-radius: 50%;
       color: #fff;
-      background: rgb(201, 9, 9);
+      background: #ff0055;
+        box-shadow: 3px 3px 10px rgba(68, 68, 68, 0.26);
       z-index: 4;
+      transition: 0.5s ease;
+    }
+    .btn-upload:hover{
+      background-color: #e6004c;
+        text-shadow: 0px 0px 20px rgb(255, 255, 255);
+        box-shadow: 0px 0px 20px #ff0055;
+      cursor: pointer;
+      transition: 0.5s ease;
     }
     .maintain-container{
         display: none;
@@ -94,33 +137,34 @@ border: 0px #000 solid;}
   background: rgba(255, 255, 255, 0);
   border: 1px rgba(0, 0, 0, 0) solid;
   border-radius: 20px;
-  padding: 10px 0px;
+  padding: 10px 10px;
   margin: 10px 20px;
   overflow: visible;
   text-overflow: ellipsis;
 }
 .card{
   display: inline-block;
-  margin: 0 16px;
+  margin: 0 10px;
   padding-bottom: 20px;
-  width: 22%;
+  width: 22.8%;
   height: 30%;
-  background: rgba(255, 255, 255, 0);
+  color: rgb(233, 233, 233);
+  background: rgb(24, 24, 24);
   /* backdrop-filter: blur(14px); */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-  border: 0px rgb(199, 199, 199) solid;
-  border-radius: 30px;
+  box-shadow: 0px 0px 00px rgba(0, 0, 0, 0.192);
+  border: 0px rgba(255, 2, 107, 0.185) solid;
+  border-radius: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
   /* cursor: pointer; */
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 .card:hover{
-  transform: scale(1.03);
-  color: rgb(27, 27, 27);
-  background: #e7013362;
-  box-shadow: 0 0 20px #e7013362;
-  /* box-shadow: 5px 5px 20px rgba(100, 100, 100, 0.274); */
+  height: 33%;
+  color: rgb(255, 255, 255);
+  background: #111111;
+  border: 0px rgba(255, 2, 107, 0.705) solid;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.192);
   transition: 0.3s ease;
 }
 .card-img{
@@ -129,7 +173,7 @@ border: 0px #000 solid;}
   box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 }
 .tags{
-    color: rgb(0, 84, 211);
+    color: rgb(0, 145, 230);
     background: rgba(201, 32, 32, 0);
     padding: 5px 10px;
     width: fit-content;
@@ -146,7 +190,7 @@ border: 0px #000 solid;}
   font-family: 'Comfortaa', cursive;
 }
 .dr-details{
-  color: rgb(59, 59, 59);
+  color: rgb(148, 148, 148);
   overflow: scroll;
   text-overflow: ellipsis;
   line-height: 15px;
@@ -177,10 +221,10 @@ border: 0px #000 solid;}
 }
 .mech-btn-fill{
   color: #fff;
-  background: #800000;
-  border: 2px #800000 solid;
-  border-radius: 20px;
-  margin: 20px 0;
+  background: #ff0055;
+  border: 2px #ff0077 solid;
+  border-radius: 4px;
+  margin: 5px 15px;
   padding: 10px 20px;
   font-size: 11px;
   font-family: 'Comfortaa', cursive;
@@ -188,25 +232,26 @@ border: 0px #000 solid;}
   transition: 0.2s ease;
 }
 .mech-btn-fill:hover{
-  color: #ffffff;
-  background: #d60101;
-  border: 2px #a0000000 solid;
-  box-shadow: 0 0 20px #ff0040ec;
+  color: #ffffffec;
+  background: #ff0040ec;
+  border: 2px #ff0040ec solid;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px #ff0040ec;
   transition: 0.2s ease;
 }
 .mech-btn-fill:active{
   color: #ffffff;
-  background: #460000;
+  background: #d10034ec;
   border: 2px #94000000 solid;
-  box-shadow: 0 0 20px #810101;
+  box-shadow: 0 0 20px #d10034ec;
   transition: 0.2s ease;
 }
 .mech-btn-outline{
-  color: #800000;
+  color: #ff0077;
   background: #46008000;
-  border: 2px #800000 solid;
-  border-radius: 20px;
-  margin: 20px 0;
+  border: 2px #ff0077 solid;
+  border-radius: 4px;
+  margin: 5px 0;
   padding: 10px 20px;
   font-size: 10px;
   font-family: 'Comfortaa', cursive;
@@ -216,8 +261,9 @@ border: 0px #000 solid;}
 .mech-btn-outline:hover{
   color: #ffffff;
   background: #ff0040ec;
-  border: 2px #a0000000 solid;
-  box-shadow: 0 0 20px #ff0040ec;
+  border: 2px #ff0040ec solid;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px #ff0040ec;
   transition: 0.2s ease;
 }
     .note{
@@ -244,19 +290,52 @@ footer{
   font-size: 15px;
 }
 @media screen and (max-width: 768px) {
+    .nav-bar{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 16%;
+  padding: 0px 0px;
+  background: #3535359c;
+  backdrop-filter: blur(14px);
+  border: 2px #2e2e2e00 solid;
+  border-radius: 150px;
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 0px #2a0035ab;
+  z-index: 12;
+  transition: 0.5s ease;
+    }
+    .nav-bar:hover{
+  background: #ff005500;
+  text-shadow: 0 0 20px #ffffff;
+  box-shadow: 0px 0px 20px #ffffff;
+    }
+    .brand-lg{
+      width: 100%;
+  margin-right: 5px;
+      border-radius: 100%;
+    }
+    .brand-name{
+  display: none;
+  color: #fff;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+    }
     .btn-upload{
+      display: none;
       position: fixed;
       bottom: 60px;
       right: 20px;
       padding: 20px 23px;
       border-radius: 50%;
       color: #fff;
-      background: rgb(201, 9, 9);
+      background: #ff0055;
       z-index: 4;
     }
     .section-title{
       padding: 0 20px;
-      color: rgb(43, 43, 43);
+      color: rgb(255, 255, 255);
       font-size: 18px;
       font-weight: 800;
       font-family: 'Comfortaa', cursive;
@@ -285,12 +364,12 @@ footer{
 }
 .card{
   display: inline-block;
-  margin: 20px 4px;
-  width: 47%;
+  margin: 20px 30px;
+  width: 80%;
   height: 100%;
-  background: rgba(255, 255, 255, 0);
+  background: rgb(29, 29, 29);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-  border-radius: 10px;
+  border-radius: 50px;
   overflow: hidden;
   word-wrap: break-word;
   text-overflow: ellipsis;
@@ -310,7 +389,7 @@ footer{
   padding: 0 10px;
   font-size: 11px;
   font-family: 'Comfortaa', cursive;
-  color: #000;
+  color: rgb(255, 255, 255);
 }
 .dr-details{
   overflow: hidden;
@@ -324,7 +403,7 @@ footer{
 .mech-btn-fill{
   display: inline-block;
   border-radius: 10px;
-  margin: 10px 0;
+  margin: 10px 10px;
   padding: 10px 20px;
   font-size: 11px;
   font-family: 'Comfortaa', cursive;
@@ -357,6 +436,33 @@ footer{
         Disclaimer: This web page is meant for educational purpose only. All copyrights to their official owner. Page was created by Om Lokhande.
     </marquee>
     </div>
+
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Select your division</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <a class="btn btn-secondary btn-sm" href="#" download="Roll Call List (A) 20021-22">A</a>
+        <a class="btn btn-secondary btn-sm" href="#" download="Roll Call List (B) 20021-22">B</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="nav-bar">
+  <a class="link" onclick="home()">
+  <img class="brand-lg" src="img/avatar.jpg">
+  <p class="brand-name">Mechnaical Unofficial</p>
+  </a>
+</div>
+
 <div class="btn-upload">
   <a class="" href="pages/materials.html">
   <i class="fa fa-upload" style="color: #fff;"></i>
@@ -365,31 +471,36 @@ footer{
 <center>
     <div class="modern-navigation">
     <div class="modern-dash"></div><br>
-    <span class="menu-tooltip disabled" onclick="back()">
-      <span class="menu-tooltiptext">Back</span>
-    <i class="material-icons modern-nav-ic">arrow_back</i>
+    <span class="disabled" onclick="back()">
+      <a class="" data-mdb-toggle="tooltip" title="Hi! I'm tooltip">
+        <i class="material-icons modern-nav-ic">arrow_back</i>
+      </a>
   </span>
-    <span class="menu-tooltip disabled" onclick="home()">
-      <span class="menu-tooltiptext">Home</span>
-      <i class="material-icons modern-nav-ic modern-nav-active">home</i>
+    <span class="disabled" onclick="home()">
+      <a class="" data-mdb-toggle="tooltip" title="Home">
+        <i class="material-icons modern-nav-ic  modern-nav-active">home</i>
+      </a>
     </span>
-    <span class="menu-tooltip" onclick="search()">
-      <span class="menu-tooltiptext">Search</span>
-      <i class="material-icons modern-nav-ic">search</i>
+    <span class="" onclick="materials()">
+      <a class="" data-mdb-toggle="tooltip" title="Materials">
+        <i class="material-icons modern-nav-ic">dns</i>
+      </a>
     </span>
-    <span class="menu-tooltip" onclick="select()">
-      <span class="menu-tooltiptext">Rooms</span>
-      <i class="material-icons modern-nav-ic">headphones</i>
+    <span class="" onclick="announcements()">
+      <a class="" data-mdb-toggle="tooltip" title="Announcements">
+        <i class="material-icons modern-nav-ic ">campaign</i>
+      </a>
     </span>
-    <span class="menu-tooltip" onclick="info()">
-      <span class="menu-tooltiptext">Info</span>
-      <i class="material-icons modern-nav-ic">info</i>
+    <span class="" onclick="info()">
+      <a class="" data-mdb-toggle="tooltip" title="Info">
+        <i class="material-icons modern-nav-ic ">info</i>
+      </a>
     </span>
     </div></center>
-<nav class="custom-nav">
+<!-- <nav class="custom-nav">
     <a class="">
       <img class="mech-avatar" src="img/avatar.jpg" draggable="false" /></span>  </a>
-</nav>
+</nav> -->
 <div class="maintain-container">
     <center><br><br><br><br><img class="maintain-img" draggable="false" src="https://rubyproducti9n.github.io/concertera/maintenance/music.png"></center>
     <center><p class="maintain-text">
@@ -400,12 +511,13 @@ footer{
 <br><br><br><br>
   <h2 class="section-title">What's New!</h2>
 <div class="custom-card" onclick="">
-    <div class="card">
+    <div class="card ">
     <img class="card-img" src="img/placeholder.png">
-    <h6 class="tags">#Tags</h6>
-    <h3 class="dr-title">Title Goes Here </h3>
-    <h6 class="dr-details">
+    <h6 class="tags placeholder">#Tags</h6>
+    <h3 class="dr-title placeholder">Title Goes Here </h3>
+    <h6 class="dr-details placeholder">
       Description Goes Here
+      <hr><p class="">ConcertEra <i class="fa fa-check-circle"></i> • 06 Mar 2022</p>
     </h6>
   </div>
   <div class="card">
@@ -414,6 +526,7 @@ footer{
   <h3 class="dr-title">Title Goes Here </h3>
   <h6 class="dr-details">
     Description Goes Here
+    <hr><p class="">ConcertEra <i class="fa fa-check-circle"></i> • 06 Mar 2022</p>
   </h6>
 </div>
 <div class="card">
@@ -422,6 +535,7 @@ footer{
 <h3 class="dr-title">Title Goes Here </h3>
 <h6 class="dr-details">
   Description Goes Here
+  <hr><p class="">ConcertEra <i class="fa fa-check-circle"></i> • 06 Mar 2022</p>
 </h6>
 </div>
 <div class="card">
@@ -430,6 +544,7 @@ footer{
 <h3 class="dr-title">Title Goes Here </h3>
 <h6 class="dr-details">
   Description Goes Here
+  <hr><p class="">ConcertEra <i class="fa fa-check-circle"></i> • 06 Mar 2022</p>
 </h6>
 </div>
   </div>
@@ -437,6 +552,7 @@ footer{
  <br><hr width="95%"><br>
 
   <h2 class="section-title"> <i class="fa fa-user-circle"></i> Mechanical Engineering Students Association </h2><br>
+<div class="custom-card" onclick="">
 <div class="card">
   <center>
   <img class="profile-img" src="img/profile-avatar.png" draggable="false">
@@ -492,11 +608,12 @@ footer{
   <button class="mech-btn-fill">Contact Me</button>
   <button class="mech-btn-outline">Learn More</a><br>
 </div>
-</div>
+</div></div>
 <br>
 <br><hr width="95%"><br>
 
 <h2 class="section-title">Useful Links <i class="fa fa-external-link-alt"></i> </h2>
+<div class="custom-card" onclick="">
 <div class="card">
   <center>
   <img class="profile-img" src="img/profile-avatar.png" draggable="false">
@@ -504,10 +621,11 @@ footer{
 <div class="profile-body">
   <h3 class="dr-title">Sanjivani Mechanical  LMS</h3>
   <h6 class="dr-details">
-    Subjects: BME & EG<br>
+    Subjects: BME & EG<br><br>
+    <p class=""> <i class="fa fa-clock"></i> 06 Mar 2022</p>
   </h6>
-  <button class="mech-btn-fill">Open</button>
-  <button class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill" onclick="mechLMS()">Login</button>
+  <button class="mech-btn-outline" onclick="error()">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -517,10 +635,11 @@ footer{
 <div class="profile-body">
   <h3 class="dr-title">Sanjivani Science LMS</h3>
   <h6 class="dr-details">
-    Subjects: EM-1 & EP<br>
+    Subjects: EM-1 & EP<br><br>
+    <p class=""> <i class="fa fa-clock"></i> 06 Mar 2022</p>
   </h6>
-  <button class="mech-btn-fill">Open</button>
-  <button class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill" onclick="esciLMS()">Login</button>
+  <button class="mech-btn-outline" onclick="error()">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -530,10 +649,11 @@ footer{
 <div class="profile-body">
   <h3 class="dr-title">Sanjivani BEEE LMS</h3>
   <h6 class="dr-details">
-    Subjects: BEE<br>
+    Subjects: BEE<br><br>
+    <p class=""> <i class="fa fa-clock"></i> 06 Mar 2022</p>
   </h6>
-  <button class="mech-btn-fill">Open</button>
-  <button class="mech-btn-outline">Learn More</a><br>
+  <button class="mech-btn-fill" onclick="eeeLMS()">Login</button>
+  <button class="mech-btn-outline" onclick="error()">Learn More</a><br>
 </div>
 </div>
 <div class="card">
@@ -543,12 +663,13 @@ footer{
 <div class="profile-body">
   <h3 class="dr-title">LMS Username & Passwords</h3>
   <h6 class="dr-details">
-    Username and password for LMS<br>
+    Username and password for LMS<br><br>
+    <p class=""> <i class="fa fa-clock"></i> 06 Mar 2022</p>
   </h6>
-  <button class="mech-btn-fill disabled">Open</button>
-  <button class="mech-btn-outline">Learn More</a><br>
+  <a class="mech-btn-fill" data-mdb-toggle="modal" data-mdb-target="#login">Login</a>
+  <button class="mech-btn-outline" onclick="error()">Learn More</a><br>
 </div>
-</div>
+</div></div>
 <br><br>
 <br><br>
 <br><br>
@@ -557,9 +678,14 @@ footer{
 </footer>
 </div>
 <script>
-    function error(){
-        alert("This is for educational purpose, it won't function.")
-    }
+function materials(){window.location = "pages/materials.html";}
+function announcements(){window.location = "pages/announcements.html";}
+
+function mechLMS(){window.location = "http://54.147.11.221/mech/login/index.php";}
+function esciLMS(){window.location = "http://18.235.169.74/esci/login/index.php";}
+function eeeLMS(){window.location = "http://52.7.61.3/eee/login/index.php";}
+
+function error(){alert("Something went wrong, please contact our team or try again later.")}
 </script>
 <script src="https://rubyproducti9n.github.io/concertera/mdb/js/global.min.js"></script>
 </body>
