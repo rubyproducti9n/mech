@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=Comfortaa:wght@700&family=Raleway:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Raleway:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Josefin+Sans&family=Raleway:wght@800&display=swap');
+        body{
+            color: rgb(0, 0, 0);
+            background: rgb(255, 255, 255);
+            user-select: none;
+        }
+        h1{
+            color: #414141;
+            font-family: 'Raleway', sans-serif;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0);
+        /* font-style: italic; */
+        padding: 10px 20px;
+        border-bottom: 2px rgb(214, 214, 214) solid;
+        font-size: 40px;
+    }
+        .first-container{
+            margin: 10px 20px;
+            border-radius: 20px;
+            background: #eeeeee;
+            border: 2px #e4e4e4 solid;
+        }
+        .first-container .img{
+            width: 30%;
+            padding: 20px;
+            border-radius: 30px;
+        }
+        .first-sub-cont{
+            color: #414141;
+            float: right;
+            width: 66%;
+            padding: 10px 0px;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+            border: 2px rgba(170, 170, 170, 0) solid;
+        }
+        .first-sub-cont h2{
+            font-size: 18px;
+        }
+        .first-sub-cont .details{
+            color: #4b4b4b;
+            font-family: 'Arimo', sans-serif;
+            line-height: 30px;
+            font-size: 14px;
+        }
+        .second-container{
+            margin: 10px 20px;
+            padding: 25px;
+            border: 2px rgba(0, 0, 0, 0) solid;
+        }
+        .gr-card{
+            display: inline-block;
+            align-items: center;
+            margin: 10px 8px;
+            width: 31%;
+            background-color: #f5f5f500;
+            border: 0px #f5f5f5 solid;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.26);
+            border-radius: 20px;
+            font-family: 'Arimo', sans-serif;
+            overflow: hidden;
+            transition: 0.5s ease;
+        }
+        .gr-card:hover{
+            transform: translateY(-20px);
+            margin: 10px 8px;
+            width: 31%;
+            background-color: #f5f5f5;
+            border: 0px #00000042 solid;
+            box-shadow: 5px 5px 10px #00000042;
+            border-radius: 20px;
+            font-family: 'Arimo', sans-serif;
+            overflow: hidden;
+            transition: 0.2s ease;
+        }
+        .gr-img{
+            width: 100%;
+        }
+        .gr-details{
+            display: block;
+            padding: 20px;
+        }
+
+@media screen and (max-width: 768px) {
+        h1{
+            color: #414141;
+            font-family: 'Raleway', sans-serif;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0);
+        /* font-style: italic; */
+        padding: 10px 20px;
+        border-bottom: 2px rgb(214, 214, 214) solid;
+        font-size: 30px;
+    }
+        .first-container{
+            margin: 10px 20px;
+            border-radius: 20px;
+            background: #eeeeee00;
+            border: 2px #e4e4e400 solid;
+        }
+        .first-container .img{
+            width: 93%;
+            padding: 10px;
+            border-radius: 30px;
+        }
+        .first-sub-cont{
+            color: #414141;
+            float: right;
+            width: 90%;
+            padding: 10px 0px;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+            border: 2px rgba(170, 170, 170, 0) solid;
+        }
+        .first-sub-cont h2{
+            font-size: 18px;
+        }
+        .first-sub-cont .details{
+            color: #4b4b4b;
+            font-family: 'Arimo', sans-serif;
+            line-height: 30px;
+            font-size: 14px;
+        }
+        .second-container{
+            margin: 10px 0px;
+            padding: 20px;
+            border: 2px rgba(0, 0, 0, 0) solid;
+        }
+        .gr-card{
+            display: inline-block;
+            align-items: center;
+            margin: 10px 0px;
+            width: 100%;
+            background-color: #f5f5f500;
+            border: 2px #e4e4e4 solid;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.26);
+            border-radius: 20px;
+            font-family: 'Arimo', sans-serif;
+            overflow: hidden;
+            transition: 0.5s ease;
+        }
+        .gr-card:hover{
+            transform: translateY(-10px);
+            background-color: #f5f5f5;
+            width: 100%;
+            border: 0px #00000042 solid;
+            box-shadow: 5px 5px 10px #00000042;
+            transition: 0.2s ease;
+        }
+        .gr-img{
+            width: 100%;
+        }
+        .gr-details{
+            display: block;
+            padding: 20px;
+        }
+}
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1>Range Rover</h1>
+    </center>
+
+    <div class="first-container">
+        <img class="img img-first" draggable="false" src="img/rr-1.webp">
+    <div class="first-sub-cont">
+        <h2>Range Rover (model no.) </h2>
+        <p class="details">
+            The Land Rover Range Rover (generally known simply as the Range Rover) is a 4x4 motor car produced by Land Rover, a marque and sub-brand of Jaguar Land Rover. The Range Rover line was launched in 1970 by British Leyland and is now in its fifth generation.
+        </p>
+    </div>
+    </div>
+
+    <div class="second-container">
+
+        <div class="gr-card">
+            <img class="gr-img" src="img/land_rover_range_rover_sport_white_jeep_95237_1280x720.jpg">
+            <div class="gr-details">
+                Range Rover
+            </div>
+        </div>
+        <div class="gr-card">
+            <img class="gr-img" src="img/land_rover_range_rover_vogue_white_side_view_108581_1280x720.jpg">
+            <div class="gr-details">
+                Range Rover
+            </div>
+        </div>
+        <div class="gr-card">
+            <img class="gr-img" src="img/range_rover_l405_white_side_view_111801_1280x720.jpg">
+            <div class="gr-details">
+                Range Rover
+            </div>
+        </div>
+
+    </div>
+
+    <div class="first-container">
+        <img class="img img-first" draggable="false" src="img/rr-1.webp">
+    <div class="first-sub-cont">
+        <h2>Range Rover (model no.) </h2>
+        <p class="details">
+            The Land Rover Range Rover (generally known simply as the Range Rover) is a 4x4 motor car produced by Land Rover, a marque and sub-brand of Jaguar Land Rover. The Range Rover line was launched in 1970 by British Leyland and is now in its fifth generation.
+        </p>
+    </div>
+    </div>
+
+    <div class="second-container">
+
+        <div class="gr-card">
+            <img class="gr-img" src="img/land_rover_range_rover_sport_white_jeep_95237_1280x720.jpg">
+            <div class="gr-details">
+                Range Rover
+            </div>
+        </div>
+        <div class="gr-card">
+            <img class="gr-img" src="img/land_rover_range_rover_vogue_white_side_view_108581_1280x720.jpg">
+            <div class="gr-details">
+                Range Rover
+            </div>
+        </div>
+        <div class="gr-card">
+            <img class="gr-img" src="img/range_rover_l405_white_side_view_111801_1280x720.jpg">
+            <div class="gr-details">
+                Range Rover
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
