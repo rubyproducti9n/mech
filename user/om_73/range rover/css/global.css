@@ -1,12 +1,27 @@
 
-        h1{
+        /* h1{
             color: #ffffff;
             font-family: 'Raleway', sans-serif;
         text-shadow: 0 0 10px rgba(255, 0, 0, 0);
-        /* font-style: italic; */
+        font-style: italic;
         padding: 10px 20px;
         border-bottom: 2px rgb(214, 214, 214) solid;
         font-size: 40px;
+    } */
+
+    ::-webkit-scrollbar{
+        display: block;
+        width: 5px;
+
+        margin: 20px;
+    }
+    ::-webkit-scrollbar-track{
+        background: rgb(255, 255, 255);
+
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: #e0b68c;
+        width: 20px;
     }
     .navbar{
         position: fixed;
@@ -14,7 +29,8 @@
         left: 0;
         right: 0;
         padding: 0px 20px;
-        background: rgba(55, 55, 55, 0.508);
+        background: #ffffffb1;
+        border-bottom: 0px #e0b68c solid;
         backdrop-filter: blur(14px);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
@@ -31,16 +47,18 @@
         padding: 20px 20px;
         margin: 0 10px;
         cursor: pointer;
-        border-bottom: 4px rgba(153, 153, 153, 0) solid;
-        transition: 0.2s ease;
+        color: #000;
+        border-bottom: 4px rgba(255, 255, 255, 0) solid;
     }
     .nav-link:hover{
-        border-bottom: 4px rgba(153, 153, 153, 0.637) solid;
-        transition: 0.2s ease;
+        color: rgb(77, 77, 77);
+        border-bottom: 4px #e0b68c solid;
     }
-    .link{display: inline-block;}
+    .link{display: inline-block;
+        color: rgb(77, 77, 77);}
     .section-title{
-            font-family: 'Arimo', sans-serif;
+        font-family: 'Cinzel', serif;
+        letter-spacing: 1px;
     }
     .know-more{
         float: right;
@@ -48,6 +66,7 @@
         font-style: italic;
         text-decoration: none;
         padding: 10px 20px;
+        color: #000;
         background-color: #e0e0e000;
         border-radius: 5px;
         cursor: pointer;
@@ -67,8 +86,8 @@
         .mini-container{
             margin: 10px 20px;
             border-radius: 6px;
-            background: #212121e0;
-            border: 2px #2b2b2be0 solid;
+            background: #fafafa00;
+            border: 2px #e6e6e600 solid;
         }
         .mini-container .img{
             width: 30%;
@@ -76,20 +95,21 @@
             border-radius: 36px;
         }
         .first-sub-cont{
-            color: #ffffff;
+            color: #e0b68c;
             float: right;
             width: 66%;
-            padding: 10px 0px;
-            font-weight: 600;
-            font-family: 'Raleway', sans-serif;
+            padding: 10px 0px;;
+            letter-spacing: 0.5px;
+            font-family: 'Cinzel', serif;
             border: 2px rgba(170, 170, 170, 0) solid;
         }
         .first-sub-cont h2{
-            font-size: 18px;
+            letter-spacing: 2px;
+            font-size: 20px;
         }
         .first-sub-cont .details{
-            color: #c2c2c2;
-            font-family: 'Arimo', sans-serif;
+            color: #3c3c3c;
+            font-family: 'Jost', sans-serif;
             line-height: 30px;
             font-size: 14px;
         }
@@ -103,7 +123,7 @@
             align-items: center;
             margin: 10px 12px;
             width: 31%;
-            background-color: #1f1f1fe0;
+            background-color: #fafafa;
             border: 0px #86868642 solid;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
             border-radius: 6px;
@@ -125,29 +145,29 @@
             display: block;
             padding: 0px 20px;
         }
-        .gr-details h4{color: #ffffff;}
+        .gr-details h4{
+            color: #e0b68c;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+        }
         .sh-detail-primary{
-            color: #929292;
+            color: #545454;
+            font-family: 'Jost', sans-serif;
             text-overflow: ellipsis;
             height: 56vh;
             line-height: 25px;
         }
         .sh-detail-secondary{
-            color: #b5b5b5;
+            color: #494949;
             text-overflow: ellipsis;
+            font-family: 'Jost', sans-serif;
             height: 14vh;
             line-height: 25px;
         }
 
 @media screen and (max-width: 768px) {
-        h1{
-            color: #414141;
-            font-family: 'Raleway', sans-serif;
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0);
-        /* font-style: italic; */
-        padding: 10px 20px;
-        border-bottom: 2px rgb(214, 214, 214) solid;
-        font-size: 30px;
+        center h1{
+            display: none;
     }
     .navbar{
         position: fixed;
@@ -155,7 +175,7 @@
         left: 0;
         right: 0;
         padding: 0px 20px;
-        background: rgba(55, 55, 55, 0.508);
+        background: rgba(255, 255, 255, 0.789);
         backdrop-filter: blur(14px);
         z-index: 1;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -216,17 +236,20 @@
             width: 98%;
             padding: 10px 0px;
             font-weight: 600;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Jost', sans-serif;
             border: 2px rgba(170, 170, 170, 0) solid;
         }
         .first-sub-cont h2{
+            color: #e0b68c;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
             font-size: 18px;
         }
         .first-sub-cont .details{
             border-bottom: 2px #2525259d solid;
             padding-bottom: 10px;
             color: #7b7b7b;
-            font-family: 'Arimo', sans-serif;
+            font-family: 'Jost', sans-serif;
             line-height: 30px;
             font-size: 12px;
         }
@@ -241,11 +264,11 @@
             padding: 0px 0;
             margin: 10px 0px;
             width: 100%;
-            background-color: rgba(26, 26, 26, 0.597);
-            border: 2px #222222c5 solid;
+            background-color: #fafafa;
+            border: 0px #222222c5 solid;
             box-shadow: 0 0 0px rgba(0, 0, 0, 0.26);
             border-radius: 6px;
-            font-family: 'Arimo', sans-serif;
+            font-family: 'Jost', sans-serif;
             overflow: hidden;
             transition: 0.5s ease;
         }
@@ -266,17 +289,20 @@
         }
         .sh-detail-primary{
             height: 20vh;
-            font-size: 10px;
+            font-size: 13px;
             white-space: nowrap;
             width: calc(100%);
             overflow: hidden;
+            font-family: 'Jost', sans-serif;
             text-overflow: ellipsis;
         }
         .sh-detail-secondary{
             height: 20vh;
+            font-size: 12px;
             /* white-space: nowrap; */
             width: calc(100%);
             overflow: hidden;
+            font-family: 'Jost', sans-serif;
             text-overflow: ellipsis;
         }
     }

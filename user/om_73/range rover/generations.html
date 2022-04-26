@@ -51,14 +51,28 @@
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Group 3</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Whisper&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=Comfortaa:wght@700&family=Raleway:wght@800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Raleway:wght@200&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Josefin+Sans&family=Raleway:wght@800&display=swap');
         body{display: block;
-            color: rgb(255, 255, 255);
-            background: rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            background: rgb(255, 255, 255);
             user-select: none;
         }
+        center h1{
+            color: #e0b68c;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0);
+        /* font-style: italic; */
+        padding: 10px 20px;
+        border-bottom: 2px rgba(214, 214, 214, 0) solid;
+        font-size: 40px;
+        margin: 15%;
+        height: 30vh;
+    }
         .grp-info-container{
             border-radius: 6px;
             height: 19vh;
@@ -77,8 +91,8 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
         .main-title{
-            color: #fff;
-            background-color: #31313100;
+            color: rgb(36, 36, 36);
+            background-color: #fafafa;
             /* background: linear-gradient(-180deg, #007bff, #005ec2); */
             padding: 10px 40px;
             margin: 20px 20px;
@@ -89,14 +103,16 @@
         .first-gen-container{
             margin: 20px 20px;
             padding: 20px;
-            background-color: #242424;
+            background-color: #fafafa;
             border: 2px #f0f0f000 solid;
             border-radius: 16px;
             line-height: 23px;
             font-family: 'Arimo', sans-serif;
         }
         .first-gen-container h1{
-            color: #fff;
+            color: #e0b68c;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
             font-size: 30px;
         }
         .first-gen-img{
@@ -104,11 +120,17 @@
             border-radius: 6px;
         }
         .first-gen-info{
+            color: #484848;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 0.5px;
             text-indent: 50px;
             padding: 0px 10px ;
             border: 2px rgba(0, 0, 0, 0) solid;
         }
         .right{
+            color: #484848;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 0.5px;
             float: right;
             width: 65%;
             margin-top: -10px;
@@ -118,14 +140,17 @@
         .gen-container{
             margin: 60px 20px;
             padding: 20px;
-            background-color: #242424;
+            background-color: #fafafa;
             border: 2px #007bff00 solid;
             border-radius: 16px;
             line-height: 30px;
-            font-family: 'Arimo', sans-serif;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 0.5px;
         }
         .gen-container h1{
-            color: #fff;
+            color: #e0b68c;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
             font-size: 30px;
         }
         .gen-img{
@@ -156,7 +181,7 @@
     .nav-strg{display: none;}
         .main-title{
             color: #fff;
-            background-color: #161616;
+            background-color: #ffffff;
             /* background: linear-gradient(-180deg, #007bff, #005ec2); */
             padding: 20px 40px;
             margin: 20px 20px;
@@ -165,9 +190,9 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
         .first-gen-container{
-            margin: 20px 0px;
-            padding: 10px;
-            background-color: #2c2c2c;
+            margin: 0px 0px;
+            padding: 0px;
+            background-color: #f2f2f200;
             border: 0px #007bff solid;
             border-radius: 16px;
             line-height: 23px;
@@ -193,11 +218,14 @@
         .gen-container{
             margin: 20px 0px;
             padding: 10px;
-            background-color: #212121;
+            background-color: #21212100;
             border: 0px #007bff solid;
             border-radius: 6px;
             line-height: 30px;
             font-family: 'Arimo', sans-serif;
+        }
+        .gen-container h1{
+            font-size: 22px;
         }
         .gen-img{
             display: block;
@@ -245,7 +273,10 @@
     </nav>
 <br><br><br><br><br>
 
-        <!-- <h1 class="main-title" >Range Rover Generations</h1> -->
+
+<center>
+    <h1 class="tit">Generations</h1>
+</center>
     <div class="first-gen-container">
         <h1>First Generation</h1>
         <img class="first-gen-img" src="img/first-gen.webp">
