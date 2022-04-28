@@ -2,6 +2,7 @@
 function home(){window.location.href = "index.html";}
 function generations(){window.location.href = "generations.html";}
 function expanded(){window.location.href = "expanded.html";}
+function models(){window.location.href = "https://www.jaguar.com/jaguar-range/index.html";}
 function info(){window.location.href = "info.html";}
 function jaguarInfo(){window.location.href = "https://en.wikipedia.org/wiki/Land_Rover";}
 
@@ -14,3 +15,7 @@ document.getElementById("grp-img").innerHTML = '<img src="' + img + '" class="gr
 document.getElementById("grp-nme").innerHTML = name;
 document.getElementById("grp-roll").innerHTML = roll;
 document.getElementById("grp-brh").innerHTML = branch;
+
+
+var title = "Name";
+document.getElementById("pg-title").innerHTML = title;
