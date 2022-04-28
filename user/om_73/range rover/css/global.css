@@ -1,4 +1,13 @@
-
+:root{
+    --white: #ffffff;
+    --faintwhite: #fafafa;
+    --black: #000000;
+    --richColor: #e0b68c;
+    --faintDark: #353535;
+    --shadow: #4d4d4d;
+    --transparent: #fafafa00;
+    --navbgcolor: #ffffffb1;
+}
         /* h1{
             color: #ffffff;
             font-family: 'Raleway', sans-serif;
@@ -16,11 +25,11 @@
         margin: 20px;
     }
     ::-webkit-scrollbar-track{
-        background: rgb(255, 255, 255);
+        background: var(--transparent);
 
     }
     ::-webkit-scrollbar-thumb{
-        background-color: #e0b68c;
+        background-color: var(--richColor);
         width: 20px;
     }
     .navbar{
@@ -29,10 +38,11 @@
         left: 0;
         right: 0;
         padding: 0px 20px;
-        background: #ffffffb1;
-        border-bottom: 0px #e0b68c solid;
+        background:  var(--navbgcolor);
+        border-bottom: 0px var(--richColor) solid;
         backdrop-filter: blur(14px);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        z-index: 9 ;
     }
     .brand-name{
         margin: 0px 0;
@@ -66,8 +76,8 @@
         font-style: italic;
         text-decoration: none;
         padding: 10px 20px;
-        color: #000;
-        background-color: #e0e0e000;
+        color: var(--black);
+        background-color: var(--transparent);
         border-radius: 5px;
         cursor: pointer;
         transition: 0.5s;
@@ -86,32 +96,35 @@
         .mini-container{
             margin: 10px 20px;
             border-radius: 6px;
-            background: #fafafa00;
-            border: 2px #e6e6e600 solid;
+            background: var(--transparent);
+            border: 2px var(--transparent) solid;
         }
         .mini-container .img{
             width: 30%;
-            padding: 20px;
-            border-radius: 36px;
+            margin: 30px 0;
+            padding: 0px;
+            border-radius: 0px;
+            transform: rotate(-3deg);
+            box-shadow: 10px 10px 0px var(--shadow);
         }
         .first-sub-cont{
             color: #e0b68c;
             float: right;
             width: 66%;
-            padding: 10px 0px;;
+            padding: 0px 0px;;
             letter-spacing: 0.5px;
             font-family: 'Cinzel', serif;
             border: 2px rgba(170, 170, 170, 0) solid;
         }
         .first-sub-cont h2{
             letter-spacing: 2px;
-            font-size: 20px;
+            font-size: 29px;
         }
         .first-sub-cont .details{
-            color: #3c3c3c;
+            color: #5e5e5e;
             font-family: 'Jost', sans-serif;
             line-height: 30px;
-            font-size: 14px;
+            font-size: 19px;
         }
         .second-container{
             margin: 10px 20px;
@@ -123,7 +136,7 @@
             align-items: center;
             margin: 10px 12px;
             width: 31%;
-            background-color: #fafafa;
+            background-color: var(--faintwhite);
             border: 0px #86868642 solid;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
             border-radius: 6px;
@@ -146,19 +159,19 @@
             padding: 0px 20px;
         }
         .gr-details h4{
-            color: #e0b68c;
+            color: var(--richColor);
             font-family: 'Cinzel', serif;
             letter-spacing: 2px;
         }
         .sh-detail-primary{
-            color: #545454;
+            color: var(--faintDark);
             font-family: 'Jost', sans-serif;
             text-overflow: ellipsis;
             height: 56vh;
             line-height: 25px;
         }
         .sh-detail-secondary{
-            color: #494949;
+            color: var(--faintDark);
             text-overflow: ellipsis;
             font-family: 'Jost', sans-serif;
             height: 14vh;
@@ -228,7 +241,9 @@
         .mini-container .img{
             width:100%;
             padding: 10px 0px;
-            border-radius: 16px;
+            border-radius: 0px;
+            transform: rotate(0deg);
+            box-shadow: 0px 0px 0px rgb(56, 56, 56);
         }
         .first-sub-cont{
             color: #414141;
