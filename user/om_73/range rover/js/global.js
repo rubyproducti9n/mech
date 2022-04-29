@@ -1,7 +1,56 @@
 
+
+        var div = document.getElementById("navbar");
+        div.innerHTML = '\
+          <nav class="navbar">\
+          <!-- <div class="brand-name">\
+              <a class="br-name">Group - 3</a>\
+          </div> -->\
+          <ul>\
+             <!-- <li class="nav-link" onclick="info()">\
+                  <a class="link"> <i class="fa fa-info-circle nav-ic"></i>\
+                    <span class="nav-strg">Info</span>\
+                  </a>\
+              </li> -->\
+              <li class="nav-link" onclick="pricing()">\
+               <a class="link"> <i class="fa fa-shapes nav-ic"></i>\
+                   <span class="nav-strg">Pricing</span>\
+                 </a>\
+           </li> \
+              <li class="nav-link" onclick="generations()">\
+                  <a class="link"> <i class="fa fa-bus nav-ic"></i>\
+                      <span class="nav-strg">Generations</span>\
+                    </a>\
+              </li>\
+              <li class="nav-link" onclick="home()">\
+                  <a class="link"> <i class="fa fa-home nav-ic"></i>\
+                      <span class="nav-strg">Home</span>\
+                    </a>\
+              </li>\
+          </ul>\
+        </nav> ';
+
+        var div = document.getElementById("explore");
+        div.innerHTML = '\
+        <center>\
+        <div class="ex-container">\
+            <h3> <i class="fa fa-compass"></i> Explore</h3>\
+            <div class="explore" onclick="home()">\
+                Home\
+            </div>\
+            <div class="explore" onclick="generations()">\
+                Car Generations\
+            </div>\
+            <div class="explore" onclick="pricing()">\
+                Car Pricing\
+            </div>\
+        </div>\
+        </center> ';
+
 function home(){window.location.href = "index.html";}
 function generations(){window.location.href = "generations.html";}
 function expanded(){window.location.href = "expanded.html";}
+function pricing(){window.location.href = "pricing.html";}
 function models(){window.location.href = "https://www.jaguar.com/jaguar-range/index.html";}
 function info(){window.location.href = "info.html";}
 function jaguarInfo(){window.location.href = "https://en.wikipedia.org/wiki/Land_Rover";}

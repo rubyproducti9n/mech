@@ -45,11 +45,11 @@
 <script src="timeago/test/test_helpers.js" type="text/javascript"></script>
 <link rel="icon" href="favicon/favicon.png" sizes="16x16 32x32" type="image/png">
 <link rel="stylesheet" href="CSS/RUBY PRODUCTION.css"> -->
-<script src="js/global.js"></script>
 <link rel="stylesheet" href="css/global.css">
+<link rel="icon" href="https://s.tmimgcdn.com/scr/800x500/77400/jaguar-logo-template_77499-2-original.jpg" sizes="16x16 32x32" type="image/png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>Pricing</title>
+    <title>Jaguar Land Rover Range Rover - Pricing</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Whisper&display=swap');
@@ -61,6 +61,8 @@
             background: rgb(255, 255, 255);
             user-select: none;
         }
+        .nav-ic{display: none;}
+        .nav-strg{display: block;}
         /* h1{color: #e0b68c;width: fit-content;padding: 10px 50px; border-bottom: 2px #e0b68c solid;} */
 
         h1{
@@ -85,14 +87,17 @@
         }
         .car-detail{
             float: right;
+            font-family: 'Jost', sans-serif;
             width: 80%;
         }
         .car-img{
             width: 20%;
         }
         .car-title{
-            color: #111111;
+            color: var(--richColor);
             text-shadow: 0 0 10px rgba;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
             padding: 10px 20px;
             height: fit-content;
             font-size: 20px;
@@ -111,40 +116,13 @@
             font-size: 23px;
             margin: 10px 0;
         }
+        @media screen and (max-width: 768px) {
+            .nav-ic{display: block;}
+            .nav-strg{display: none;}}
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <!-- <div class="brand-name">
-            <a class="br-name">Group - 3</a>
-        </div> -->
-        <ul>
-            <li class="nav-link" onclick="info()">
-                <a class="link"> <i class="fa fa-info-circle nav-ic"></i>
-                  <span class="nav-strg">Info</span>
-                </a>
-            </li>
-            <li class="nav-link" onclick="generations()">
-                <a class="link"> <i class="fa fa-bus nav-ic"></i>
-                    <span class="nav-strg">Generations</span>
-                  </a>
-            </li>
-            <li class="nav-link" onclick="expanded()">
-            <a class="link"> <i class="fa fa-shapes nav-ic"></i>
-                <span class="nav-strg">Expanded</span>
-              </a>
-        </li>
-            <li class="nav-link" onclick="home()">
-                <a class="link"> <i class="fa fa-home nav-ic"></i>
-                    <span class="nav-strg">Home</span>
-                  </a>
-            </li>
-        </ul>
-    </nav>
-<br><br><br><br><br>
-
-
-
+<div id="navbar"></div><br><br><br><br><br>
     <center>
         <h1>Pricing</h1>
     </center>
@@ -169,7 +147,7 @@
             Diesel/Petrol • Automatic
         </div>
         <div class="car-price">
-            Rs.2.32 - 3.41 Cr*
+            86.75 Lakh*
         </div>
         <a class="know-more" href="https://www.cardekho.com/land-rover/range-rover-velar">Know More <i class="fa fa-chevron-right"></i> </a>
     </div>
@@ -182,7 +160,7 @@
             Diesel/Petrol • Automatic
         </div>
         <div class="car-price">
-            Rs.2.32 - 3.41 Cr*
+            Rs.80.72 Lakh - 1.22 Cr*
         </div>
         <a class="know-more" href="https://www.cardekho.com/land-rover/defender">Know More <i class="fa fa-chevron-right"></i> </a>
     </div>
@@ -195,7 +173,7 @@
             Diesel/Petrol • Automatic
         </div>
         <div class="car-price">
-            Rs.2.32 - 3.41 Cr*
+            Rs.69.99 Lakh*
         </div>
         <a class="know-more" href="https://www.cardekho.com/land-rover/range-rover-evoque">Know More <i class="fa fa-chevron-right"></i> </a>
     </div>
@@ -208,11 +186,12 @@
             Diesel/Petrol • Automatic
         </div>
         <div class="car-price">
-            Rs.2.32 - 3.41 Cr*
+            Rs.91.27 Lakh - 2.19 Cr*
         </div>
         <a class="know-more" href="https://www.cardekho.com/carmodels/Land_Rover/Land_Rover_Range_Rover_Sport">Know More <i class="fa fa-chevron-right"></i> </a>
     </div>
     </div>
-
+    <div id="explore"></div>
+    <script src="js/global.js"></script>
 </body>
 </html>

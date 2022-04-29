@@ -6,7 +6,7 @@
     --faintDark: #353535;
     --shadow: #4d4d4d;
     --transparent: #fafafa00;
-    --navbgcolor: #ffffffb1;
+    --navbgcolor: #ffffff;
 }
         /* h1{
             color: #ffffff;
@@ -40,7 +40,7 @@
         padding: 0px 20px;
         background:  var(--navbgcolor);
         border-bottom: 0px var(--richColor) solid;
-        backdrop-filter: blur(14px);
+        backdrop-filter: blur(0px);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         z-index: 9 ;
     }
@@ -176,6 +176,30 @@
             font-family: 'Jost', sans-serif;
             height: 14vh;
             line-height: 25px;
+        }
+        .ex-container{
+            color: var(--black);
+            background-color: transparent;
+            letter-spacing: 2px;
+            margin: 120px 0;
+            font-family: 'Cinzel', serif;
+        }
+        .explore{
+            display: inline-block;
+            color: var(--richColor);
+            background-color: #aeaeae00;
+            border-bottom: 4px var(--transparent) solid;
+            border-radius: 0px;
+            padding: 20px 40px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        margin: 10px 20px;
+        cursor: pointer;
+        }
+        .explore:hover{
+            color: var(--richColor);
+            background-color: #e1e1e100;
+            border-bottom: 4px var(--richColor) solid;
         }
 
 @media screen and (max-width: 768px) {
