@@ -7,11 +7,11 @@
               <a class="br-name">Group - 3</a>\
           </div> -->\
           <ul>\
-             <!-- <li class="nav-link" onclick="info()">\
+              <li class="nav-link" onclick="info()">\
                   <a class="link"> <i class="fa fa-info-circle nav-ic"></i>\
                     <span class="nav-strg">Info</span>\
                   </a>\
-              </li> -->\
+              </li> \
               <li class="nav-link" onclick="pricing()">\
                <a class="link"> <i class="fa fa-shapes nav-ic"></i>\
                    <span class="nav-strg">Pricing</span>\
@@ -43,6 +43,9 @@
             </div>\
             <div class="explore" onclick="pricing()">\
                 Car Pricing\
+            </div>\
+            <div class="explore" onclick="pricing()">\
+                Info\
             </div>\
         </div>\
         </center> ';

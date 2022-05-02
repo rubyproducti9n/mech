@@ -172,9 +172,20 @@
     }
 }
     </style>
-    <script></script>
+    <script>
+
+      $(window).load(function() {
+          $('#loading').delay(2625).fadeOut(200);
+        });
+    </script>
 </head>
 <body>
+
+    <div id="loading">
+        <center>
+          <div class="spinner"></div>
+        </center>
+      </div>
 <div id="navbar"></div><br><br><br><br><br>
     <div class="cover">
         <center>
@@ -383,6 +394,13 @@ Making the world a better place.
     </div>
 </div>
 <div id="explore"></div>
+
+  <script>
+
+    $(window).load(function() {
+        $('#loading').delay(2625).fadeOut(200);
+      });
+  </script>
     <script src="js/global.js"></script>
 </body>
 </html>

@@ -46,115 +46,347 @@
 <link rel="icon" href="favicon/favicon.png" sizes="16x16 32x32" type="image/png">
 <link rel="stylesheet" href="CSS/RUBY PRODUCTION.css"> -->
 <link rel="stylesheet" href="css/global.css">
+<link rel="icon" href="https://s.tmimgcdn.com/scr/800x500/77400/jaguar-logo-template_77499-2-original.jpg" sizes="16x16 32x32" type="image/png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>Group 3</title>
+    <title>Group Info</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Whisper&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=Comfortaa:wght@700&family=Raleway:wght@800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Raleway:wght@200&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Josefin+Sans&family=Raleway:wght@800&display=swap');
         body{display: block;
-            color: rgb(255, 255, 255);
-            background: rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            background: rgb(255, 255, 255);
             user-select: none;
         }
+        h1{
+            position: relative;
+            color: var(--richColor);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0);
+        /* font-style: italic; */
+        padding: 10px 20px;
+        border-bottom: 2px rgba(214, 214, 214, 0) solid;
+        font-size: 40px;
+        margin: 15%;
+        height: 30vh;
+    }
+    .nav-ic{display: none;}
+    .nav-strg{display: block;}
         .grp-info-container{
             border-radius: 6px;
-            height: 19vh;
-            border: 2px #242424 solid;
+            margin: 40px 0;
+            padding: 10px 20px;
+            border: 0px #808080d2 solid;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 0.5px;
         }
         .grp-img{
-            float: left;
+            float: right;
             width: 20%;
-            border-right: 2px #242424 solid;
+            border-right: 0px #242424 solid;
             border-radius: 0px;
             width: 10%;
+            transform: rotate(-2deg);
         }
         .grp-info{
-            border: 2px #24242400 solid;
-            margin: 10px 150px;
+            position: relative;
+            border: 4px #24242400 solid;
+            margin: 0px 0px;
+            width: fit-content;
+            padding: 10px 20px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-@media screen and (max-width: 768px) {
-    body{opacity: 0;}
-        .main-title{
-            color: #fff;
-            background-color: #fffbf600;
-            background: linear-gradient(-180deg, #007bff, #005ec2);
-            padding: 20px 40px;
-            margin: 20px 20px;
-            border-bottom: 2px #007bff solid;
+        .grp-info::after{
+            position: absolute;
+            content: " ";
+            width: 4px;
+            height: 100%;
+            background: #e0b68c00;
+            border-radius: 20px;
+            left: 0;
+            bottom: 0%;
+            transition: all 0.1s ease;
+        }
+        .grp-info:hover::after{
+            background: #e0b68c;
+            width: 4px;
+            left: 0%;
+        }
+        center h4{
+            border-top: 2px rgba(0, 0, 0, 0) solid;
+            margin-top: 0px;
+            padding-top: 50px;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 1px;
+        }
+        .qr{
+            width: 15%;
             border-radius: 6px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
         }
-        .first-gen-container{
-            margin: 20px 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 2px #007bff solid;
-            border-radius: 16px;
-            line-height: 23px;
-            font-family: 'Arimo', sans-serif;
+        .sc-img{
+            float: left;
+            padding: 0 10px;
+            width: 10.8%;
         }
-        .first-gen-img{
+        .sc-link{
+            position: relative;
+            display: inline-block;
+            width: 16%;
+            margin: 0px 0px;
+            padding: 10px 40px;
+            border-bottom: 4px #dadada00 solid;
+            cursor: pointer;
+        }
+        .sc-link::after{
+            position: absolute;
+            content: " ";
+            width: 0%;
+            height: 4px;
+            background: #e0b68c;
+            left: 50%;
+            bottom: -10px;
+            transition: all 0.3s ease;
+        }
+        .sc-link:hover::after{
             width: 100%;
-            border-radius: 6px;
+            left: 0;
         }
-        .first-gen-info{
-            text-indent: 50px;
-            padding: 0px 10px ;
-            border: 2px rgba(0, 0, 0, 0) solid;
+        center h4{
+            font-weight: normal;
+            font-display: normal;
+            font-style: normal;
         }
-        .right{
-            float: right;
-            width: 100%;
-            margin-top: -10px;
-            padding: 10px ;
-            border: 2px rgba(0, 0, 0, 0) solid;
-        }
-        .gen-container{
-            margin: 20px 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 2px #007bff solid;
-            border-radius: 6px;
-            line-height: 30px;
-            font-family: 'Arimo', sans-serif;
-        }
-        .gen-img{
+        .prg-container{
             display: block;
-            float: right;
-            padding: 20px;
-            border-radius: 26px;
-            width: 100%;
-        }
-        .gen-info{
-            text-indent: 50px;
-            padding: 0px 10px ;
+            padding: 10px 20px;
             border: 2px rgba(0, 0, 0, 0) solid;
+        }
+        .prg-container h2{
+            color: #494949;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+        }
+        h6{
+            color: #aeaeae;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 0.5px;
+            margin-top: -18px;
+            margin-left: 6px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
+        }
+        .prg{
+            padding: 10px 20px;
+            border: 2px rgba(0, 0, 0, 0) solid;
+        }
+        .prg-title{
+            font-family: 'Jost', sans-serif;
+        }
+        progress {
+            border-radius: 0px;
+            width: 80%;
+            height: 10px;
+            box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+          }
+        progress::-webkit-progress-bar{
+            background-color: rgb(232, 232, 232);
+        }
+        progress::-webkit-progress-value{
+            background-color: var(--richColor);
+        }
+@media screen and (max-width: 768px) {
+    body{opacity: 1;}
+    .nav-ic{display: block;}
+    .nav-strg{display: none;}
+    .grp-info-container{
+        border-radius: 6px;
+        margin: 40px 0;
+        padding: 10px 20px;
+        border: 2px #80808000 solid;
+        font-family: 'Jost', sans-serif;
+        letter-spacing: 0.5px;
+    }
+    .grp-img{
+        float: right;
+        border-right: 0px #242424 solid;
+        border-radius: 0px;
+        width: 20%;
+        filter: contrast(0);
+        opacity: .1;
+        transform: rotate(-2deg);
+    }
+    .grp-info{
+        position: relative;
+        border: 4px #24242400 solid;
+        margin: 0px 0px;
+        width: fit-content;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .grp-info::after{
+        position: absolute;
+        content: " ";
+        width: 4px;
+        height: 100%;
+        background: #e0b68c00;
+        border-radius: 20px;
+        left: 0;
+        bottom: 0%;
+        transition: all 0.1s ease;
+    }
+    .grp-info:hover::after{
+        background: #e0b68c;
+        width: 4px;
+        left: 0%;
+    }
+    center h4{
+        border-top: 2px rgba(0, 0, 0, 0) solid;
+        margin-top: 0px;
+        padding-top: 50px;
+        font-family: 'Jost', sans-serif;
+        letter-spacing: 1px;
+    }
+    .qr{
+        width: 50%;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+    }
+    .sc-img{
+        float: left;
+        padding: 0 10px;
+        width: 10.8%;
+    }
+    .sc-link{
+        position: relative;
+        display: inline-block;
+        width: 64%;
+        margin: 10px 0;
+        padding: 10px 40px;
+        border-bottom: 4px #dadada00 solid;
+        cursor: pointer;
+    }
+    .sc-link::after{
+        position: absolute;
+        content: " ";
+        width: 0%;
+        height: 4px;
+        background: #e0b68c;
+        left: 50%;
+        bottom: -10px;
+        transition: all 0.3s ease;
+    }
+    .sc-link:hover::after{
+        width: 100%;
+        left: 0;
+    }
+        .prg-container{
+            display: none;
+            padding: 10px 20px;
+            border: 2px rgba(0, 0, 0, 0) solid;
+        }
+        .prg-container h2{
+            color: #494949;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+        }
+        h6{
+            color: #494949;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+        }
+        .prg{
+            padding: 10px 0px;
+            border: 2px rgba(0, 0, 0, 0) solid;
+        }
+        .prg-title{
+            font-family: 'Jost', sans-serif;
+        }
+        progress {
+            border-radius: 0px;
+            width: 100%;
+            height: 10px;
+            box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+          }
+        progress::-webkit-progress-bar{
+            background-color: rgb(232, 232, 232);
+        }
+        progress::-webkit-progress-value{
+            background-color: var(--richColor);
         }
 }
     </style>
 </head>
 <body>
+    <div id="navbar"></div><br><br><br><br><br>
+    <center>
+        <h1>Info</h1>
+    </center>
+
+    <div id="stats" class="prg-container">
+        <h2>Total Progress</h2>
+        <h6>Last updated : 02 May 2022 at 09:13 PM</h6>
+        <div class="prg">
+       <span class="prg-title"> Report Progress: 0% </span><br>
+        <progress id="report" value="0" max="100">10%</progress></div><br>
+        <div class="prg">
+        <span class="prg-title"> Presentaion Progress: 0%</span><br>
+         <progress id="report" value="0" max="100"></progress></div><br>
+         <div class="prg">
+         <span class="prg-title"> Website Progress: 17%</span><br>
+          <progress id="report" value="17" max="100"></progress></div><br>
+    </div>
+
 
     <div class="grp-info-container">
-        <div id="grp-img" class="grp-info-img"></div>
+
+
+
+        <div id="grp-img" class="grp-info-img" onclick="stats()"></div>
         <div class="grp-sub-container">
-        <div id="grp-nme" class="grp-info"></div>
-        <div id="grp-mem" class="grp-info"></div>
-        <div id="grp-roll" class="grp-info"></div>
-        <div id="grp-brh" class="grp-info"></div>
+            <h4>Group Info:</h4>
+
+        <div id="grp-nme1" class="grp-info">Group members : Om, Prashant, Ruchika & Akash</div>
+        <div id="grp-nme1" class="grp-info">Roll No. : 73, 74, 75, 76</div>
+        <div id="grp-nme1" class="grp-info">Report by (Unknown)</div>
+        <div id="grp-mem1" class="grp-info">Presentaion by (Unknown)</div>
+        <div id="grp-roll1" class="grp-info">Website by Om Lokhande</div>
+        <div id="grp-brh1" class="grp-info"></div>
     </div>
-    </div><br>
+        <h4>Social Media Links:</h4>
+        <div class="sc-link"> <img class="sc-img" src="https://www.youtube.com/s/desktop/5aa0c1f3/img/favicon_144x144.png"> YouTube</div>
+        <div class="sc-link"> <img class="sc-img" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"> Instagram</div>
+        <div class="sc-link"> <img class="sc-img" src="https://s.tmimgcdn.com/scr/800x500/77400/jaguar-logo-template_77499-2-original.jpg"> Website</div>
+        <div class="sc-link"> <img class="sc-img" src="https://abs.twimg.com/favicons/twitter.2.ico"> Twitter</div>
+    </div><br><br><br><br><br>
+    <center>
+    <h4>Scan the QR Code below to visit our website: </h4>
+    <img class="qr" draggable="false" src="img/qr_range_rover.png">
+</center>
 
 
 
+<div id="explore"></div>
 <script>
+function stats(){
+var x = document.getElementById("stats");
+if (x.style.display == "none"){
+x.style.display = "block";
+}else{
+x.style.display = "none";
+}
+}
 
 var name = "Om Lokhande | Akash Mhais | Prashant Londhe | Ruchika Mapari";
 var roll = "73, 74, 75, 76";
-var branch = "Mechanical";
+var branch = "Mechanical Department";
 var img = "img/demo.png";
 // img.setAttribute("src", "img/ds.jpg");
 document.getElementById("grp-img").innerHTML = '<img src="' + img + '" class="grp-img">';
@@ -166,5 +398,6 @@ document.getElementById("grp-brh").innerHTML = branch;
     function expanded(){window.location.href = "expanded.html";}
     function jaguarInfo(){window.location.href = "https://en.wikipedia.org/wiki/Land_Rover";}
     </script>
+    <script src="js/global.js"></script>
 </body>
 </html>

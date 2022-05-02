@@ -51,6 +51,7 @@
         width: fit-content;
         border: 2px rgba(153, 153, 153, 0.774) solid;}
     .nav-link{
+        position: relative;
         float: right;
         display: inline;
         list-style: none;
@@ -60,10 +61,24 @@
         color: #000;
         border-bottom: 4px rgba(255, 255, 255, 0) solid;
     }
-    .nav-link:hover{
+    .nav-link::after{
+        position: absolute;
+        content: " ";
+        width: 0%;
+        height: 4px;
+        background: #e0b68c;
+        left: 50%;
+        bottom: -10px;
+        transition: all 0.3s ease;
+    }
+    .nav-link:hover::after{
+        width: 100%;
+        left: 0;
+    }
+    /* .nav-link:hover{
         color: rgb(77, 77, 77);
         border-bottom: 4px #e0b68c solid;
-    }
+    } */
     .link{display: inline-block;
         color: rgb(77, 77, 77);}
     .section-title{
@@ -116,10 +131,6 @@
             font-family: 'Cinzel', serif;
             border: 2px rgba(170, 170, 170, 0) solid;
         }
-        .first-sub-cont h2{
-            letter-spacing: 2px;
-            font-size: 29px;
-        }
         .first-sub-cont .details{
             color: #5e5e5e;
             font-family: 'Jost', sans-serif;
@@ -136,7 +147,7 @@
             align-items: center;
             margin: 10px 12px;
             width: 31%;
-            background-color: var(--faintwhite);
+            background-color: var(--white);
             border: 0px #86868642 solid;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
             border-radius: 6px;
@@ -185,6 +196,7 @@
             font-family: 'Cinzel', serif;
         }
         .explore{
+            position: relative;
             display: inline-block;
             color: var(--richColor);
             background-color: #aeaeae00;
@@ -196,12 +208,57 @@
         margin: 10px 20px;
         cursor: pointer;
         }
-        .explore:hover{
-            color: var(--richColor);
-            background-color: #e1e1e100;
-            border-bottom: 4px var(--richColor) solid;
+        .explore::after{
+            position: absolute;
+            content: " ";
+            width: 0%;
+            height: 2px;
+            background: #e0b68c;
+            left: 50%;
+            bottom: 0px;
+            transition: all 0.2s ease;
         }
+        .explore:hover::after{
+            width: 100%;
+            left: 0;
+        }
+        #loading{
+          background-color: rgb(255, 255, 255);
+          /* background: linear-gradient(180deg, #c200c2, #c200c2); */
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          z-index: 19;
+        }
+        .loading-img{
+          width: 13%;
+          margin-top: 20%;
+          opacity: .5;
+        }
+    .spinner {
+       width: 56px;
+       height: 56px;
+       margin-top: 20%;
+       border-radius: 100%;
+       border: 2px solid;
+       border-color: #000000;
+       border-right-color: #000000;
+       border-left-color: #00000000;
+       border-top-color: #00000000;
+       /* box-shadow: 0 0 54px #410066,
+                  inset 0 0 10px #410066; */
+       animation: spinner-d3wgkg .3s infinite linear;
+    }
 
+    @keyframes spinner-d3wgkg {
+       to {
+          transform: rotate(1turn);
+       }
+    }
 @media screen and (max-width: 768px) {
         center h1{
             display: none;
@@ -212,8 +269,8 @@
         left: 0;
         right: 0;
         padding: 0px 20px;
-        background: rgba(255, 255, 255, 0.789);
-        backdrop-filter: blur(14px);
+        background: rgb(255, 255, 255);
+        backdrop-filter: blur(0px);
         z-index: 1;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
@@ -314,7 +371,7 @@
         .gr-card:hover{
             transform: translateY(0px);
             width: 100%;
-            border: 2px #5c5c5c42 solid;
+            border: 0px #5c5c5c42 solid;
             box-shadow: 0px 0px 0px #00000042;
             transition: 0.2s ease;
         }
@@ -343,5 +400,17 @@
             overflow: hidden;
             font-family: 'Jost', sans-serif;
             text-overflow: ellipsis;
+        }
+        .explore{
+            display: inline-block;
+            color: var(--richColor);
+            background-color: #aeaeae00;
+            border-bottom: 4px var(--transparent) solid;
+            border-radius: 0px;
+            padding: 10px 40px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        margin: 20px 20px;
+        cursor: pointer;
         }
     }
