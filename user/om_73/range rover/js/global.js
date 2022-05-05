@@ -61,7 +61,7 @@ function jaguarInfo(){window.location.href = "https://en.wikipedia.org/wiki/Land
 var name = "Om Lokhande | Akash Mhais | Prashant Londhe | Ruchika Mapari";
 var roll = "73, 74, 75, 76";
 var branch = "Mechanical";
-var img = "img/demo.png";
+var img = "img/3.jpg";
 // img.setAttribute("src", "img/ds.jpg");
 document.getElementById("grp-img").innerHTML = '<img src="' + img + '" class="grp-img">';
 document.getElementById("grp-nme").innerHTML = name;

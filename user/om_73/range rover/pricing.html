@@ -78,6 +78,27 @@
         height: 30vh;
     }
         a{color: aliceblue;}
+        .rr-btn{
+            position: relative;
+            color: var(--richColor);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+        .rr-btn::after{
+            position: absolute;
+            content: " ";
+            width: 0%;
+            height: 2px;
+            background: #e0b68c;
+            left: 50%;
+            bottom: -10px;
+            transition: all 0.4s ease;
+        }
+        .rr-btn:hover::after{
+            width: 15%;
+            left: 42.5%;
+        }
         .container{
             background-color: #fafafa;
             box-shadow: 5px 5px 5px rgba(65, 65, 65, 0.083);
@@ -233,7 +254,29 @@
         <a class="know-more" href="https://www.cardekho.com/carmodels/Land_Rover/Land_Rover_Range_Rover_Sport">Know More <i class="fa fa-chevron-right"></i> </a>
     </div>
     </div>
+    <div class="container">
+        <img class="car-img" src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Discovery/8514/1646805311941/front-left-side-47.jpg?impolicy=resize&imwidth=480">
+        <div class="car-detail">
+        <div class="car-title">Range Rover Discovery</div>
+        <div class="car-info">
+            Diesel/Petrol • Automatic
+        </div>
+        <div class="car-price">
+            Rs.88.06 Lakh - 1.20 Cr*
+        </div>
+        <a class="know-more" href="https://www.cardekho.com/carmodels/Land_Rover/Land_Rover_Range_Rover_Sport">Know More <i class="fa fa-chevron-right"></i> </a>
+    </div>
+    </div>
+
+    <div class="rr-btn" onclick="more()">
+        <center>
+            Browse More
+        </center>
+        </div>
+
     <div id="explore"></div>
+    <script>
+        function more(){window.location.href = "https://www.cardekho.com/cars/Land_Rover";}</script>
     <script src="js/global.js"></script>
 </body>
 </html>
