@@ -216,8 +216,7 @@
         border-right: 0px #242424 solid;
         border-radius: 0px;
         width: 20%;
-        filter: contrast(0);
-        opacity: .1;
+        opacity: 1;
         transform: rotate(-2deg);
     }
     .grp-info{
@@ -332,7 +331,7 @@
 
     <div id="stats" class="prg-container">
         <h2>Total Progress</h2>
-        <h6>Last updated : 04 May 2022 at 11:38 PM</h6>
+        <h6>Last updated : 08 May 2022 at 02:33 AM</h6>
         <div class="prg">
        <span class="prg-title"> Report Progress: 0% </span><br>
         <progress id="report" value="0" max="100">10%</progress></div><br>
@@ -340,8 +339,8 @@
         <span class="prg-title"> Presentaion Progress: 0%</span><br>
          <progress id="report" value="0" max="100"></progress></div><br>
          <div class="prg">
-         <span class="prg-title"> Website Progress: 20%</span><br>
-          <progress id="report" value="20" max="100"></progress></div><br>
+         <span class="prg-title"> Website Progress: 24%</span><br>
+          <progress id="report" value="24" max="100"></progress></div><br>
     </div>
 
 
@@ -375,25 +374,6 @@
 
 <div id="explore"></div>
 <script>
-function stats(){
-var x = document.getElementById("stats");
-if (x.style.display == "none"){
-x.style.display = "block";
-}else{
-x.style.display = "none";
-}
-}
-
-var name = "Om Lokhande | Akash Mhais | Prashant Londhe | Ruchika Mapari";
-var roll = "73, 74, 75, 76";
-var branch = "Mechanical Department";
-var img = "img/3.jpg";
-// img.setAttribute("src", "img/ds.jpg");
-document.getElementById("grp-img").innerHTML = '<img src="' + img + '" class="grp-img">';
-document.getElementById("grp-nme").innerHTML = name;
-document.getElementById("grp-roll").innerHTML = roll;
-document.getElementById("grp-brh").innerHTML = branch;
-
     function generations(){window.location.href = "generations.html";}
     function expanded(){window.location.href = "expanded.html";}
     function jaguarInfo(){window.location.href = "https://en.wikipedia.org/wiki/Land_Rover";}

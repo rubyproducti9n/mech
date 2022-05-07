@@ -13,7 +13,7 @@
                   </a>\
               </li> \
               <li class="nav-link" onclick="pricing()">\
-               <a class="link"> <i class="fa fa-shapes nav-ic"></i>\
+               <a class="link"> <i class="fa fa-dollar-sign nav-ic"></i>\
                    <span class="nav-strg">Pricing</span>\
                  </a>\
            </li> \
@@ -69,5 +69,11 @@ document.getElementById("grp-roll").innerHTML = roll;
 document.getElementById("grp-brh").innerHTML = branch;
 
 
-var title = "Name";
-document.getElementById("pg-title").innerHTML = title;
+function stats(){
+    var x = document.getElementById("stats");
+    if (x.style.display == "none"){
+    x.style.display = "block";
+    }else{
+    x.style.display = "none";
+    }
+    }

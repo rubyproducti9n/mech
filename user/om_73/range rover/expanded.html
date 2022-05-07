@@ -119,6 +119,49 @@
             font-style: normal;
             font-display: normal;
         }
+        .options{
+            padding: 0 10px;
+            margin: 10px 0;
+            border: 2px rgba(0, 0, 0, 0) solid;
+        }
+        .mech-btn{
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 0px;
+            font-size: 10px;
+            font-weight: 400;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+            color: #fff;
+            border: 2px var(--transparent) solid;
+            background: var(--richColor);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.1s ease;
+        }
+        .mech-btn:hover{
+            color: var(--richColor);
+            border: 2px var(--richColor) solid;
+            background: #efc39700;
+        }
+        .divider{
+            margin: 0 10px;
+            margin-top: 80px;
+            padding: 1px 20px;
+            color: var(--white);
+            background: var(--richColor);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+        }
+        .sm-info{
+            color: var(--black);
+            text-decoration: none;
+        }
+        .sm-info:hover{
+            color: var(--black);
+            text-decoration: underline;
+        }
         @media screen and (max-width: 768px) {
             center h1{
                 color: #e0b68c;
@@ -180,6 +223,32 @@
                 font-style: normal;
                 font-display: normal;
             }
+            .options{
+                padding: 0 10px;
+                margin: 10px 0;
+                border: 2px rgba(0, 0, 0, 0) solid;
+            }
+            .mech-btn{
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 0 10px;
+                border-radius: 0px;
+                font-size: 8px;
+                font-weight: 400;
+                font-family: 'Cinzel', serif;
+                letter-spacing: 1px;
+                color: #fff;
+                border: 2px var(--transparent) solid;
+                background: var(--richColor);
+                text-decoration: none;
+                cursor: pointer;
+                transition: all 0.1s ease;
+            }
+            .mech-btn:hover{
+                color: var(--richColor);
+                border: 2px var(--richColor) solid;
+                background: #efc39700;
+            }
         }
     </style>
 </head>
@@ -202,7 +271,7 @@
             </div>
             <div class="exp-sec">
                 <h4>Engine and Transmission</h4>
-                • Transmission Type: Automatic<br>
+                • Transmission Type: <a class="sm-info" href="#automatic"> Automatic </a><br>
                 • Engine: Diesel Engine<br>
                 • Engine Type: Diesel Engine<br>
                 • Gear Box: 9-speed automatic <br>
@@ -219,6 +288,7 @@
             • Breakes: Disc Brakes<br>
             • Seating Capacity: 5 <br>
             • Body Type: SUV <br>
+            • Company: Jaguar - A Tata Company <br>
             <h4>Key Features</h4>
             <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
             <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
@@ -226,6 +296,10 @@
             <div class="price-tg">
             <h2>Price: Rs.69.99 Lakh*</h2>
             </div>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
         </div>
     </div>
     <div class="exp-container">
@@ -243,7 +317,7 @@
                 <h4>Engine and Transmission</h4>
                 • Transmission Type: Automatic<br>
                 • Engine: Petrol Engine <br>
-                • Engine Type: TD4 Engine<br>
+                • Engine Type: <a class="sm-info" href="#TD4Engine">  TD4 Engine </a><br>
                 • Gear Box: 8 Automatic Transmission<br>
             </div>
             <div class="exp-sec">
@@ -258,6 +332,7 @@
             • Brakes: Disc Braks<br>
             • Seating Capacity: 5<br>
             • Body Type: SUV<br>
+            • Company: Jaguar - A Tata Company <br>
             <h4>Key Features</h4>
             <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
             <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
@@ -266,11 +341,191 @@
             <h2>Price: Rs.86.75 - 86.81 Lakh*</h2>
             </div>
         </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
+        </div>
     </div>
     <div class="exp-container">
-        <img class="exp-img" src="img/rr-1.webp" draggable="false"><br>
+        <img class="exp-img" src="https://cdn.wallpapersafari.com/9/16/SQumZH.jpg" draggable="false"><br>
         <div class="exp-details">
-            <h1>Model Name</h1>
+            <h1>Range Rover Discovery</h1>
+            <div class="rating">
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star-half ic-rate"></i> 3.5 Ratings
+            </div>
+            <div class="exp-sec">
+                <h4>Engine and Transmission</h4>
+                • Transmission Type: Automatic<br>
+                • Engine: Petrol Engine<br>
+                • Engine Type: 3.0 Litre Petrol Engine<br>
+                • Gear Box: 8-Speed Automatic Transmission<br>
+            </div>
+            <div class="exp-sec">
+                <h4>Fuel & Performance</h4>
+                • Fuel Type: Petrol <br>
+                • Fuel Tank Capacity (Litres): <br>
+                • Acceleration: 8 Seconds<br>
+                • Top Speed (Kmph): 191 <br>
+            </div>
+            <h4>More Info</h4>
+            • Ground Clearence: 291mm<br>
+            • Breakes: Twin piston sliding fist caliper<br>
+            • Seating Capacity: 6, 7<br>
+            • Body Type: SUV<br>
+            <h4>Key Features</h4>
+            <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
+            <div class="price-tg">
+            <h2>Price: Rs.80.72 Lakh - 1.22 Cr* </h2>
+            </div>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="exp-container">
+        <img class="exp-img" src="https://wallpaperfx.com/view_image/gorgeous-white-range-rover-sport-1280x720-wallpaper-15367.jpg" draggable="false"><br>
+        <div class="exp-details">
+            <h1>Range Rover Sport</h1>
+            <div class="rating">
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star-half ic-rate"></i> 4.5 Ratings
+            </div>
+            <div class="exp-sec">
+                <h4>Engine and Transmission</h4>
+                • Transmission Type: Automatic<br>
+                • Engine: Petrol Engine<br>
+                • Engine Type: V-Type Engine<br>
+                • Gear Box: 8 Speed<br>
+            </div>
+            <div class="exp-sec">
+                <h4>Fuel & Performance</h4>
+                • Fuel Type: Petrol<br>
+                • Fuel Tank Capacity (Litres): <br>
+                • Acceleration: 4.7 Seconds<br>
+                • Top Speed (Kmph): 260<br>
+            </div>
+            <h4>More Info</h4>
+            • Ground Clearence: 213mm<br>
+            • Breakes: Ventilated Disc<br>
+            • Seating Capacity: 5<br>
+            • Body Type: SUV<br>
+            <h4>Key Features</h4>
+            <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
+            <div class="price-tg">
+            <h2>Price: Rs.91.27 Lakh - 2.19 Cr*</h2>
+            </div>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+
+    <div class="divider">
+        <h3>Other Jaguar Models</h3>
+    </div>
+
+    <div class="exp-container">
+        <img class="exp-img" src="https://www.team-bhp.com/sites/default/files/styles/amp_high_res/public/Jag_F-PACE_%20Exterior%201.jpg" draggable="false"><br>
+        <div class="exp-details">
+            <h1>Jaguar F-Pace</h1>
+            <div class="rating">
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star-half ic-rate"></i> 4.5 Ratings
+            </div>
+            <div class="exp-sec">
+                <h4>Engine and Transmission</h4>
+                • Transmission Type: Automatic <br>
+                • Engine: Petrol Engine<br>
+                • Engine Type: <a class="sm-info" href="#5.0V8SuperchargedP550SVR">  5.0 V8 Supercharged P550 SVR </a> <br>
+                • Gear Box: 8-speed automatic<br>
+            </div>
+            <div class="exp-sec">
+                <h4>Fuel & Performance</h4>
+                • Fuel Type: Petrol<br>
+                • Fuel Tank Capacity (Litres): 82.0<br>
+                • Acceleration: 4.0 Seconds<br>
+                • Top Speed (Kmph): 286<br>
+            </div>
+            <h4>More Info</h4>
+            • Ground Clearence: Unknown<br>
+            • Breakes:Ventilated Disc <br>
+            • Seating Capacity: 5<br>
+            • Body Type: SUV<br>
+            <h4>Key Features</h4>
+            <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
+            <div class="price-tg">
+            <h2>Price: </h2>
+            </div>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="exp-container">
+        <img class="exp-img" src="https://wallpapershome.com/images/wallpapers/jaguar-f-type-1280x720-coupe-white-startech-5950.jpeg" draggable="false"><br>
+        <div class="exp-details">
+            <h1>Jaguar F-Type Coupe</h1>
+            <div class="rating">
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star-half ic-rate"></i> 4.5 Ratings
+            </div>
+            <div class="exp-sec">
+                <h4>Engine and Transmission</h4>
+                • Transmission Type: Automatic<br>
+                • Engine: Petrol Engine<br>
+                • Engine Type: <a class="sm-info" href="#P450PetrolEngine">   P450 Petrol Engine </a><br>
+                • Gear Box: 8 Speed<br>
+            </div>
+            <div class="exp-sec">
+                <h4>Fuel & Performance</h4>
+                • Fuel Type: Petrol<br>
+                • Fuel Tank Capacity (Litres): 70.0<br>
+                • Acceleration: 4.6sec <br>
+                • Top Speed (Kmph): 285<br>
+            </div>
+            <h4>More Info</h4>
+            • Ground Clearence: 100mm<br>
+            • Breakes: Disc<br>
+            • Seating Capacity: 2<br>
+            • Body Type: Coupe<br>
+            <h4>Key Features</h4>
+            <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
+            <div class="price-tg">
+            <h2>Price: </h2>
+            </div>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="exp-container">
+        <img class="exp-img" src="https://cdn.motor1.com/images/mgl/RBe9P/s3/2020-jaguar-xe.jpg" draggable="false"><br>
+        <div class="exp-details">
+            <h1>Jaguar XE</h1>
             <div class="rating">
                 <i class="fa fa-star ic-rate"></i>
                 <i class="fa fa-star ic-rate"></i>
@@ -302,8 +557,12 @@
             <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
             <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
             <div class="price-tg">
-            <h2>Price: </h2>
+            <h2>Price: Rs.46.64 - 48.50 Lakh*</h2>
             </div>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
         </div>
     </div>
     <div class="exp-container">
@@ -343,6 +602,96 @@
             <div class="price-tg">
             <h2>Price: </h2>
             </div>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="exp-container">
+        <img class="exp-img" src="img/rr-1.webp" draggable="false"><br>
+        <div class="exp-details">
+            <h1>Model Name</h1>
+            <div class="rating">
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star-half ic-rate"></i> 4.5 Ratings
+            </div>
+            <div class="exp-sec">
+                <h4>Engine and Transmission</h4>
+                • Transmission Type: <br>
+                • Engine: <br>
+                • Engine Type: <br>
+                • Gear Box: <br>
+            </div>
+            <div class="exp-sec">
+                <h4>Fuel & Performance</h4>
+                • Fuel Type: <br>
+                • Fuel Tank Capacity (Litres): <br>
+                • Acceleration: <br>
+                • Top Speed: <br>
+            </div>
+            <h4>More Info</h4>
+            • Ground Clearence: <br>
+            • Breakes: <br>
+            • Seating Capacity: <br>
+            • Body Type: <br>
+            <h4>Key Features</h4>
+            <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
+            <div class="price-tg">
+            <h2>Price: </h2>
+            </div>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="exp-container">
+        <img class="exp-img" src="img/rr-1.webp" draggable="false"><br>
+        <div class="exp-details">
+            <h1>Model Name</h1>
+            <div class="rating">
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star-half ic-rate"></i> 4.5 Ratings
+            </div>
+            <div class="exp-sec">
+                <h4>Engine and Transmission</h4>
+                • Transmission Type: <br>
+                • Engine: <br>
+                • Engine Type: <br>
+                • Gear Box: <br>
+            </div>
+            <div class="exp-sec">
+                <h4>Fuel & Performance</h4>
+                • Fuel Type: <br>
+                • Fuel Tank Capacity (Litres): <br>
+                • Acceleration: <br>
+                • Top Speed: <br>
+            </div>
+            <h4>More Info</h4>
+            • Ground Clearence: <br>
+            • Breakes: <br>
+            • Seating Capacity: <br>
+            • Body Type: <br>
+            <h4>Key Features</h4>
+            <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
+            <div class="price-tg">
+            <h2>Price: </h2>
+            </div>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+            <a href="#" class="mech-btn"> View More <i class="fa fa-chevron-right"></i></a>
         </div>
     </div>
 
