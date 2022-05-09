@@ -33,10 +33,10 @@
         width: 20px;
     }
     .home{
-        display: none;
+        display: block;
     }
     .maintain-container{
-        display: block;
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
