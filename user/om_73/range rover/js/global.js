@@ -23,9 +23,9 @@ div.innerHTML = '\
                    <span class="nav-strg">Pricing</span>\
                  </a>\
            </li> \
-              <li class="nav-link" onclick="generations()">\
+              <li class="nav-link" onclick="expanded()">\
                   <a class="link"> <i class="fa fa-bus nav-ic"></i>\
-                      <span class="nav-strg">Generations</span>\
+                      <span class="nav-strg">Expanded</span>\
                     </a>\
               </li>\
               <li class="nav-link" onclick="home()">\
@@ -87,16 +87,29 @@ var roll = "73, 74, 75, 76";
 var branch = "Mechanical";
 var img = "img/3.jpg";
 // img.setAttribute("src", "img/ds.jpg");
-document.getElementById("grp-img").innerHTML = '<img src="' + img + '" class="grp-img">';
+document.getElementById("grp-img").innerHTML = '<img src="' + img + '" class="grp-img" draggable="false">';
 document.getElementById("grp-nme").innerHTML = name;
 document.getElementById("grp-roll").innerHTML = roll;
 document.getElementById("grp-brh").innerHTML = branch;
 
 function stats() {
     var x = document.getElementById("stats");
-    if (x.style.display == "none") {
-        x.style.display = "block";
+    // x.style.position = "absolute";
+    // x.style.bottom = "20px";
+    // x.style.transition = "0.5s ease";
+    if (x.style.bottom == "-620px") {
+        x.style.bottom = "20px";
+        x.style.transition = "0.5s ease";
     } else {
-        x.style.display = "none";
+        x.style.bottom = "-620px";
+        x.style.transition = "0.5s ease";
     }
+    // if (x.style.display == "none") {
+    //     x.style.display = "block";
+    // } else {
+    //     x.style.display = "none";
+    // }
 }
+
+var globalImg = document.getElementsByTagName("img");
+globalImg.setAttribute("draggable", "false");
