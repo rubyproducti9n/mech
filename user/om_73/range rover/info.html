@@ -229,6 +229,80 @@
             text-indent: 30px;
             font-family: 'Jost', sans-serif;
         }
+        .min-cont{
+            margin-left: 30px;
+        }
+        .insta-handle{
+            position: relative;
+            display: inline-block;
+            border: 2px rgba(0, 0, 0, 0) solid;
+            padding: 10px 20px;
+            margin: 0 5px;
+            width: fit-content;
+            color: var(--white);
+            background-color: var(--richColor);
+            font-family: 'Jost', sans-serif;
+            overflow: hidden;
+        }
+        .insta-handle::before{
+            position: absolute;
+            bottom: 0;
+            left: 0px;
+            text-align: center;
+            color: var(--white);
+            background-color: var(--richColor);
+            content: " 73 ";
+            padding: 10px 0px;
+            width: 100%;
+            overflow: visible;
+            transition: all 0.9s ease;
+        }
+        .insta-handle:nth-child(1)::before{
+            content: " 73 ";
+        }
+        .insta-handle:nth-child(2)::before{
+            content: " 74 ";
+        }
+        .insta-handle:nth-child(3)::before{
+            content: " 75 ";
+        }
+        .insta-handle:nth-child(4)::before{
+            content: " 76 ";
+        }
+        .insta-handle::after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            color: var(--richColor);
+            background-color: var(--white);
+            content: " Social ";
+            padding: 10px 0px;
+            width: 100%;
+            transition: 0.4s  ease;
+        }
+        .insta-handle:nth-child(1)::after{
+            content: " Om Lokhande ";
+        }
+        .insta-handle:nth-child(2)::after{
+            content: " Prashant Londhe ";
+        }
+        .insta-handle:nth-child(3)::after{
+            content: " Ruchika Mapari ";
+        }
+        .insta-handle:nth-child(4)::after{
+            content: " Akash Mhais ";
+        }
+        .insta-handle:hover::after{
+            padding-top: 90px;
+            bottom: -160px;
+            transition: 1.3s ease;
+        }
+      /*  .insta-handle:hover{
+            color: var(--richColor);
+            background-color: var(--white);
+            border: 2px var(--richColor) solid;
+        }*/
 @media screen and (max-width: 768px) {
     body{opacity: 1;}
     .nav-ic{display: block;}
@@ -354,6 +428,48 @@
         progress::-webkit-progress-value{
             background-color: var(--richColor);
         }
+        .insta-handle{
+            position: relative;
+            display: inline-block;
+            border: 2px rgba(0, 0, 0, 0) solid;
+            padding: 10px 20px;
+            margin: 3px 5px;
+            width: 70%;
+            color: var(--white);
+            background-color: var(--richColor);
+            font-family: 'Jost', sans-serif;
+            overflow: hidden;
+        }
+        .insta-handle::before{
+            position: absolute;
+            bottom: 0;
+            left: 0px;
+            text-align: center;
+            color: var(--white);
+            background-color: var(--richColor);
+            content: " 73 ";
+            padding: 10px 0px;
+            width: 100%;
+            overflow: visible;
+            transition: all 0.9s ease;
+        }
+        .insta-handle::after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            color: var(--richColor);
+            background-color: var(--white);
+            content: " Social ";
+            padding: 10px 0px;
+            width: 100%;
+            transition: 0.4s  ease;
+        }
+        .insta-handle:hover::after{
+            padding-top: 90px;
+            bottom: -160px;
+            transition: 0.6s ease;
+        }
 }
     </style>
 </head>
@@ -451,8 +567,14 @@
         <div class="grp-sub-container">
             <h4>Group Info:</h4>
 
-        <div id="grp-nme1" class="grp-info">Group members : Om, Akash, Prashant & Ruchika</div>
-        <div id="grp-nme1" class="grp-info">Roll No. : 73, 74, 75, 76</div>
+        <div id="grp-nme1" class="grp-info">Group members</div>
+            <div class="min-cont">
+            <div class="insta-handle">Om Lokhande</div>
+            <div class="insta-handle">Om Lokhande</div>
+            <div class="insta-handle">Om Lokhande</div>
+            <div class="insta-handle">Om Lokhande</div>
+        </div>
+        <!-- <div id="grp-nme1" class="grp-info">Roll No. : 73, 74, 75, 76</div> -->
         <div id="grp-nme1" class="grp-info">Report by Om Lokhande</div>
         <div id="grp-mem1" class="grp-info">Presentaion by Akash Mhais</div>
         <div id="grp-roll1" class="grp-info">Website by Om Lokhande</div>
