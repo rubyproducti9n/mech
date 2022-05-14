@@ -7,9 +7,503 @@
 <link rel="icon" href="img/favicon.png" sizes="16x16 32x32" type="image/png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <title>Group Info</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&display=swap');@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Whisper&display=swap');@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=Comfortaa:wght@700&family=Raleway:wght@800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Raleway:wght@200&display=swap');@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Josefin+Sans&family=Raleway:wght@800&display=swap');body{display:block;color:rgb(0,0,0);background:rgb(255,255,255);user-select:none}h1{position:relative;color:var(--richColor);font-family:'Cinzel',serif;letter-spacing:1px;text-shadow:0 0 10px rgba(255,0,0,0);padding:10px 20px;border-bottom:2px rgba(214,214,214,0) solid;font-size:40px;margin:15%;height:30vh}.nav-ic{display:none}.nav-strg{display:block}.grp-info-container{border-radius:6px;margin:40px 0;padding:10px 20px;border:0px #808080d2 solid;font-family:'Jost',sans-serif;letter-spacing:0.5px}.grp-img{float:right;width:20%;border-right:0px #242424 solid;border-radius:0px;width:10%;transform:rotate(-2deg)}.grp-info{position:relative;border:4px #24242400 solid;margin:0px 0px;width:fit-content;padding:10px 20px;font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif}.grp-info::after{position:absolute;content:"";width:4px;height:0%;background:#e0b68c;border-radius:0px;left:0;bottom:50%;transition:all 0.3s ease}.grp-info:hover::after{width:4px;height:100%;bottom:0%}center h4{border-top:2px rgba(0,0,0,0) solid;margin-top:0px;padding-top:50px;font-family:'Jost',sans-serif;letter-spacing:1px}.qr{width:15%;border-radius:6px;box-shadow:0 0 10px rgba(0,0,0,0.185)}.sc-img{float:left;padding:0 10px;width:10.8%}.sc-link{position:relative;display:inline-block;width:16%;margin:0px 0px;padding:10px 40px;border-bottom:4px #dadada00 solid;cursor:pointer;font-family:'Jost',sans-serif}.sc-link::after{position:absolute;content:"";width:0%;height:4px;background:#e0b68c;left:50%;bottom:-10px;transition:all 0.3s ease}.sc-link:hover::after{width:100%;left:0}center h4{font-weight:normal;font-display:normal;font-style:normal}.prg-container{position:fixed;bottom:-620px;left:20px;display:block;padding:10px 20px;width:50%;background-color:rgba(255,255,255,0.562);backdrop-filter:blur(14px);border:2px rgba(0,0,0,0) solid;border-radius:6px;box-shadow:3px 3px 10px rgba(61,61,61,0.233);z-index:9}.prg-container h2{color:#494949;font-family:'Cinzel',serif;letter-spacing:2px;text-shadow:1px 1px 4px rgba(0,0,0,0.2)}h6{color:#aeaeae;font-family:'Jost',sans-serif;letter-spacing:0.5px;margin-top:-18px;margin-left:6px;text-shadow:1px 1px 4px rgba(0,0,0,0)}.prg{padding:10px 20px;border:2px rgba(0,0,0,0) solid}.prg-title{font-family:'Jost',sans-serif}progress{border-radius:0px;width:80%;height:10px;box-shadow:1px 1px 4px rgba(0,0,0,0.2)}progress::-webkit-progress-bar{background-color:rgb(242,242,242)}progress::-webkit-progress-value{background-color:var(--richColor)}.jag-container{border:2px rgba(0,0,0,0) solid;padding:20px}.jag-container img{float:right;width:13%;margin:20px;transform:rotate(3deg)}.jag-container h2{color:var(--richColor);font-family:'Cinzel',serif;letter-spacing:2px;text-shadow:0 0 3px rgba(160,160,160,0.281)}.jag-info{line-height:29px;text-indent:30px;font-family:'Jost',sans-serif}.min-cont{margin-left:30px}.insta-handle{position:relative;display:inline-block;border:2px rgba(0,0,0,0) solid;padding:10px 20px;margin:0 5px;width:fit-content;color:var(--white);background-color:var(--richColor);font-family:'Jost',sans-serif;overflow:hidden;cursor:pointer}.insta-handle::before{position:absolute;bottom:0;left:0px;text-align:center;color:var(--white);background-color:var(--richColor);content:"73";padding:10px 0px;width:100%;overflow:visible;transition:all 0.9s ease}.insta-handle:nth-child(1)::before{content:"Report & Website"}.insta-handle:nth-child(2)::before{content:"Info Analysis"}.insta-handle:nth-child(3)::before{content:"Data Collector"}.insta-handle:nth-child(4)::before{content:"Presentation"}.insta-handle::after{position:absolute;bottom:0;left:0;text-align:center;color:var(--richColor);background-color:var(--white);content:"Social";padding:10px 0px;width:100%;transition:0.5s ease}.insta-handle:nth-child(1)::after{content:"Om Lokhande"}.insta-handle:nth-child(2)::after{content:"Prashant Londhe"}.insta-handle:nth-child(3)::after{content:"Ruchika Mapari"}.insta-handle:nth-child(4)::after{content:"Akash Mhais"}.insta-handle:hover::after{padding-top:90px;bottom:-160px;transition:0.7s ease}@media screen and(max-width:768px){body{opacity:1}.nav-ic{display:block}.nav-strg{display:none}.grp-info-container{border-radius:6px;margin:40px 0;padding:10px 20px;border:2px #80808000 solid;font-family:'Jost',sans-serif;letter-spacing:0.5px}.grp-img{float:right;border-right:0px #242424 solid;border-radius:0px;width:20%;opacity:1;transform:rotate(-2deg)}.grp-info{position:relative;border:4px #24242400 solid;margin:0px 0px;width:fit-content;padding:5px 10px;font-size:12px;font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif}.grp-info::after{position:absolute;content:"";width:4px;height:100%;background:#e0b68c00;border-radius:20px;left:0;bottom:0%;transition:all 0.1s ease}.grp-info:hover::after{background:#e0b68c;width:4px;left:0%}center h4{border-top:2px rgba(0,0,0,0) solid;margin-top:0px;padding-top:50px;font-family:'Jost',sans-serif;letter-spacing:1px}.qr{width:50%;border-radius:6px;box-shadow:0 0 10px rgba(0,0,0,0.185)}.sc-img{float:left;padding:0 10px;width:10.8%}.sc-link{position:relative;display:inline-block;width:64%;margin:10px 0;padding:10px 40px;border-bottom:4px #dadada00 solid;cursor:pointer}.sc-link::after{position:absolute;content:"";width:0%;height:4px;background:#e0b68c;left:50%;bottom:-10px;transition:all 0.3s ease}.sc-link:hover::after{width:100%;left:0}.prg-container{position:fixed;bottom:-620px;left:20px;display:block;width:76%;padding:10px 20px;border:2px rgba(0,0,0,0) solid}.prg-container h2{color:#494949;font-family:'Cinzel',serif;letter-spacing:2px;text-shadow:1px 1px 4px rgba(0,0,0,0.2)}h6{color:#494949;font-family:'Cinzel',serif;letter-spacing:2px;text-shadow:1px 1px 4px rgba(0,0,0,0.2)}.prg{padding:10px 0px;border:2px rgba(0,0,0,0) solid}.prg-title{font-family:'Jost',sans-serif}progress{border-radius:0px;width:100%;height:10px;box-shadow:1px 1px 4px rgba(0,0,0,0.2)}progress::-webkit-progress-bar{background-color:rgb(232,232,232)}progress::-webkit-progress-value{background-color:var(--richColor)}.insta-handle{position:relative;display:inline-block;border:2px rgba(0,0,0,0) solid;padding:10px 20px;margin:3px 5px;width:70%;color:var(--white);background-color:var(--richColor);font-family:'Jost',sans-serif;overflow:hidden}.insta-handle::before{position:absolute;bottom:0;left:0px;text-align:center;color:var(--white);background-color:var(--richColor);content:"73";padding:10px 0px;width:100%;overflow:visible;transition:all 0.9s ease}.insta-handle::after{position:absolute;bottom:0;left:0;text-align:center;color:var(--richColor);background-color:var(--white);content:"Social";padding:10px 0px;width:100%;transition:0.4s ease}.insta-handle:hover::after{padding-top:90px;bottom:-160px;transition:0.6s ease}}
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=Comfortaa:wght@700&family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Josefin+Sans&family=Raleway:wght@800&display=swap');
+
+body {
+    display: block;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    user-select: none
+}
+
+h1 {
+    position: relative;
+    color: var(--richColor);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0);
+    padding: 10px 20px;
+    border-bottom: 2px rgba(214, 214, 214, 0) solid;
+    font-size: 40px;
+    margin: 15%;
+    height: 30vh
+}
+
+.nav-ic {
+    display: none
+}
+
+.nav-strg {
+    display: block
+}
+
+.grp-info-container {
+    border-radius: 6px;
+    margin: 40px 0;
+    padding: 10px 20px;
+    border: 0px #808080d2 solid;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.5px
+}
+
+.grp-img {
+    float: right;
+    width: 20%;
+    border-right: 0px #242424 solid;
+    border-radius: 0px;
+    width: 10%;
+    transform: rotate(-2deg)
+}
+
+.grp-info {
+    position: relative;
+    border: 4px #24242400 solid;
+    margin: 0px 0px;
+    width: fit-content;
+    padding: 10px 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.grp-info::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 0%;
+    background: #e0b68c;
+    border-radius: 0px;
+    left: 0;
+    bottom: 50%;
+    transition: all 0.3s ease
+}
+
+.grp-info:hover::after {
+    width: 4px;
+    height: 100%;
+    bottom: 0%
+}
+
+center h4 {
+    border-top: 2px rgba(0, 0, 0, 0) solid;
+    margin-top: 0px;
+    padding-top: 50px;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 1px
+}
+
+.qr {
+    width: 15%;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.185)
+}
+
+.sc-img {
+    float: left;
+    padding: 0 10px;
+    width: 10.8%
+}
+
+.sc-link {
+    position: relative;
+    display: inline-block;
+    width: 16%;
+    margin: 0px 0px;
+    padding: 10px 40px;
+    border-bottom: 4px #dadada00 solid;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif
+}
+
+.sc-link::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 4px;
+    background: #e0b68c;
+    left: 50%;
+    bottom: -10px;
+    transition: all 0.3s ease
+}
+
+.sc-link:hover::after {
+    width: 100%;
+    left: 0
+}
+
+center h4 {
+    font-weight: normal;
+    font-display: normal;
+    font-style: normal
+}
+
+.prg-container {
+    position: fixed;
+    bottom: -620px;
+    left: 20px;
+    display: block;
+    padding: 10px 20px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.562);
+    backdrop-filter: blur(14px);
+    border: 2px rgba(0, 0, 0, 0) solid;
+    border-radius: 6px;
+    box-shadow: 3px 3px 10px rgba(61, 61, 61, 0.233);
+    z-index: 9
+}
+
+.prg-container h2 {
+    color: #494949;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2)
+}
+
+h6 {
+    color: #aeaeae;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.5px;
+    margin-top: -18px;
+    margin-left: 6px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0)
+}
+
+.prg {
+    padding: 10px 20px;
+    border: 2px rgba(0, 0, 0, 0) solid
+}
+
+.prg-title {
+    font-family: 'Jost', sans-serif
+}
+
+progress {
+    border-radius: 0px;
+    width: 80%;
+    height: 10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2)
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgb(242, 242, 242)
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--richColor)
+}
+
+.jag-container {
+    border: 2px rgba(0, 0, 0, 0) solid;
+    padding: 20px
+}
+
+.jag-container img {
+    float: right;
+    width: 13%;
+    margin: 20px;
+    transform: rotate(3deg)
+}
+
+.jag-container h2 {
+    color: var(--richColor);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px rgba(160, 160, 160, 0.281)
+}
+
+.jag-info {
+    line-height: 29px;
+    text-indent: 30px;
+    font-family: 'Jost', sans-serif
+}
+
+.min-cont {
+    margin-left: 30px
+}
+
+.insta-handle {
+    position: relative;
+    display: inline-block;
+    border: 2px rgba(0, 0, 0, 0) solid;
+    padding: 10px 20px;
+    margin: 0 5px;
+    width: fit-content;
+    color: var(--white);
+    background-color: var(--richColor);
+    font-family: 'Jost', sans-serif;
+    overflow: hidden;
+    cursor: pointer
+}
+
+.insta-handle::before {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--richColor);
+    content: "73";
+    padding: 10px 0px;
+    width: 100%;
+    overflow: visible;
+    transition: all 0.9s ease
+}
+
+.insta-handle:nth-child(1)::before {
+    content: "Report & Website"
+}
+
+.insta-handle:nth-child(2)::before {
+    content: "Info Analysis"
+}
+
+.insta-handle:nth-child(3)::before {
+    content: "Data Collector"
+}
+
+.insta-handle:nth-child(4)::before {
+    content: "Presentation"
+}
+
+.insta-handle::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: var(--richColor);
+    background-color: var(--white);
+    content: "Social";
+    padding: 10px 0px;
+    width: 100%;
+    transition: 0.5s ease
+}
+
+.insta-handle:nth-child(1)::after {
+    content: "Om Lokhande"
+}
+
+.insta-handle:nth-child(2)::after {
+    content: "Prashant Londhe"
+}
+
+.insta-handle:nth-child(3)::after {
+    content: "Ruchika Mapari"
+}
+
+.insta-handle:nth-child(4)::after {
+    content: "Akash Mhais"
+}
+
+.insta-handle:hover::after {
+    padding-top: 90px;
+    bottom: -160px;
+    transition: 0.7s ease
+}
+
+@media screen and(max-width:768px) {
+    body {
+        opacity: 1
+    }
+
+    .nav-ic {
+        display: block
+    }
+
+    .nav-strg {
+        display: none
+    }
+
+    .grp-info-container {
+        border-radius: 6px;
+        margin: 40px 0;
+        padding: 10px 20px;
+        border: 2px #80808000 solid;
+        font-family: 'Jost', sans-serif;
+        letter-spacing: 0.5px
+    }
+
+    .grp-img {
+        float: right;
+        border-right: 0px #242424 solid;
+        border-radius: 0px;
+        width: 20%;
+        opacity: 1;
+        transform: rotate(-2deg)
+    }
+
+    .grp-info {
+        position: relative;
+        border: 4px #24242400 solid;
+        margin: 0px 0px;
+        width: fit-content;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    .grp-info::after {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 100%;
+        background: #e0b68c00;
+        border-radius: 20px;
+        left: 0;
+        bottom: 0%;
+        transition: all 0.1s ease
+    }
+
+    .grp-info:hover::after {
+        background: #e0b68c;
+        width: 4px;
+        left: 0%
+    }
+
+    center h4 {
+        border-top: 2px rgba(0, 0, 0, 0) solid;
+        margin-top: 0px;
+        padding-top: 50px;
+        font-family: 'Jost', sans-serif;
+        letter-spacing: 1px
+    }
+
+    .qr {
+        width: 50%;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.185)
+    }
+
+    .sc-img {
+        float: left;
+        padding: 0 10px;
+        width: 10.8%
+    }
+
+    .sc-link {
+        position: relative;
+        display: inline-block;
+        width: 64%;
+        margin: 10px 0;
+        padding: 10px 40px;
+        border-bottom: 4px #dadada00 solid;
+        cursor: pointer
+    }
+
+    .sc-link::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 4px;
+        background: #e0b68c;
+        left: 50%;
+        bottom: -10px;
+        transition: all 0.3s ease
+    }
+
+    .sc-link:hover::after {
+        width: 100%;
+        left: 0
+    }
+
+    .prg-container {
+        position: fixed;
+        bottom: -620px;
+        left: 20px;
+        display: block;
+        width: 76%;
+        padding: 10px 20px;
+        border: 2px rgba(0, 0, 0, 0) solid
+    }
+
+    .prg-container h2 {
+        color: #494949;
+        font-family: 'Cinzel', serif;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2)
+    }
+
+    h6 {
+        color: #494949;
+        font-family: 'Cinzel', serif;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2)
+    }
+
+    .prg {
+        padding: 10px 0px;
+        border: 2px rgba(0, 0, 0, 0) solid
+    }
+
+    .prg-title {
+        font-family: 'Jost', sans-serif
+    }
+
+    progress {
+        border-radius: 0px;
+        width: 100%;
+        height: 10px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2)
+    }
+
+    progress::-webkit-progress-bar {
+        background-color: rgb(232, 232, 232)
+    }
+
+    progress::-webkit-progress-value {
+        background-color: var(--richColor)
+    }
+
+    .insta-handle {
+        position: relative;
+        display: inline-block;
+        border: 2px rgba(0, 0, 0, 0) solid;
+        padding: 10px 20px;
+        margin: 3px 5px;
+        width: 70%;
+        color: var(--white);
+        background-color: var(--richColor);
+        font-family: 'Jost', sans-serif;
+        overflow: hidden
+    }
+
+    .insta-handle::before {
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        text-align: center;
+        color: var(--white);
+        background-color: var(--richColor);
+        content: "73";
+        padding: 10px 0px;
+        width: 100%;
+        overflow: visible;
+        transition: all 0.9s ease
+    }
+
+    .insta-handle::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        color: var(--richColor);
+        background-color: var(--white);
+        content: "Social";
+        padding: 10px 0px;
+        width: 100%;
+        transition: 0.4s ease
+    }
+
+    .insta-handle:hover::after {
+        padding-top: 90px;
+        bottom: -160px;
+        transition: 0.6s ease
+    }
+    }
     </style>
 </head>
 <body>
@@ -85,7 +579,7 @@
     <div class="sc-link"> <img class="sc-img" onclick="rangeTwitter()" src="https://abs.twimg.com/favicons/twitter.2.ico"> Twitter</div>
     <div id="stats" class="prg-container">
         <h2>Total Progress</h2>
-        <h6>Last updated : 13 May 2022 at 11:51 PM</h6>
+        <h6>Last updated : 14 May 2022 at 10:08 PM</h6>
         <div class="prg">
        <span class="prg-title"> Report Progress: 7% </span><br>
         <progress id="report" value="7" max="100"></progress></div><br>
@@ -93,8 +587,8 @@
         <span class="prg-title"> Presentaion Progress: 13%</span><br>
          <progress id="report" value="13" max="100"></progress></div><br>
          <div class="prg">
-         <span class="prg-title"> Website Progress: 39%</span><br>
-          <progress id="report" value="39" max="100"></progress></div><br>
+         <span class="prg-title"> Website Progress: 45%</span><br>
+          <progress id="report" value="45" max="100"></progress></div><br>
     </div>
 
 
@@ -126,7 +620,7 @@
 </center>
 
 
-
+<div id="loading"></div>
 <div id="explore"></div>
 </div>
 <script>function generations(){window.location.href="generations.html"}function expanded(){window.location.href="expanded.html"}function jaguarInfo(){window.location.href="https://en.wikipedia.org/wiki/Land_Rover"}function jagYT(){window.location.href="https://www.youtube.com/c/jaguarcars"}function jagInsta(){window.location.href="https://www.instagram.com/jaguar_india/"}function jagWebsite(){window.location.href="https://www.jaguar.in/index.html"}function jagTwitter(){window.location.href="https://twitter.com/jaguarindia"}function rangeYT(){window.location.href="https://www.youtube.com/user/landrover"}function rangeInsta(){window.location.href="https://www.instagram.com/landrover_in/"}function rangeWebsite(){window.location.href="https://www.landrover.in/index.html"}function rangeTwitter(){window.location.href="https://twitter.com/LandRover?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"}</script>
