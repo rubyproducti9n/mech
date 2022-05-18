@@ -76,8 +76,7 @@
                 let mainContainer = document.getElementById("myData");
                 for (let i = 0; i < data.length; i++) {
                     let div = document.createElement("div");
-                    div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
-                    div.innerHTML = 'Roll No.: ' + data[i].roll;
+                    div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName + '<br>' + 'Roll No.: ' + data[i].roll;
                     mainContainer.appendChild(div);
                 }
             }
