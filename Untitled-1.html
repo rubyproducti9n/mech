@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <title>Document</title>
+    <style>
+
+    </style>
+
+    <script>
+        function load() {
+            var mydata = JSON.parse(person);
+            alert(mydata.length);
+
+            var div = document.getElementById('data');
+
+            for(var i = 0;i < mydata.length; i++)
+            {
+                div.innerHTML = div.innerHTML + "<p class='inner' id="+i+">"+ mydata[i].name +"</p>" + "<br>";
+            }
+        }
+        $(function() {
+
+
+       var people = [];
+
+       $.getJSON('../people.json', function(data) {
+           $.each(data.person, function(i, f) {
+              var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+               "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+               $(tblRow).appendTo("#userdata tbody");
+               tblRow.document.getElementById("tbody");
+         });
+
+       });
+
+    });
+    </script>
+</head>
+<body onload="load()">
+
+    <div class="wrapper">
+        <div class="profile">
+           <table id= "userdata" border="2">
+          <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                    <th>City</th>
+                </thead>
+              <tbody id="sa" class="data">
+
+               </tbody>
+           </table>
+
+        </div>
+        </div>
+        <div id="myData"></div>
+        <script type="text/javascript">
+            fetch('../people.json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    appendData(data);
+                })
+                .catch(function (err) {
+                    console.log('error: ' + err);
+                });
+
+            function appendData(data) {
+                let mainContainer = document.getElementById("myData");
+                for (let i = 0; i < data.length; i++) {
+                    let div = document.createElement("div");
+                    div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName + '<br>' + 'Roll No.: ' + data[i].roll;
+                    mainContainer.appendChild(div);
+                }
+            }
+        </script>
+	<div id="quoteDisplay">
+
+	</div>
+
+    <button onclick="newQuote()">Another one!</button>
+    <!-- <script>
+
+        var quotes = [
+	'Catsy',
+	'Jope',
+	'Nope',
+	'Hey',
+
+]
+
+function newQuote() {
+	var randomNumber = Math.floor(Math.random()*(quotes.length));
+	document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+}
+    </script> -->
+</body>
+</html>
