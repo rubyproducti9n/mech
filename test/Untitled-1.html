@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" language="javascript" src="people.json"></script>
+    <script type="text/javascript" language="javascript" src="https://rubyproducti9n.github.io/mech/test/people.json"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
     <title>Document</title>
     <style>
@@ -77,6 +77,7 @@
                 for (let i = 0; i < data.length; i++) {
                     let div = document.createElement("div");
                     div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
+                    div.innerHTML = 'Roll No.: ' + data[i].roll;
                     mainContainer.appendChild(div);
                 }
             }
