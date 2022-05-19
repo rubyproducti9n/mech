@@ -57,6 +57,8 @@
         </div>
         <script type="text/javascript">
 
+
+
             fetch('../data.json')
                 .then(function (response) {
                     return response.json();
@@ -72,11 +74,17 @@
                 let mainContainer = document.getElementById("st-data");
                 for (let i = 0; i < data.length; i++) {
                     let div = document.createElement("div");
-                    div.innerHTML = 'Name: ' + data[i].id + ' ' + data[i].prImage + '<br>' + 'Roll No.: ' + data[i].fullName;
+                    div.innerHTML =
+                    '<div class="pr-container">\
+                    <div class="pr-img">' + ' ' + data[i].prImage + ' ' +'</div>\
+                    <div class="pr-nme">' + data[i].fullName + '</div>\
+                    <div class="pr-roll">' + data[i].roll + '</div>\
+                    <div class="pr-int">' + data[i].intField + '</div>\
+                    </div>';
+                    //div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName + '<br>' + 'Roll No.: ' + data[i].roll;
                     mainContainer.appendChild(div);
                 }
             }
-
         </script>
 </body>
 </html>
