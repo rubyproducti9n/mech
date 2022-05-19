@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <title>Document</title>
+    <style>
+
+        .pr-container{
+            display: inline-block;
+            border: 2px #000 solid;
+            width: 16%;
+            margin: 10px 20px;
+            overflow: hidden;
+        }
+        .img{
+            width: 100%;
+            border: 2px #000 solid;
+        }
+        .pr-nme, .pr-roll, .pr-int{
+            padding: 5px 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .pr-nme{
+            font-size: 18px;
+        }
+        .pr-roll{
+            font-size: 12px;
+        }
+        .pr-int{
+            font-size: 12px;
+        }
+
+    </style>
+
+</head>
+<body onload="load()">
+
+        <div id="st-data">
+            <!-- <div class="pr-container">
+                <div class="pr-img">
+                    <img class="img" src="../img/profile-avatar.png">
+                </div>
+                <div class="pr-nme">
+                    Your Name Goes Here
+                </div>
+                <div class="pr-roll">
+                    00
+                </div>
+                <div class="pr-int">
+                    None
+                </div>
+            </div> -->
+        </div>
+        <script type="text/javascript">
+            fetch('../data.json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    appendData(data);
+                })
+                .catch(function (err) {
+                    console.log('error: ' + err);
+                });
+
+            function appendData(data) {
+                let mainContainer = document.getElementById("st-data");
+                for (let i = 0; i < data.length; i++) {
+                    let div = document.createElement("div");
+                    div.innerHTML =
+                    '<div class="pr-container">'
+                    '<div class="pr-img">' + data[i].prImage + '</div>'
+                    '<div class="pr-nme">' + data[i].fullName + '</div>'
+                    '<div class="pr-roll">' + data[i].roll + '</div>'
+                    '<div class="pr-int">' + data[i].intField + '</div>'
+                    '</div>';
+                    //div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName + '<br>' + 'Roll No.: ' + data[i].roll;
+                    mainContainer.appendChild(div);
+                }
+            }
+        </script>
+</body>
+</html>
