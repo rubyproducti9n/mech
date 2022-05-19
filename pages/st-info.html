@@ -69,14 +69,13 @@
                 });
 
             function appendData(data) {
-                let mainContainer = document.getElementById("myData");
+                let mainContainer = document.getElementById("st-data");
                 for (let i = 0; i < data.length; i++) {
                     let div = document.createElement("div");
                     div.innerHTML = 'Name: ' + data[i].id + ' ' + data[i].prImage + '<br>' + 'Roll No.: ' + data[i].fullName;
                     mainContainer.appendChild(div);
                 }
             }
-
 
         </script>
 </body>
