@@ -4,13 +4,181 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="dark mode/dark-mode.css">
 <link rel="icon" href="img/favicon.png" sizes="16x16 32x32" type="image/png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <title>Jaguar Land Rover Range Rover - Pricing</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&display=swap');@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Whisper&display=swap');@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=Comfortaa:wght@700&family=Raleway:wght@800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Raleway:wght@200&display=swap');@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Josefin+Sans&family=Raleway:wght@800&display=swap');body{color:rgb(0,0,0);background:rgb(255,255,255);user-select:none}.nav-ic{display:none}.nav-strg{display:block}h1{color:#e0b68c;font-family:'Cinzel',serif;letter-spacing:2px;text-shadow:0 0 10px rgba(255,0,0,0);padding:10px 20px;border-bottom:2px rgba(214,214,214,0) solid;font-size:40px;margin:15%;height:30vh}a{color:aliceblue}.rr-btn{position:relative;color:var(--richColor);font-family:'Cinzel',serif;letter-spacing:2px;cursor:pointer}.rr-btn::after{position:absolute;content:"";width:0%;height:2px;background:#e0b68c;left:50%;bottom:-10px;transition:all 0.4s ease}.rr-btn:hover::after{width:15%;left:42.5%}.container{background-color:#fafafa;box-shadow:5px 5px 5px rgba(65,65,65,0.083);margin:40px 20px;font-family:'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif}.car-detail{float:right;font-family:'Jost',sans-serif;width:78%}.car-img{width:22%}.car-title{color:var(--richColor);text-shadow:0 0 10px rgba;font-family:'Cinzel',serif;letter-spacing:2px;padding:10px 20px;height:fit-content;font-size:20px;font-weight:900;margin:10px 0}.car-info{color:#262626c4;padding:0px 20px;font-size:12px;margin:10px 0}.car-price{color:#181818de;padding:5px 20px;font-size:23px;margin:10px 0}@media screen and (max-width:768px){.nav-ic{display:block}.nav-strg{display:none}.container{background-color:#fafafa00;box-shadow:5px 5px 10px rgba(65,65,65,0);padding:50px 00px;border-bottom:0px #b9b9b9 solid;margin:40px 00px;font-family:'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif}.car-detail{float:right;font-family:'Jost',sans-serif;width:100%}.car-img{width:100%}.car-title{color:var(--richColor);text-shadow:0 0 10px rgba;font-family:'Cinzel',serif;letter-spacing:2px;padding:0px 10px;height:fit-content;border:2px #e0b68c00 solid;font-size:12px;font-weight:900;margin:10px 0}.car-info{color:#262626c4;padding:0px 14px;font-size:10px;margin:10px 0}.car-price{color:#181818de;padding:5px 10px;font-size:13px;margin:10px 0}.know-more{display:none}}
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Whisper&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=Comfortaa:wght@700&family=Raleway:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Raleway:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Josefin+Sans&family=Raleway:wght@800&display=swap');
+
+        body {
+            color: rgb(0, 0, 0);
+            background: rgb(255, 255, 255);
+            user-select: none
+        }
+        .dark-control{
+            display: none;
+        }
+
+        .nav-ic {
+            display: none
+        }
+
+        .nav-strg {
+            display: block
+        }
+
+        h1 {
+            color: #e0b68c;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0);
+            padding: 10px 20px;
+            border-bottom: 2px rgba(214, 214, 214, 0) solid;
+            font-size: 40px;
+            margin: 15%;
+            height: 30vh
+        }
+
+        a {
+            color: aliceblue
+        }
+
+        .rr-btn {
+            position: relative;
+            color: var(--richColor);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            cursor: pointer
+        }
+
+        .rr-btn::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #e0b68c;
+            left: 50%;
+            bottom: -10px;
+            transition: all 0.4s ease
+        }
+
+        .rr-btn:hover::after {
+            width: 15%;
+            left: 42.5%
+        }
+
+        .container {
+            background-color: #fafafa;
+            box-shadow: 5px 5px 5px rgba(65, 65, 65, 0.083);
+            margin: 40px 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        .car-detail {
+            float: right;
+            font-family: 'Jost', sans-serif;
+            width: 78%
+        }
+
+        .car-img {
+            width: 22%
+        }
+
+        .car-title {
+            color: var(--richColor);
+            text-shadow: 0 0 10px rgba;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            padding: 10px 20px;
+            height: fit-content;
+            font-size: 20px;
+            margin: 10px 0
+        }
+
+        .car-info {
+            color: #262626c4;
+            padding: 0px 20px;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 1.2px;
+            font-size: 12px;
+            margin: 10px 0
+        }
+
+        .car-price {
+            color: #181818de;
+            padding: 5px 20px;
+            font-size: 23px;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 1.2px;
+            margin: 10px 0
+        }
+
+        @media screen and (max-width:768px) {
+            .nav-ic {
+                display: block
+            }
+
+            .nav-strg {
+                display: none
+            }
+
+            .container {
+                background-color: #fafafa00;
+                box-shadow: 5px 5px 10px rgba(65, 65, 65, 0);
+                padding: 50px 00px;
+                border-bottom: 0px #b9b9b9 solid;
+                margin: 40px 00px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            }
+
+            .car-detail {
+                float: right;
+                font-family: 'Jost', sans-serif;
+                width: 100%
+            }
+
+            .car-img {
+                width: 100%
+            }
+
+            .car-title {
+                color: var(--richColor);
+                text-shadow: 0 0 10px rgba;
+                font-family: 'Cinzel', serif;
+                letter-spacing: 2px;
+                padding: 0px 10px;
+                height: fit-content;
+                border: 2px #e0b68c00 solid;
+                font-size: 12px;
+                font-weight: 900;
+                margin: 10px 0
+            }
+
+            .car-info {
+                color: #262626c4;
+                padding: 0px 14px;
+                font-size: 10px;
+                margin: 10px 0
+            }
+
+            .car-price {
+                color: #181818de;
+                padding: 5px 10px;
+                font-size: 13px;
+                margin: 10px 0
+            }
+
+            .know-more {
+                display: none
+            }
+        }
     </style>
 </head>
 <body>
@@ -21,6 +189,10 @@
 <center>
     <h1>Pricing</h1>
 </center>
+<div class="custom-control custom-switch dark-control">
+  <input type="checkbox" class="custom-control-input" id="darkSwitch">
+  <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
 <div class="container"> <img class="car-img" src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover/8672/1642077991894/front-left-side-47.jpg?impolicy=resize&imwidth=480">
     <div class="car-detail">
         <div class="car-title">Land Rover Range Rover ...</div>
@@ -71,5 +243,7 @@
     <script>
         function more(){window.location.href = "https://www.cardekho.com/cars/Land_Rover";}</script>
     <script src="js/global.js"></script>
+    <script src="dark mode/dark-mode-switch.min.js"></script>
+    <script src="dark mode/dark-mode-switch.js"></script>
 </body>
 </html>
