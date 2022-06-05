@@ -43,8 +43,8 @@
             border: 1px rgb(204, 204, 204) solid;
             border-radius: 28px;
             float: left;
-            width: 50%;
             padding: 0px 0px;
+            width: 50%;
         }
         .video{
             width: 100%;
@@ -74,14 +74,15 @@
             background: #fff;
             border: 1px rgb(204, 204, 204) solid;
             border-radius: 100px;
+            cursor: pointer;
             transition: all 0.2s ease;
         }
-       /* .ic-btn:hover{
+        .ic-btn:hover{
             color: #ffffff;
-            background: #ff446d;
+            background: rgb(255, 17, 69);
             text-shadow: 0 0 10px #ffffff46;
             border: 1px #ff446d solid;
-        }*/
+        }
         .description{
             font-size: 10px;
             padding: 0px 10px;
@@ -103,7 +104,7 @@
         .container10{
             border: 2px rgba(128, 128, 128, 0) solid;
             float: right;
-            width: 42%;
+            width: 44%;
             padding: 0px 20px;
         }
 
@@ -165,7 +166,7 @@
             }
             .video{
                 width: 100%;
-                height: 360px;
+                height: 100%;
                 background: #000;
                 border-radius: 0px 0 0 0;
             }
@@ -282,21 +283,22 @@
     <div class="home">
 
         <div id="data" class="container9">
-            <video class="video" poster="../img/poster.jpg" preload="none" controls  controlsList="nodownload">
+            <video class="video" controls poster="../img/poster.jpg" preload="none" controlsList="nodownload">
                 <source id="source" src="https://drive.google.com/uc?export=download&id=199446ubbXRqXo3yzej5ZuOCviLF5n_Xm">
             </video>
-            <div class="title"> ANTARANG 2K22 UNOFFICIAL VIDEO | FLY HIGH MECH  </div>
+            <div class="title"> ANTARANG 2K22 UNOFFICIAL VIDEO | FLY HIGH MECH | MECHANICAL DEPT.  </div>
             <div class="description">
-                <p class="tag">#ANTRANG 2K22</p><br>
-                <p class="detail">No views • Published 06 June 2022</p>
-                Thumbnail - Vivek Mule<br>
-                Video - Om Lokhande
+                <!-- <p class="tag">#ANTRANG 2K22</p><br> -->
+                <p class="detail"> <i class="fa fa-eye"></i> No views • <i class="fa fa-thumbs-up"></i> 0
+                    <br>
+                    Published on 06 Jun 2022
+                </p>
+                Video by Om Lokhande<br>
+                *Mechanical Unofficial website opens soon, stay tuned!
             </div>
             <div class="btn-container">
-                <i id="swap" class="fa fa-thumbs-up ic-btn"></i>
-                <i class="fa fa-thumbs-down ic-btn"></i>
-                <i class="fa fa-comment ic-btn"></i>
-                <i class="fa fa-share ic-btn"></i>
+                <i class="fa fa-thumbs-up ic-btn" onclick="like()"></i>
+                <!-- <i id="swap" class="fa fa-exchange-alt ic-btn" title="Switch Video"></i> -->
             </div>
         </div>
         <div class="container10">
@@ -347,6 +349,9 @@
 
     </div>
 <script>
+    function like(){
+        alert("Your like was added");
+    }
     $(function(){
         $('#swap').click(function(){
             $('#source').attr('src', "../vid/po.mp4");
