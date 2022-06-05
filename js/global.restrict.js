@@ -29,7 +29,7 @@ $(document).keydown(function (event) {
 });
 document.addEventListener('contextmenu', event => event.preventDefault());
 
-fetch('../vid.json')
+fetch('../vids.json')
 .then(function (response) {
     return response.json();
 })
