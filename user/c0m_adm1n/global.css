@@ -1,0 +1,24 @@
+body{
+    user-select: none;
+}
+.maintain{
+    display: none;
+    border: 0px #000 solid;
+}
+.home{
+    display: block;
+    border: 0px #000 solid;
+}
+.support{
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .home{
+        display: none;
+    }
+    .support{
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
