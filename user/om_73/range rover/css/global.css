@@ -48,12 +48,12 @@ body {
 }
 
 .home {
-    display:none;
+    display:block;
     transition: all 0.2s ease;
 }
 
 .maintain-container {
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
