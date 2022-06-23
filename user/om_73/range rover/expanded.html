@@ -11,6 +11,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <title>Jaguar Land Rover Range Rover - Expanded Models</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&family=Montserrat+Alternates:wght@200;400&family=Red+Hat+Display&family=Roboto:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Whisper&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=Comfortaa:wght@700&family=Raleway:wght@800&display=swap');
@@ -35,7 +36,7 @@
             border-bottom: 2px rgba(214, 214, 214, 0) solid;
             font-size: 40px;
             margin: 15%;
-            height: 30vh
+            height: 100vh
         }
 
         .nav-ic {
@@ -45,13 +46,78 @@
         .nav-strg {
             display: block
         }
+        .home{
+            margin: 0 40px;
+        }
+
+
+        .container-md{
+            width: 97%;
+            height: 82vh;
+            padding: 20px;
+            margin: 80px 0;
+            border: 1px rgb(230, 230, 230) solid;
+            border-radius: 28px;
+            overflow: hidden;
+        }
+        .cont-left{
+            float: left;
+            width: 48%;
+            font-family: 'Cinzel', serif;
+        }
+        .cont-left h1{
+            letter-spacing: 2px;
+            color: #e0b68c;
+            font-family: 'Cinzel', serif;
+        }
+        .cont-left .rating{
+            font-family: 'Jost', sans-serif;
+        }
+        .cont-right{
+            float: right;
+            width: 48%;
+            font-family: 'Jost', sans-serif;
+        }
+        .cont-right .exp-sec, h4{
+            font-family: 'Jost', sans-serif;
+        }
+        .mech-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            margin: 10px 10px;
+            border-radius: 16px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 800;
+            color: #554023;
+            border: 2px var(--transparent) solid;
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.212);
+            background: #ffddab;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            /*font-family: 'Red Hat Display', sans-serif;*/
+            transition: all 0.2s ease
+        }
+
+        .mech-btn:hover {
+            color: #554023;
+            transform: translateY(-10px);
+            box-shadow: 3px 13px 2px rgba(0, 0, 0, 0.212);
+            transition: all 0.2s ease
+        }
+
 
         .exp-container {
-            display: inline-block;
-            border: 2px rgba(211, 211, 211, 0.247) solid;
-            border-radius: 6px;
-            margin: 10px 10px;
-            width: 48%
+            display: block;
+            border: 1px rgb(230, 230, 230) solid;
+            border-radius: 28px;
+            margin: 30px 10px;
+            width: 60%;
+            align-items: center;
+            align-content: center;
+            flex-direction: row;
+            overflow: hidden;
         }
 
         .exp-container h1 {
@@ -62,7 +128,8 @@
         }
 
         .exp-img {
-            width: 100%
+            width: 100%;
+            border-radius: 28px;
         }
 
         .exp-details {
@@ -79,7 +146,7 @@
 
         .key-feat {
             width: fit-content;
-            padding: 5px 10px;
+            padding: 5px 3px;
             margin: 0px 10px;
             border-bottom: 2px rgb(211, 211, 211) solid
         }
@@ -95,43 +162,23 @@
         }
 
         .price-tg {
-            padding-top: 40px
+            margin-top: 10px
         }
 
         .price-tg h2 {
             font-weight: normal;
             font-style: normal;
+            font-family: 'Jost', sans-serif;
             font-display: normal
         }
 
         .options {
+            float: right;
             padding: 0 10px;
             margin: 10px 0;
             border: 2px rgba(0, 0, 0, 0) solid
         }
 
-        .mech-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 0px;
-            font-size: 10px;
-            font-weight: 400;
-            font-family: 'Cinzel', serif;
-            letter-spacing: 1px;
-            color: #fff;
-            border: 2px var(--transparent) solid;
-            background: var(--richColor);
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.1s ease
-        }
-
-        .mech-btn:hover {
-            color: var(--richColor);
-            border: 2px var(--richColor) solid;
-            background: #efc39700
-        }
 
         .divider {
             margin: 0 10px;
@@ -173,6 +220,70 @@
             .nav-strg {
                 display: none
             }
+            .home{
+                margin: 0 -5px;
+            }
+
+            .container-md{
+                width: 96%;
+                height: fit-content;
+                padding: 5px;
+                margin: 40px 0;
+                border: 1px rgba(230, 230, 230, 0) solid;
+                border-bottom: 1px rgb(230, 230, 230) solid;
+                border-radius: 0px;
+                overflow: hidden;
+            }
+            .cont-left{
+                float: left;
+                width: 100%;
+                font-family: 'Cinzel', serif;
+            }
+            .cont-left h1{
+                font-size: 22px;
+                letter-spacing: 2px;
+                color: #e0b68c;
+                font-family: 'Cinzel', serif;
+            }
+            .cont-left .rating{
+                font-family: 'Jost', sans-serif;
+            }
+            .cont-right{
+                float: right;
+                width: 100%;
+                font-family: 'Jost', sans-serif;
+            }
+            .cont-right .exp-sec, h4{
+                font-size: 14px;
+                line-height: 23px;
+                font-family: 'Jost', sans-serif;
+            }
+            .mech-btn {
+                display: inline-block;
+                padding: 12px 22px;
+                margin: 10px 10px;
+                border-radius: 16px;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 800;
+                color: #554023;
+                border: 2px var(--transparent) solid;
+                box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.212);
+                background: #ffddab;
+                text-decoration: none;
+                cursor: pointer;
+                font-family: 'Roboto', sans-serif;
+                /*font-family: 'Red Hat Display', sans-serif;*/
+                transition: all 0.2s ease
+            }
+
+            .mech-btn:hover {
+                color: #554023;
+                transform: translateY(-10px);
+                box-shadow: 3px 13px 2px rgba(0, 0, 0, 0.212);
+                transition: all 0.2s ease
+            }
+
 
             .exp-container {
                 display: inline-block;
@@ -193,7 +304,7 @@
             }
 
             .exp-img {
-                width: 100%
+                width: 100%;
             }
 
             .exp-details {
@@ -205,7 +316,7 @@
 
             .exp-sec {
                 display: inline-block;
-                width: 47%;
+                width: 100%;
                 border: 2px rgba(0, 0, 0, 0) solid
             }
 
@@ -228,10 +339,11 @@
             }
 
             .price-tg {
-                padding-top: 40px
+                padding-top: 10px
             }
 
             .price-tg h2 {
+                font-size: 20px;
                 font-weight: normal;
                 font-style: normal;
                 font-display: normal
@@ -243,28 +355,6 @@
                 border: 2px rgba(0, 0, 0, 0) solid
             }
 
-            .mech-btn {
-                display: inline-block;
-                padding: 10px 20px;
-                margin: 0 10px;
-                border-radius: 0px;
-                font-size: 8px;
-                font-weight: 400;
-                font-family: 'Cinzel', serif;
-                letter-spacing: 1px;
-                color: #fff;
-                border: 2px var(--transparent) solid;
-                background: var(--richColor);
-                text-decoration: none;
-                cursor: pointer;
-                transition: all 0.1s ease
-            }
-
-            .mech-btn:hover {
-                color: var(--richColor);
-                border: 2px var(--richColor) solid;
-                background: #efc39700
-            }
         }
     </style>
 </head>
@@ -279,6 +369,148 @@
     <div class="custom-control custom-switch dark-control">
       <input type="checkbox" class="custom-control-input" id="darkSwitch">
       <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+    </div>
+
+
+    <div class="container-md">
+        <div class="cont-left">
+            <img class="exp-img" src="https://images.hdqwalls.com/download/range-rover-evoque-tuned-1280x720.jpg" draggable="false"><br>
+            <h1>Range Rover Evoque</h1>
+            <div class="rating">
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star-half ic-rate"></i> 4.5 Ratings
+            </div>
+             <div class="price-tg">
+                <h2>Price: Rs.69.99 Lakh*</h2>
+            </div>
+        </div>
+        <div class="cont-right">
+            <div class="exp-sec">
+                <h2>Specifications</h2>
+                <h4>Engine and Transmission</h4>
+                • Transmission Type: <a class="sm-info" href="#automatic"> Automatic </a><br>
+                • Engine: Diesel Engine<br>
+                • Engine Type: Diesel Engine<br>
+                • Gear Box: 9-speed automatic <br>
+            </div>
+            <div class="exp-sec">
+                <h4>Fuel & Performance</h4>
+                • Fuel Type: Diesel<br>
+                • Fuel Tank Capacity (Litres): 67.0<br>
+                • Acceleration: 9.3 Sec<br>
+                • Top Speed (Kmph): 230<br>
+            </div>
+            <div class="exp-sec">
+            <h4>More Info</h4>
+            • Ground Clearence: 212mm<br>
+            • Breakes: Disc Brakes<br>
+            • Seating Capacity: 5 <br>
+            • Body Type: SUV <br>
+            • Company: Jaguar - A Tata Company <br>
+            </div>
+            <h4>Key Features</h4>
+            <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
+            <br>
+        </div>
+        <div class="options">
+            <a href="#" class="mech-btn"> Learn more <i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="container-md">
+        <div class="cont-left">
+            <img class="exp-img" src="https://images.hdqwalls.com/download/2018-land-rover-range-rover-vela-qu-1280x720.jpg" draggable="false"><br>
+            <h1>Range Rover Velar</h1>
+            <div class="rating">
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star-half ic-rate"></i> 4.5 Ratings
+            </div>
+             <div class="price-tg">
+                <h2>Price: Rs.86.75 - 86.81 Lakh*</h2>
+            </div>
+        </div>
+        <div class="cont-right">
+            <div class="exp-sec">
+                <h4>Engine and Transmission</h4>
+                • Transmission Type: Automatic<br>
+                • Engine: Petrol Engine <br>
+                • Engine Type: <a class="sm-info" href="#TD4Engine"> TD4 Engine </a><br>
+                • Gear Box: 8 Automatic Transmission<br>
+            </div>
+            <div class="exp-sec">
+                <h4>Fuel & Performance</h4>
+                • Fuel Type: Petrol<br>
+                • Fuel Tank Capacity (Litres): 82.0<br>
+                • Acceleration: 7.5 Sec<br>
+                • Top Speed (Kmph): 217<br>
+            </div>
+            <h4>More Info</h4>
+            • Ground Clearence: 156mm<br>
+            • Brakes: Disc Braks<br>
+            • Seating Capacity: 5<br>
+            • Body Type: SUV<br>
+            • Company: Jaguar - A Tata Company <br>
+            <h4>Key Features</h4>
+            <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
+            <br>
+            <div class="options">
+                <a href="#" class="mech-btn"> Learn more <i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-md">
+        <div class="cont-left">
+            <img class="exp-img" src="https://cdn.wallpapersafari.com/9/16/SQumZH.jpg" draggable="false"><br>
+            <h1>Range Rover Discovery</h1>
+            <div class="rating">
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star ic-rate"></i>
+                <i class="fa fa-star-half ic-rate"></i> 4.5 Ratings
+            </div>
+             <div class="price-tg">
+                <h2>Price: Rs.80.72 Lakh - 1.22 Cr* </h2>
+            </div>
+        </div>
+        <div class="cont-right">
+            <div class="exp-sec">
+                    <h4>Engine and Transmission</h4>
+                    • Transmission Type: Automatic<br>
+                    • Engine: Petrol Engine<br>
+                    • Engine Type: 3.0 Litre Petrol Engine<br>
+                    • Gear Box: 8-Speed Automatic Transmission<br>
+                </div>
+                <div class="exp-sec">
+                    <h4>Fuel & Performance</h4>
+                    • Fuel Type: Petrol <br>
+                    • Fuel Tank Capacity (Litres): <br>
+                    • Acceleration: 8 Seconds<br>
+                    • Top Speed (Kmph): 191 <br>
+                </div>
+                <h4>More Info</h4>
+                • Ground Clearence: 291mm<br>
+                • Breakes: Twin piston sliding fist caliper<br>
+                • Seating Capacity: 6, 7<br>
+                • Body Type: SUV<br>
+            <h4>Key Features</h4>
+            <span class="key-feat">Anti Lock Breaking Syst. <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Driver Air Bag <i class="fa fa-check-circle ic-check"></i> </span>
+            <span class="key-feat">Passenger Airbag <i class="fa fa-check-circle ic-check"></i> </span><br>
+            <br>
+            <div class="options">
+                <a href="#" class="mech-btn"> Learn more <i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
     </div>
 
     <div class="exp-container">

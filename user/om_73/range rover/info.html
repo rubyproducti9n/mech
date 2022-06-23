@@ -12,7 +12,7 @@
     <title>Group Info</title>
     <style>
         .dark-control{
-            display: block;
+            display: none;
         }
         @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Whisper&display=swap');
@@ -24,7 +24,8 @@
             display: block;
             color: rgb(0, 0, 0);
             background: rgb(255, 255, 255);
-            user-select: none
+            user-select: none;
+            font-family: 'Jost', sans-serif;
         }
 
         .views {
@@ -56,6 +57,71 @@
 
         .nav-strg {
             display: block
+        }
+
+        .container{
+            display: block;
+            margin: 10px 80px;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        .container h2{
+            font-size: 32px;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+        }
+        table{
+            width: 95%;
+            margin: 10px 20px;
+            padding: 0px;
+            border: 4px #ffddab solid;
+            border-radius: 28px;
+            overflow: hidden;
+        }
+        tr, td, th{
+            margin: 0;
+            padding: 0px;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        th{
+            color: #554023;
+            outline: #ffddab solid;
+            background-color: #ffddab;
+            font-weight: 800;
+            padding: 15px 100px;
+        }
+
+        .container-ref{
+            display: block;
+            width: 80%;
+            padding: 10px;
+            font-family: 'Cinzel', serif;
+            border: 0px rgb(201, 201, 201) solid;
+        }
+        .container-ref h2{
+            color: var(--richColor);
+            font-weight: 800;
+        }
+        .ref-link{
+            margin: 5px 0;
+            padding: 5px 10px;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 1px;
+            color: rgb(57, 159, 255);
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+        .ref-link:hover{
+            border-radius: 4px;
+            background-color: rgba(57, 159, 255, 0.123);
+            transition: 0.3s ease;
+        }
+        .ref-link:active{
+            border-radius: 4px;
+            background-color: rgba(36, 97, 155, 0.082);
+            transition: 0.3s ease;
         }
 
         .grp-info-container {
@@ -102,6 +168,13 @@
             height: 100%;
             bottom: 0%
         }
+        .grp-sub-container h4{
+            border: 2px rgba(0, 0, 0, 0) solid;
+            padding: 0px 25px;
+            font-size: 20px;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1.5px;
+        }
 
         center h4 {
             border-top: 2px rgba(0, 0, 0, 0) solid;
@@ -113,42 +186,37 @@
 
         .qr {
             width: 15%;
-            border-radius: 6px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.185)
+            border-radius: 28px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+            transition: all 0.2s ease;
         }
-
-        .sc-img {
-            float: left;
-            padding: 0 10px;
-            width: 10.8%
+        .qr:hover{
+            transform: scale(1.1);
+            border-radius: 28px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);;
         }
 
         .sc-link {
             position: relative;
             display: inline-block;
-            width: 16%;
-            margin: 0px 0px;
-            padding: 10px 40px;
-            border-bottom: 4px #dadada00 solid;
+            margin: 0px 10px;
+            padding: 12px 40px;
+            text-align: center;
+            background-color: #ffddab;
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.13);
+            border-radius: 16px;
             cursor: pointer;
-            font-family: 'Jost', sans-serif
+            font-family: 'Jost', sans-serif;
+            transition: all 0.2s ease;
+        }
+        .sc-link:hover{
+            transform: translateY(-10px);
+            box-shadow: 3px 13px 2px rgba(0, 0, 0, 0.13);
+        }
+        .sc-link .sc-img {
+            display: none;
         }
 
-        .sc-link::after {
-            position: absolute;
-            content: "";
-            width: 0%;
-            height: 4px;
-            background: #e0b68c;
-            left: 50%;
-            bottom: -10px;
-            transition: all 0.3s ease
-        }
-
-        .sc-link:hover::after {
-            width: 100%;
-            left: 0
-        }
 
         center h4 {
             font-weight: normal;
@@ -213,14 +281,17 @@
         }
 
         .jag-container {
-            border: 2px rgba(0, 0, 0, 0) solid;
+            border: 1px rgba(0, 0, 0, 0.164) solid;
+            border-radius: 28px;
+            margin: 40px;
             padding: 20px
         }
 
         .jag-container img {
             float: right;
-            width: 13%;
-            margin: 20px;
+            width: 18%;
+            margin-top: 30px;
+            margin-right: 30px;
             transform: rotate(3deg)
         }
 
@@ -234,6 +305,8 @@
         .jag-info {
             line-height: 29px;
             text-indent: 30px;
+            width: 100%;
+            text-align: justify;
             font-family: 'Jost', sans-serif
         }
 
@@ -245,11 +318,12 @@
             position: relative;
             display: inline-block;
             border: 2px rgba(0, 0, 0, 0) solid;
+            border-radius: 28px;
             padding: 10px 20px;
             margin: 0 5px;
             width: fit-content;
             color: var(--white);
-            background-color: var(--richColor);
+            background-color: #ffddab;
             font-family: 'Jost', sans-serif;
             overflow: hidden;
             cursor: pointer
@@ -260,8 +334,8 @@
             bottom: 0;
             left: 0px;
             text-align: center;
-            color: var(--white);
-            background-color: var(--richColor);
+            color: #554023;
+            background-color: #ffddab;
             content: "73";
             padding: 10px 0px;
             width: 100%;
@@ -290,7 +364,7 @@
             bottom: 0;
             left: 0;
             text-align: center;
-            color: var(--richColor);
+            color: #554023;
             background-color: var(--white);
             content: "Social";
             padding: 10px 0px;
@@ -322,24 +396,30 @@
 
         @media screen and (max-width:768px) {
             body {
-                opacity: 1
+                opacity: 1;
             }
 
             .nav-ic {
-                display: block
+                display: block;
             }
 
             .nav-strg {
-                display: none
+                display: none;
             }
 
+            .container-ref{
+                display: none;;
+            }
+            .container{
+                display: none;;
+            }
             .grp-info-container {
                 border-radius: 6px;
                 margin: 40px 0;
                 padding: 10px 20px;
                 border: 2px #80808000 solid;
                 font-family: 'Jost', sans-serif;
-                letter-spacing: 0.5px
+                letter-spacing: 0.5px;
             }
 
             .grp-img {
@@ -348,7 +428,7 @@
                 border-radius: 0px;
                 width: 20%;
                 opacity: 1;
-                transform: rotate(-2deg)
+                transform: rotate(-2deg);
             }
 
             .grp-info {
@@ -358,7 +438,7 @@
                 width: fit-content;
                 padding: 5px 10px;
                 font-size: 12px;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             }
 
             .grp-info::after {
@@ -370,13 +450,13 @@
                 border-radius: 20px;
                 left: 0;
                 bottom: 0%;
-                transition: all 0.1s ease
+                transition: all 0.1s ease;
             }
 
             .grp-info:hover::after {
                 background: #e0b68c;
                 width: 4px;
-                left: 0%
+                left: 0%;
             }
 
             center h4 {
@@ -384,45 +464,38 @@
                 margin-top: 0px;
                 padding-top: 50px;
                 font-family: 'Jost', sans-serif;
-                letter-spacing: 1px
+                letter-spacing: 1px;
             }
 
-            .qr {
+            .qr{
                 width: 50%;
-                border-radius: 6px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.185)
+                border-radius: 28px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
             }
 
             .sc-img {
                 float: left;
                 padding: 0 10px;
-                width: 10.8%
+                width: 10.8%;
             }
 
             .sc-link {
                 position: relative;
                 display: inline-block;
-                width: 64%;
-                margin: 10px 0;
-                padding: 10px 40px;
-                border-bottom: 4px #dadada00 solid;
-                cursor: pointer
+                margin: 10px 10px;
+                padding: 12px 40px;
+                text-align: center;
+                background-color: #ffddab;
+                box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.13);
+                border-radius: 16px;
+                width: 50%;
+                cursor: pointer;
+                font-family: 'Jost', sans-serif;
+                transition: all 0.2s ease;
             }
-
-            .sc-link::after {
-                position: absolute;
-                content: "";
-                width: 0%;
-                height: 4px;
-                background: #e0b68c;
-                left: 50%;
-                bottom: -10px;
-                transition: all 0.3s ease
-            }
-
-            .sc-link:hover::after {
-                width: 100%;
-                left: 0
+            .sc-link:hover{
+                transform: translateY(-10px);
+                box-shadow: 3px 13px 2px rgba(0, 0, 0, 0.13);
             }
 
             .prg-container {
@@ -432,69 +505,69 @@
                 display: block;
                 width: 76%;
                 padding: 10px 20px;
-                border: 2px var(--richColor) solid
+                border: 2px var(--richColor) solid;
             }
 
             .prg-container h2 {
                 color: #494949;
                 font-family: 'Cinzel', serif;
-                letter-spacing: 2px
+                letter-spacing: 2px;
             }
 
             h6 {
                 color: #494949;
                 font-family: 'Cinzel', serif;
-                letter-spacing: 2px
+                letter-spacing: 2px;
             }
 
             .prg {
                 padding: 10px 0px;
-                border: 2px rgba(0, 0, 0, 0) solid
+                border: 2px rgba(0, 0, 0, 0) solid;
             }
 
             .prg-title {
-                font-family: 'Jost', sans-serif
+                font-family: 'Jost', sans-serif;
             }
 
             progress {
                 border-radius: 0px;
                 width: 100%;
                 height: 10px;
-                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2)
+                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
             }
 
             progress::-webkit-progress-bar {
-                background-color: rgb(232, 232, 232)
+                background-color: rgb(232, 232, 232);
             }
 
             progress::-webkit-progress-value {
-                background-color: var(--richColor)
+                background-color: var(--richColor);
             }
 
             .jag-container {
                 border: 2px rgba(0, 0, 0, 0) solid;
-                padding: 20px
+                padding: 10px;
             }
 
             .jag-container img {
                 float: right;
                 width: 30%;
                 margin: 20px;
-                transform: rotate(0deg)
+                transform: rotate(0deg);
             }
 
             .jag-container h2 {
                 color: var(--richColor);
                 font-family: 'Cinzel', serif;
                 letter-spacing: 2px;
-                text-shadow: 0 0 3px rgba(160, 160, 160, 0.281)
+                text-shadow: 0 0 3px rgba(160, 160, 160, 0.281);
             }
 
             .jag-info {
                 font-size: 12px;
                 line-height: 29px;
                 text-indent: 30px;
-                font-family: 'Jost', sans-serif
+                font-family: 'Jost', sans-serif;
             }
 
             .insta-handle {
@@ -507,7 +580,7 @@
                 color: var(--white);
                 background-color: var(--richColor);
                 font-family: 'Jost', sans-serif;
-                overflow: hidden
+                overflow: hidden;
             }
 
             .insta-handle::before {
@@ -521,7 +594,7 @@
                 padding: 10px 0px;
                 width: 100%;
                 overflow: visible;
-                transition: all 0.9s ease
+                transition: all 0.9s ease;
             }
 
             .insta-handle::after {
@@ -534,13 +607,13 @@
                 content: "Social";
                 padding: 10px 0px;
                 width: 100%;
-                transition: 0.4s ease
+                transition: 0.4s ease;
             }
 
             .insta-handle:hover::after {
                 padding-top: 90px;
                 bottom: -160px;
-                transition: 0.6s ease
+                transition: 0.6s ease;
             }
         }
     </style>
@@ -582,13 +655,13 @@
             Since the Ford ownership era, Jaguar and Land Rover have used joint design facilities in engineering centres at Whitley in Coventry and Gaydon in Warwickshire and Jaguar cars have been assembled in plants at Castle Bromwich and Solihull.
             On 15 February 2021 Jaguar Land Rover announced that all cars made under the Jaguar brand will be fully electric by 2025.<br><br>
         </div>
-
+        <div class="sc-link"> <img class="sc-img" onclick="jagYT()" src="https://www.youtube.com/s/desktop/5aa0c1f3/img/favicon_144x144.png"> YouTube</div>
+        <div class="sc-link"> <img class="sc-img" onclick="jagInsta()" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"> Instagram</div>
+        <div class="sc-link"> <img class="sc-img" onclick="jagWebsite()" src="https://s.tmimgcdn.com/scr/800x500/77400/jaguar-logo-template_77499-2-original.jpg"> Website</div>
+        <div class="sc-link"> <img class="sc-img" onclick="jagTwitter()" src="https://abs.twimg.com/favicons/twitter.2.ico"> Twitter</div>
     </div>
     <!-- <h4>Social Media Links:</h4> -->
-    <div class="sc-link"> <img class="sc-img" onclick="jagYT()" src="https://www.youtube.com/s/desktop/5aa0c1f3/img/favicon_144x144.png"> YouTube</div>
-    <div class="sc-link"> <img class="sc-img" onclick="jagInsta()" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"> Instagram</div>
-    <div class="sc-link"> <img class="sc-img" onclick="jagWebsite()" src="https://s.tmimgcdn.com/scr/800x500/77400/jaguar-logo-template_77499-2-original.jpg"> Website</div>
-    <div class="sc-link"> <img class="sc-img" onclick="jagTwitter()" src="https://abs.twimg.com/favicons/twitter.2.ico"> Twitter</div>
+
     <br><br><br>
     <div class="jag-container">
         <img class="global-img dark-support" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Land_Rover_logo_black.svg/2560px-Land_Rover_logo_black.svg.png"><br>
@@ -614,26 +687,127 @@
             Since the Ford ownership era, Jaguar and Land Rover have used joint design facilities in engineering centres at Whitley in Coventry and Gaydon in Warwickshire and Jaguar cars have been assembled in plants at Castle Bromwich and Solihull.
             On 15 February 2021 Jaguar Land Rover announced that all cars made under the Jaguar brand will be fully electric by 2025.<br><br>
         </div>
-
+        <div class="sc-link"> <img class="sc-img" onclick="rangeYT()" src="https://www.youtube.com/s/desktop/5aa0c1f3/img/favicon_144x144.png"> YouTube</div>
+        <div class="sc-link"> <img class="sc-img" onclick="rangeInsta()" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"> Instagram</div>
+        <div class="sc-link"> <img class="sc-img" onclick="rangeWebsite()" src="https://s.tmimgcdn.com/scr/800x500/77400/jaguar-logo-template_77499-2-original.jpg"> Website</div>
+        <div class="sc-link"> <img class="sc-img" onclick="rangeTwitter()" src="https://abs.twimg.com/favicons/twitter.2.ico"> Twitter</div>
     </div>
     <!-- <h4>Social Media Links:</h4> -->
-    <div class="sc-link"> <img class="sc-img" onclick="rangeYT()" src="https://www.youtube.com/s/desktop/5aa0c1f3/img/favicon_144x144.png"> YouTube</div>
-    <div class="sc-link"> <img class="sc-img" onclick="rangeInsta()" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"> Instagram</div>
-    <div class="sc-link"> <img class="sc-img" onclick="rangeWebsite()" src="https://s.tmimgcdn.com/scr/800x500/77400/jaguar-logo-template_77499-2-original.jpg"> Website</div>
-    <div class="sc-link"> <img class="sc-img" onclick="rangeTwitter()" src="https://abs.twimg.com/favicons/twitter.2.ico"> Twitter</div>
+
+
+    <div class="container">
+        <br><br>
+        <h2 style="color: var(--richColor)">Jaguar</h2>
+        <h6>Dealers across India</h6>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Name of the Dealer</th>
+                    <th>City</th>
+                    <th>Contact</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Cargo Motors</td>
+                    <td>Ahmedabad</td>
+                    <td>vinod.jlr@cargomotors.co.in</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Marqland</td>
+                    <td>Banglore</td>
+                    <td>No contact info</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Jaguar Marqland</td>
+                    <td>Banglore</td>
+                    <td>No contact info</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Marqland Motors</td>
+                    <td>Banglore</td>
+                    <td>No contact info</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Shakti Auto Cars</td>
+                    <td>Banglore</td>
+                    <td>No contact info</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Vst Grandeur</td>
+                    <td>Chennai</td>
+                    <td>No contact info</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>V S T Grandeur</td>
+                    <td>Chennai</td>
+                    <td>sales@vstgrandeur.com</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>A M P Motors</td>
+                    <td>Delhi</td>
+                    <td>communication4@amp-group.in</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Amp Motors</td>
+                    <td>Delhi</td>
+                    <td>sales1.westdelhi@ampmotors.in</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Pride Motors</td>
+                    <td>Hydrabad</td>
+                    <td>cre.sr@pride-motors.com</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Lexus Motors</td>
+                    <td>Kolkata</td>
+                    <td>hrd@lexusmotors.in</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Navnit Motors</td>
+                    <td>Mumbai</td>
+                    <td>sharad@navnitmotors.com</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Modi Motors Jaguar Land Rover, Worli</td>
+                    <td>Mumbai</td>
+                    <td>No contact info</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Ace Perkins</td>
+                    <td>Pune</td>
+                    <td>ganesh.daundkar@aceperkins.in</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <div id="stats" class="prg-container">
 
         <h2>Total Progress</h2>
-        <h6>Last updated : 16 May 2022 at 03:48 PM</h6>
+        <h6>Last updated : 14 Jun 2022 at 10:38 PM</h6>
         <div class="prg">
-       <span class="prg-title"> Report Progress: 7% </span><br>
+       <span class="prg-title"> Report Progress: 34% </span><br>
         <progress id="report" value="7" max="100"></progress></div><br>
         <div class="prg">
-        <span class="prg-title"> Presentaion Progress: 18%</span><br>
+        <span class="prg-title"> Presentaion Progress: 100%</span><br>
          <progress id="report" value="18" max="100"></progress></div><br>
          <div class="prg">
-         <span class="prg-title"> Website Progress: 51%</span><br>
-          <progress id="report" value="51" max="100"></progress></div><br>
+         <span class="prg-title"> Website Progress: 93%</span><br>
+          <progress id="report" value="65" max="100"></progress></div><br>
 
           <div class="views"> 22 views • 25 April 2022 </div>
         </div>
@@ -645,7 +819,7 @@
 
         <div id="grp-img" class="grp-info-img" onclick="stats()"></div>
         <div class="grp-sub-container">
-            <h4>Group Info:</h4>
+            <h4 style="font-family:'Cinzel', serif ; letter-spacing: 1.5px;">Group Info:</h4>
 
         <!-- <div id="grp-nme1" class="grp-info">Group members</div> -->
             <div class="min-cont">
@@ -653,7 +827,17 @@
             <div class="insta-handle">Om Lokhande 73</div>
             <div class="insta-handle">Om Lokhande 73</div>
             <div class="insta-handle">Om Lokhande 73</div>
+            <br><br>
+                <div class="container-ref">
+                    <h2>References</h2>
+                    • Jaguar Official Website: <span class="ref"> <a class="ref-link" draggable="false" href="https://www.jaguar.in/index.html">https://www.jaguar.in/index.html</a> </span><br><br>
+                    • Range Rover Official Website: <span class="ref"> <a class="ref-link" draggable="false" href="https://www.landrover.in/index.html">https://www.landrover.in/index.html</a> </span><br><br>
+                    • Wikipedia: <span class="ref"> <a class="ref-link" draggable="false" href="https://en.wikipedia.org/wiki/Main_Page">https://en.wikipedia.org/wiki/Main_Page</a> </span><br><br>
+                    • Car Dekho: <span class="ref"> <a class="ref-link" draggable="false" href="https://www.cardekho.com/land-rover/range-rover">https://www.cardekho.com/land-rover/range-rover    </a> </span><br><br>
+                    • Zig Wheels: <span class="ref"> <a class="ref-link" draggable="false" href="https://www.zigwheels.com/dealers/Jaguar">https://www.zigwheels.com/dealers/Jaguar</a> </span><br>
+                </div>
         </div>
+
         <!-- <div id="grp-nme1" class="grp-info">A Sanjivani COE, Kopargaon Students</div> -->
         <!-- <div id="grp-nme1" class="grp-info">Report by Om Lokhande</div>
         <div id="grp-mem1" class="grp-info">Presentaion by Akash Mhais</div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&family=Montserrat+Alternates:wght@200;400&family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&family=Montserrat+Alternates:wght@200;400&family=Red+Hat+Display&family=Roboto:wght@400;700&display=swap');
 :root {
     --white: #ffffff;
     --faintwhite: #fafafa;
@@ -8,7 +10,9 @@
     --shadow: #4d4d4d;
     --transparent: #fafafa00;
     --darknavbgcolor: #111;
-    --navbgcolor: #ffffff;
+    --navbgcolor: #ffddabe5;
+    --android: #ffddab;
+    --androidText: #554023;
     transition: all 0.2s ease;
 }
 
@@ -25,7 +29,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--richColor);
+    background-color: #ffddab;
     width: 20px;
     transition: all 0.2s ease;
 }
@@ -40,15 +44,15 @@ body {
     right: 0;
     padding: 10px 20px;
     border-radius: 20px 0px 0 0 ;
-    background: #fff;
-    color: #000;
+    background: #ffddab;
+    color: #554023;
     font-family: 'Jost', sans-serif;
     z-index: 12;
     transition: all 0.2s ease;
 }
 
 .home {
-    display:block;
+    display: block;
     transition: all 0.2s ease;
 }
 
@@ -85,9 +89,10 @@ body {
     padding: 0px 20px;
     background: var(--navbgcolor);
     border-bottom: 0px var(--richColor) solid;
-    backdrop-filter: blur(0px);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    z-index: 9;
+    box-shadow: 0px 3px 2px #5540233b;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
     transition: all 0.2s ease;
 }
 
@@ -108,7 +113,7 @@ body {
     padding: 20px 20px;
     margin: 0 10px;
     cursor: pointer;
-    color: #000;
+    color: var(--androidText);
     border: 0px rgba(255, 0, 0, 0) solid;
     border-bottom: 4px rgba(255, 255, 255, 0) solid;
     transition: all 0.2s ease;
@@ -119,7 +124,8 @@ body {
     content: "";
     width: 0%;
     height: 4px;
-    background: #e0b68c;
+    background: #554023;
+    border-radius: 100px;
     left: 50%;
     bottom: -5px;
     transition: all 0.3s ease;
@@ -138,66 +144,6 @@ body {
     transition: all 0.2s ease;
 }
 
-[data-theme="dark"] .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0px 20px;
-    background: var(--darknavbgcolor);
-    border-bottom: 0px var(--richColor) solid;
-    backdrop-filter: blur(0px);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    z-index: 9;
-    transition: all 0.2s ease;
-}
-
-[data-theme="dark"] .brand-name {
-    margin: 0px 0;
-    padding: 20px 20px;
-    font-size: 30px;
-    width: fit-content;
-    border: 2px rgba(153, 153, 153, 0.774) solid;
-    transition: all 0.2s ease;
-}
-
-[data-theme="dark"] .nav-link {
-    position: relative;
-    float: right;
-    display: inline;
-    list-style: none;
-    padding: 20px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    color: #000;
-    border: 0px rgba(255, 0, 0, 0) solid;
-    border-bottom: 4px rgba(255, 255, 255, 0) solid;
-    transition: all 0.2s ease;
-}
-
-[data-theme="dark"] .nav-link::after {
-    position: absolute;
-    content: "";
-    width: 0%;
-    height: 4px;
-    background: #e0b68c;
-    left: 50%;
-    bottom: -5px;
-    transition: all 0.3s ease;
-    transition: all 0.2s ease;
-}
-
-[data-theme="dark"] .nav-link:hover::after {
-    width: 100%;
-    left: 0;
-    transition: all 0.2s ease;
-}
-
-[data-theme="dark"] .link {
-    display: inline-block;
-    color: var(--white);
-    transition: all 0.2s ease;
-}
 .section-title {
     font-family: 'Cinzel', serif;
     letter-spacing: 1px;
@@ -205,22 +151,28 @@ body {
 }
 
 .know-more {
-    float: right;
     font-size: 12px;
-    font-style: italic;
+    font-style: normal;
+    text-align: center;
     text-decoration: none;
-    padding: 10px 20px;
-    color: var(--black);
-    background-color: var(--transparent);
-    border-radius: 5px;
+    padding: 16px 30px;
+    margin: 10px 25px;
+    color: #554023;
+    background-color: #ffddab;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.137);
+    border-radius: 16px;
     cursor: pointer;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
     transition: 0.2s;
     transition: all 0.2s ease;
 }
 
 .know-more:hover {
-    background-color: #d1d1d100;
-    text-decoration: underline;
+    background-color: #eebf78c2;
+    transform: translateY(-5px);
+    box-shadow: 3px 8px 2px rgba(0, 0, 0, 0.212);
+    text-decoration: none;
     transition: 0.1s;
     transition: all 0.2s ease;
 }
@@ -237,20 +189,26 @@ body {
 }
 
 .mini-container {
-    margin: 10px 20px;
-    border-radius: 6px;
+    margin: 0px 20px;
+    border-radius: 28px;
     background: var(--transparent);
-    border: 2px var(--transparent) solid;
-    transition: all 0.2s ease;
+    border: 1px rgb(207, 207, 207) solid;
+    height: 270px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.1s ease;
+}
+.mini-container:hover{
+    background: #eebf783f;
 }
 
 .mini-container .img {
-    width: 30%;
-    margin: 30px 0;
+    height: 100%;
+    margin: 0px 0;
     padding: 0px;
     border-radius: 0px;
-    transform: rotate(-3deg);
-    box-shadow: 10px 10px 0px var(--shadow);
+    transform: rotate(0deg);
+    box-shadow: 0px 0px 0px var(--shadow);
     transition: all 0.2s ease;
 }
 
@@ -258,8 +216,7 @@ body {
     color: #e0b68c;
     float: right;
     width: 66%;
-    padding: 0px 0px;
-    ;
+    padding: 0px 10px;
     letter-spacing: 0.5px;
     font-family: 'Cinzel', serif;
     border: 2px rgba(170, 170, 170, 0) solid;
@@ -268,8 +225,8 @@ body {
 .first-sub-cont h2 {
     color: #e0b68c;
     font-family: 'Cinzel', serif;
-    letter-spacing: 1px;
-    font-size: 18px;
+    letter-spacing: 2px;
+    font-size: 24px;
     transition: all 0.2s ease;
 }
 
@@ -278,6 +235,7 @@ body {
     font-family: 'Jost', sans-serif;
     line-height: 30px;
     font-size: 19px;
+    text-align: justify;
     transition: all 0.2s ease;
 }
 
@@ -294,12 +252,24 @@ body {
     margin: 10px 12px;
     width: 31%;
     background-color: var(--white);
-    border: 0px #86868642 solid;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
-    border-radius: 6px;
+    border: 1px #e4e4e4 solid;
+    box-shadow: 0px 0px 0px rgba(139, 139, 139, 0.164);
+    border-radius: 28px;
     font-family: 'Arimo', sans-serif;
+    cursor: pointer;
     overflow: hidden;
-    transition: all 0.2s ease;
+    transition: 0.5s ease;
+}
+.hvr-img, .gr-card:hover{
+    background-color: #eebf7800;
+    transform: translateY(-3px);
+    border: 1px #e4e4e400 solid;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.164);
+    transition: 0.1s ease;
+}
+.gr-card:active{
+    transform: translateY(-20px);
+    transition: 0.2s ease;
 }
 
 .gr-img {
@@ -324,7 +294,7 @@ body {
     color: var(--faintDark);
     font-family: 'Jost', sans-serif;
     text-overflow: ellipsis;
-    height: 56vh;
+    height: 40vh;
     line-height: 25px;
     transition: all 0.2s ease;
 }
@@ -333,7 +303,7 @@ body {
     color: var(--faintDark);
     text-overflow: ellipsis;
     font-family: 'Jost', sans-serif;
-    height: 14vh;
+    height: 18vh;
     line-height: 25px;
     transition: all 0.2s ease;
 }
@@ -341,13 +311,32 @@ body {
 .ex-container {
     color: var(--black);
     background-color: transparent;
-    letter-spacing: 2px;
     margin: 120px 0;
     font-family: 'Cinzel', serif;
     transition: all 0.2s ease;
 }
-
 .explore {
+    position: relative;
+    display: inline-block;
+    color: #554023;
+    background-color: #ffddab;
+    border-bottom: 0px rgb(231, 231, 231) solid;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.212);
+    border-radius: 12px;
+    padding: 16px 22px;
+    font-size: 14px;
+    margin: 10px 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.2s ease;
+}
+.explore:hover{
+    background-color: #eebf78d7;
+    transform: translateY(-10px);
+    box-shadow: 3px 13px 2px rgba(0, 0, 0, 0.212);
+}
+/* .explore {
     position: relative;
     display: inline-block;
     color: var(--richColor);
@@ -360,8 +349,8 @@ body {
     margin: 10px 20px;
     cursor: pointer;
     transition: all 0.2s ease;
-}
-
+} */
+/*
 .explore::after {
     position: absolute;
     content: "";
@@ -378,11 +367,11 @@ body {
     width: 100%;
     left: 0;
     transition: all 0.2s ease;
-}
+} */
 
 #loading {
     position: fixed;
-    display: block;
+    display: none;
     width: 100%;
     height: 100%;
     top: 0;
@@ -434,7 +423,8 @@ body {
         left: 0;
         right: 0;
         padding: 0px 20px;
-        background: rgb(255, 255, 255);
+        color: var(--androidText);
+        background: var(--navbgcolor);
         backdrop-filter: blur(0px);
         z-index: 1;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
@@ -464,8 +454,8 @@ body {
         padding: 10px 25px;
         margin: 0 0px;
         cursor: pointer;
-        border: 0px rgb(255, 0, 0) solid;
-        transition: 0.2s ease
+        border: 0px rgba(255, 0, 0, 0) solid;
+        transition: 0.2s ease;
     }
 
     .nav-link:hover {
@@ -474,21 +464,30 @@ body {
     }
 
     .know-more {
-        float: right;
         font-size: 12px;
-        font-style: italic;
+        font-style: normal;
+        text-align: center;
         text-decoration: none;
-        padding: 10px 20px;
-        background-color: #e0e0e000;
-        border-radius: 5px;
+        padding: 16px 30px;
+        margin: 10px 25px;
+        color: #554023;
+        background-color: #ffddab;
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.137);
+        border-radius: 16px;
         cursor: pointer;
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif;
         transition: 0.2s;
+        transition: all 0.2s ease;
     }
 
     .know-more:hover {
-        background-color: #d1d1d100;
-        text-decoration: underline;
-        transition: 0.1s
+        background-color: #eebf78c2;
+        transform: translateY(-5px);
+        box-shadow: 3px 8px 2px rgba(0, 0, 0, 0.212);
+        text-decoration: none;
+        transition: 0.1s;
+        transition: all 0.2s ease;
     }
 
     .mini-container {
@@ -549,7 +548,7 @@ body {
         background-color: #fafafa;
         border: 0px #222222c5 solid;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
-        border-radius: 0px;
+        border-radius: 28px;
         font-family: 'Jost', sans-serif;
         overflow: hidden;
         transition: 0.5s ease
@@ -568,40 +567,48 @@ body {
     }
 
     .gr-details {
-        height: 20vh
+        height: 30vh
     }
 
     .sh-detail-primary {
         height: 20vh;
         font-size: 13px;
-        white-space: nowrap;
+        text-align: justify;
         width: calc(100%);
         overflow: hidden;
         font-family: 'Jost', sans-serif;
-        text-overflow: ellipsis
     }
 
     .sh-detail-secondary {
-        height: 20vh;
+        height: fit-content;
         font-size: 12px;
         width: calc(100%);
         overflow: hidden;
+        text-align: justify;
         font-family: 'Jost', sans-serif;
         text-overflow: ellipsis
     }
 
     .explore {
+        position: relative;
         display: inline-block;
-        width: 60%;
-        color: var(--richColor);
-        background-color: #aeaeae00;
-        border-bottom: 4px var(--transparent) solid;
-        border-radius: 0px;
-        padding: 10px 40px;
+        color: #554023;
+        background-color: #ffddab;
+        border-bottom: 0px rgb(231, 231, 231) solid;
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.212);
+        border-radius: 12px;
+        padding: 16px 22px;
         font-size: 14px;
-        letter-spacing: 1px;
-        margin: 20px 20px;
-        cursor: pointer
+        margin: 10px 10px;
+        cursor: pointer;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+        transition: all 0.2s ease;
+    }
+    .explore:hover{
+        background-color: #eebf78d7;
+        transform: translateY(-10px);
+        box-shadow: 3px 13px 2px rgba(0, 0, 0, 0.212);
     }
 
     #loading {
