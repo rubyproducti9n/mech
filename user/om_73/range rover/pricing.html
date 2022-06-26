@@ -18,7 +18,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Josefin+Sans&family=Raleway:wght@800&display=swap');
 
         body {
-            display: none;
+            display: block;
             color: rgb(0, 0, 0);
             background: rgb(255, 255, 255);
             user-select: none
@@ -50,7 +50,10 @@
         a {
             color: aliceblue
         }
-
+        .know-more{
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
         .rr-btn {
             position: relative;
             color: var(--richColor);
@@ -83,16 +86,16 @@
             padding: 10px;
             border-radius: 28px;
             overflow: hidden;
-            height: 250px;
+            height: 270px;
             max-width: 1320px;
-            min-width: 1000px;
+            min-width: 100px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
         }
 
         .car-detail {
             float: right;
             font-family: 'Jost', sans-serif;
-            max-width: 880px;
+            max-width: 860px;
             width: 70%
 
         }
@@ -133,6 +136,12 @@
         }
 
         @media screen and (max-width:768px) {
+            .maintain-container{
+                display: block;
+            }
+            .home{
+                display: none;
+            }
             .nav-ic {
                 display: block
             }
@@ -144,20 +153,22 @@
             .container {
                 background-color: #fafafa00;
                 box-shadow: 5px 5px 10px rgba(65, 65, 65, 0);
-                padding: 50px 00px;
-                border-bottom: 0px #b9b9b9 solid;
+                padding: 0px 0px;
+                width: 90%;
+                height: 330px;
+                border: 1px #e0e0e0 solid;
                 margin: 40px 00px;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
             }
 
             .car-detail {
                 float: right;
+                width: 100%;
                 font-family: 'Jost', sans-serif;
-                width: 100%
             }
 
             .car-img {
-                width: 100%
+                height: 208px;
             }
 
             .car-title {
@@ -250,6 +261,7 @@
 <div class="rr-btn" onclick="more()">
     <center> Browse More </center>
 </div>
+<div id="info"></div>
 <div id="explore"></div>
 </div>
     <script>
