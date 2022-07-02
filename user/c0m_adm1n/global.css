@@ -4,6 +4,7 @@ body{
 .maintain{
     display: none;
     border: 0px #000 solid;
+    font-family: none;
 }
 .home{
     display: block;
@@ -19,6 +20,6 @@ body{
     }
     .support{
         display: block;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: none;
     }
 }
