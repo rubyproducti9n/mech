@@ -1,30 +1,26 @@
 
-.card{
+.mech-card{
     display: inline-block;
     margin: 0 10px;
     padding-bottom: 20px;
     width: 22.8%;
     height: 30%;
-    color: rgb(233, 233, 233);
-    background: rgb(24, 24, 24);
+    color: rgb(39, 39, 39);
+    background: rgb(255, 255, 255);
     /* backdrop-filter: blur(14px); */
     box-shadow: 0px 0px 00px rgba(0, 0, 0, 0.192);
-    border: 0px rgba(255, 2, 107, 0.185) solid;
-    border-radius: 50px;
+    border: 2px #ff026b00 solid;
+    border-radius: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     /* cursor: pointer; */
-    transition: 0.3s ease;
   }
-  .card:hover{
+  .mech-card:hover{
     height: 33%;
-    color: rgb(255, 255, 255);
-    background: #111111;
-    border: 0px rgba(255, 2, 107, 0.705) solid;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.192);
-    transition: 0.3s ease;
+    border: 2px #ff026b00 solid;
+    box-shadow: 0px 0px 0px #00000031;
   }
-  .card-img{
+  .mech-card-img{
     width: 100%;
     border-radius: 0px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0);
@@ -62,7 +58,7 @@
     cursor: default;
     z-index: 13;
   }
-   .dr-details .card:hover {
+   .dr-details .mech-card:hover {
     color: #fff;
   }
   .profile-img{
@@ -79,7 +75,7 @@
 .profile-img{
     width: 50%;
     border-radius: 50%;
-    border: 2px #f50000a1 solid;
+    border: 4px #ffffff solid;
     margin-top: 20px;
     box-shadow: 5px 5px 20px #00000057;
   }
@@ -87,55 +83,32 @@
     padding: 10px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  .mech-btn-fill{
-    color: #fff;
-    background: #ff0055;
-    border: 2px #ff0077 solid;
-    border-radius: 4px;
-    margin: 5px 15px;
-    padding: 10px 20px;
+  .mech-btn{
+    color: #5599ff;
+    background: #5599ff00;
+    border: 2px #5599ff00 solid;
+    border-radius: 0px;
+    margin: 5px 10px;
+    padding: 10px 15px;
     font-size: 11px;
     font-family: 'Comfortaa', cursive;
     outline: none;
-    transition: 0.2s ease;
   }
-  .mech-btn-fill:hover{
-    color: #ffffffec;
-    background: #ff0040ec;
-    border: 2px #ff0040ec solid;
+  .mech-btn:hover{
+    color: #5599ff;
+    background: #f3f3f3;
+    border: 2px #5599ff00 solid;
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
-    box-shadow: 0px 0px 20px #ff0040ec;
-    transition: 0.2s ease;
+    box-shadow: 0px 0px 0px #5599ff;
   }
-  .mech-btn-fill:active{
+  .mech-btn:active{
     color: #ffffff;
-    background: #d10034ec;
+    background: #5599ff;
     border: 2px #94000000 solid;
-    box-shadow: 0 0 20px #d10034ec;
-    transition: 0.2s ease;
-  }
-  .mech-btn-outline{
-    color: #ff0077;
-    background: #46008000;
-    border: 2px #ff0077 solid;
-    border-radius: 4px;
-    margin: 5px 0;
-    padding: 10px 20px;
-    font-size: 10px;
-    font-family: 'Comfortaa', cursive;
-    outline: none;
-    transition: 0.2s ease;
-  }
-  .mech-btn-outline:hover{
-    color: #ffffff;
-    background: #ff0040ec;
-    border: 2px #ff0040ec solid;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255);
-    box-shadow: 0px 0px 20px #ff0040ec;
-    transition: 0.2s ease;
+    box-shadow: 0 0 0px #5599ff;
   }
   @media screen and (max-width: 768px) {
-    .card{
+    .mech-card{
       display: inline-block;
       margin: 20px 30px;
       width: 80%;
@@ -149,10 +122,10 @@
       cursor: pointer;
       transition: 0.5s ease;
     }
-    .card:hover{
+    .mech-card:hover{
       transition: 0.5s ease;
     }
-    .card-img{
+    .mech-card-img{
       width: 100%;
       border-radius: 0px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0);
