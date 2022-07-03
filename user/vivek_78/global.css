@@ -16,16 +16,34 @@ body{
 }
 .card{
     display: inline-block;
-    border: 1px rgb(194, 194, 194) solid;
-    border-radius: 4px;
+    border: 0px rgb(255, 255, 255) solid;
+    border-radius: 28px;
     width: 23%;
     height: 500px;
     margin: 1vh 0.6vw;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(206, 206, 206);
     transition: all 0.2s ease;
 }
+.card:nth-child(2){
+    color: #fff;
+    background-color: #4285f4;
+}
+.card:nth-child(3){
+    color: #fff;
+    background-color: #ea4335;
+}
+.card:nth-child(4){
+    color: #fff;
+    background-color: #fbbc05;
+}
+.card:nth-child(5){
+    color: #fff;
+    background-color: #34a853;
+}
 .card:hover{
+    transform: scale(1.02);
     box-shadow: 5px 5px 5px rgb(206, 206, 206);
 }
 .card:active{
@@ -50,12 +68,21 @@ section{
 .box-container{
     display: block;
     margin: 10px;
-    padding: 10px;
-    height: 400px;
+    padding: 20px;
+    height: 540px;
     border: 0px #000 solid;
+    border-radius: 28px;
+    color: #fff;
+    background-color: #ea4335;
+    box-shadow: 2px 2px 5px rgba(36, 36, 36, 0.568);
+}
+.box-container:nth-child(9){
+    color: #fff;
+    background-color: #fbbc05;
 }
 .img{
     width: 100%;
+    border-radius: 28px;
 }
 .explore{
     border: 0px #000 solid;
