@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../c0m_adm1n/global.css">
+    <link rel="stylesheet" href="global.css" type="text/css">
+    <title>3D Printing </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&family=Montserrat+Alternates:wght@200;400&family=Red+Hat+Display&family=Roboto:wght@400;700&display=swap');
+        :root{
+            --color: #31101d;
+            --background: #ffd8e4;
+        }
+        body{
+            color: var(--color);
+            /*font-family: 'Red Hat Display', sans-serif;*/
+            font-family: 'Roboto', sans-serif;
+        }
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #ffd8e4;
+            color: var(--color);
+            padding: 10px;
+        }
+        .nav{
+            display: inline-block;
+            list-style: none;
+            margin: 0 10px;
+            font-weight: 600;
+            background-color: var(--background);
+            color: var(--color);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .nav-link{
+            color: var(--color);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 0px;
+            background-color: var(--background);
+            transition: all 0.2s ease;
+        }
+        .nav:hover{
+            transform: scale(1.1);
+            color: #fff;
+            transition: all 0.2s ease;
+        }
+        .img{
+            border-radius: 28px;
+            width: 100%;
+        }
+        .float-end{
+            float: right;
+            width: 40%;
+        }
+        .text{
+            width: 30%;
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1.3px;
+            line-height: 23px;
+            padding: 10px;
+        }
+        section{
+            margin: 20px;
+        }
+        .container{
+            color: var(--color);
+            background-color: var(--background);
+            padding: 20px;
+            margin: 50px 0;
+            border-radius: 28px;
+        }
+        .adjust{
+            padding: 0 120px;
+        }
+        .card{
+            display: inline-block;
+            width: 30%;
+            border: 0px #000 solid;
+            border-radius: 28px;
+            padding: 10px;
+            margin: 0 10px;
+            color: #643720;
+            background-color: #fbe2d0;
+        }
+        .card header{
+            margin: 0px 0;
+        }
+        .card footer{
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin: 10px 10px;
+        }
+         li{
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="home">
+    <nav>
+        <ul>
+            <li class="nav">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav">
+                <a class="nav-link" href="#">Search</a>
+            </li>
+            <li class="nav">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section>
+        <br><br>
+        <div class="container">
+            <img class="img " draggable="false" align="right" src="sample.jpg" style="width: 30%;">
+        <h2>3D Printing</h2>
+        <p class="text">
+            3D printing or additive manufacturing is a process of making three dimensional solid objects from a digital file. The creation of a 3D printed object is achieved using additive processes.
+            <br><br>
+        </p>
+    </div>
+
+    <div class="card">
+        <header>
+            <img class="img" src="sample.jpg" draggable="false">
+        </header>
+        <footer>
+            <h1>Step 1</h1>
+            A person creates a 3D image of an item using CAD
+            <br><br>
+        </footer>
+    </div>
+    <div class="card">
+        <header>
+            <img class="img" src="sample.jpg" draggable="false">
+        </header>
+        <footer>
+            <h1>Step 2</h1>
+            A CAD information is sent to printer
+            <br><br><br>
+        </footer>
+    </div>
+    <div class="card">
+        <header>
+            <img class="img" src="sample.jpg" draggable="false">
+        </header>
+        <footer>
+            <h1>Step 3</h1>
+            The PRINTER forms the item by depositing the material in layers starting from the bottom layer onto a platform.
+
+        </footer>
+    </div>
+
+    <div class="container">
+        <img class="img " draggable="false" align="right" src="sample.jpg" style="width: 30%;">
+    <h2>Important Steps</h2>
+    <p class="text">
+        <li>MODELING</li>
+        <li>PRINTING</li>
+        <li>FINISHING</li>
+        <br><br>
+    </p>
+</div>
+
+<div class="container">
+    <img class="img " draggable="false" align="right" src="sample.jpg" style="width: 30%;">
+
+    <h2>Modeling</h2>
+<p class="text">
+    Additive manufacturing takes virtual blueprints from computer aided design (CAD) or animation modeling software and "slices" them into digital cross-sections for the machine to successively use as a guideline for printing.
+
+
+</p>
+</div>
+
+<div class="container">
+    <img class="img " draggable="false" align="right" src="sample.jpg" style="width: 30%;">
+
+    <h2>Printing</h2>
+<p class="text">
+    To perform a print, the machine reads the design and lays down successive layers of liquid, powder, or sheet material to build the model from a series of cross sections. These layers, which correspond to the virtual cross sections from the CAD model, are joined together or automatically fused to create the final shape. Advantage: Ability to create almost any shape or geometric feature.
+</p>
+</div>
+
+<div class="container">
+    <img class="img " draggable="false" align="right" src="sample.jpg" style="width: 30%;">
+
+    <h2>Finishing</h2>
+<p class="text">
+    Though the printer-produced resolution is sufficient for many applications, printing a slightly oversized version of the desired object in standard resolution, and then removing material with a higher-resolution subtractive process can achieve a higher-resolution.
+
+</p>
+</div>
+
+<h1>Methods & Technologies</h1>
+<div class="card">
+    <footer>
+        <h4>Selective laser sintering (SLS)        </h4>
+    </footer>
+</div>
+<div class="card">
+    <footer>
+        <h4>Fused deposition modelling (FDS)        </h4>
+    </footer>
+</div>
+<div class="card">
+    <footer>
+        <h4>Stereo lithography (SLA)
+        </h4>
+    </footer>
+</div>
+    </section>
+</div>
+<div class="maintain">
+    <h3>Error 423</h3>
+</div>
+<div class="support">
+    <h3>Error 505</h3>
+</div>
+</body>
+</html>
