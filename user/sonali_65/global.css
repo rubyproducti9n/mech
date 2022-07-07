@@ -1,0 +1,61 @@
+
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #ffd8e4;
+            color: var(--color);
+            padding: 10px;
+        }
+        .nav{
+            display: inline-block;
+            list-style: none;
+            margin: 0 10px;
+            font-weight: 600;
+            background-color: var(--background);
+            color: var(--color);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .nav-link{
+            color: var(--color);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 0px;
+            background-color: var(--background);
+            transition: all 0.2s ease;
+        }
+        .nav:hover{
+            transform: scale(1.1);
+            color: #fff;
+            transition: all 0.2s ease;
+        }
+        .card{
+            display: inline-block;
+            width: 30%;
+            border: 0px #000 solid;
+            border-radius: 28px;
+            padding: 10px;
+            margin: 0 10px;
+            color: #643720;
+            background-color: #fbe2d0;
+            transition: all 0.2s ease;
+        }
+        .card:hover{
+            transform: scale(1.03);
+            box-shadow: 3px 3px 8px #64372067;
+        }
+        .card:active{
+            transform: scale(0.7);
+            box-shadow: 3px 3px 8px #64372067;
+        }
+        .card header{
+            margin: 0px 0;
+        }
+        .card footer{
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin: 10px 10px;
+        }
