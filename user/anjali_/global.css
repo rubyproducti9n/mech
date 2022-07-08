@@ -1,0 +1,23 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        nav{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
+        }
+        .nav-link{
+            display: inline-block;
+            background: rgb(255, 255, 255);
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 28px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover{
+            background: rgb(230, 230, 230);
+        }
