@@ -5,14 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="global.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="../c0m_adm1n/global.css">
     <title>Artificial Intelligence </title>
     <link rel="icon"href="https://i.pinimg.com/originals/dc/30/1d/dc301dd6fac108a2a60f103e01539f04.jpg"sizes="16x16 32x32"type="image/png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&family=Montserrat+Alternates:wght@200;400&family=Red+Hat+Display&family=Roboto:wght@400;700&display=swap');
         body{
-
             font-family: 'Montserrat Alternates', sans-serif;
+        }
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            padding: 20px 0;
+        }
+        li{list-style: none;
+        display: inline-block;
+        }
+        .nav-link{
+            color: rgb(34, 34, 34);
+            background: #e4060600;
+            margin: 10px 5px;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+        .nav-link:hover{
+            color: #363636;
+            background: #e9e9e9;
         }
         h1{
             font-weight: 200;}
@@ -38,20 +61,44 @@
             margin-right: 5px;
         }
         .guide{
-            color: rgb(46, 46, 46);
+            color: #34a853;
             background-color: #ffffff;
-            border: 2px rgb(185, 185, 185) solid;
-            border-radius: 4px;
+            border: 0px rgba(185, 185, 185, 0) solid;
+            border-radius: 16px;
             margin: 20px;
-            padding: 20px;
-            width: 50%;
+            font-size: 26px;
+            padding: 15px 25px;
+            width: fit-content;
             cursor: pointer;
+            font-weight: 800;
             transition: all 0.1s ease;
         }
-        .guide:hover{
+        .set-default{
+            color: #307bf3;
+            text-decoration: none;
+        }
+        .btn-download{
+            display: inline-block;
+            color: #307bf3;
+            background: #307bf300;
+            border-radius: 16px;
+            padding: 15px 25px;
+            margin: 10px;
+            width: fit-content;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn-download:hover{
             color: #fff;
-            background-color: #363636;
-            border: 2px #363636 solid;
+            background: #e0e0e0;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0);
+        }
+        .fa-download{
+            margin: 0 5px;
         }
     </style>
 </head>
@@ -59,11 +106,6 @@
     <div class="home">
         <nav class="navbar">
             <ul>
-                <li>
-                    <a class="nav-link" href="index.html#query?machine=true,show=false">
-                        Home
-                    </a>
-                </li>
                 <li>
                     <a class="nav-link" href="machine learning.html#query?machine=true,show=false">
                         Machine Learning
@@ -215,6 +257,8 @@ Daffodil can provide their insightful understanding of AI to build technology so
     <div class="member">• <span class="roll">80</span> Tejas Nalkar</div>
     <div class="member">• <span class="roll">81</span> Pranav Nile</div>
 
+    <div class="btn-download"> <a class="set-default" href="#error404" onclick="error()"> Report <i class="fa fa-download"></i></a></div>
+    <div class="btn-download"> <a class="set-default" href="files/Artificial_Intelligence _Presentaion_(COPY).pptx" download> Presentation <i class="fa fa-download"></i></a></div>
     <div class="guide">Guided by Y. A. Bhavsar</div>
 
 </div>
@@ -240,6 +284,9 @@ function iot() {
 }
 function deep() {
     window.location.href = "deep learning.html"
+}
+function error() {
+    alert("File not found");
 }
     </script>
 </body>
