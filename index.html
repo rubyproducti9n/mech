@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mechanical Unofficial</title>
+    <title>UNOFFICIAL MECH</title>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
@@ -23,39 +23,6 @@
     @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
     body{ background: rgb(255, 255, 255); user-select: none;}
     hr{background: rgb(75, 75, 75);}
-    .nav-bar{
-      display: none;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  width: 23%;
-  padding: 0px 0px;
-  background: #3535359c;
-  backdrop-filter: blur(14px);
-  border: 2px #2e2e2e00 solid;
-  border-radius: 150px;
-  text-shadow: 0 0 0px rgba(255, 255, 255, 0);
-  box-shadow: 0px 0px 0px #2a0035ab;
-  z-index: 12;
-  transition: 0.5s ease;
-    }
-    .nav-bar:hover{
-  background: #ff0055;
-  text-shadow: 0 0 20px #ffffff;
-  box-shadow: 0px 0px 20px #ff0055;
-    }
-    .brand-lg{
-      width: 25%;
-  margin-right: 5px;
-      border-radius: 100%;
-    }
-    .brand-name{
-  display: inline-block;
-  color: #fff;
-  font-size: 14px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 600;
-    }
     .section-title{
       padding: 0 40px;
       color: rgb(0, 0, 0);
@@ -251,62 +218,60 @@ footer{
         Disclaimer: This web page is meant for educational purpose only. All copyrights to their official owner. Page was created by Om Lokhande.
     </marquee>
     </div>
+    <header class="header">
+      <a href="#" class="header__logo">UNOFFICIAL MECH</a>
 
-<div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Select your division</h5>
-        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <a class="btn btn-secondary btn-sm" href="#" download="Roll Call List (A) 20021-22">A</a>
-        <a class="btn btn-secondary btn-sm" href="#" download="Roll Call List (B) 20021-22">B</a>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+      <i class='bx bx-menu header__toggle' id="header-toggle"></i>
 
-<div class="nav-bar">
-  <a class="link" onclick="home()">
-  <img class="brand-lg" src="img/avatar.jpg">
-  <p class="brand-name">Mechnaical Unofficial</p>
-  </a>
-</div>
+      <nav class="nav" id="nav-menu">
+          <div class="nav__content bd-grid">
+              <a href="" class="nav__perfil">
+                  <div class="nav__img">
+                      <img src="img/profile-avatar.png" alt="">
+                  </div>
 
-<div class="btn-upload">
-  <a class="" href="pages/materials.html">
-  <i class="fa fa-upload" style="color: #fff;"></i>
-</a>
+                  <div>
+                      <span id="user_name" class="nav__name"></span>
+                      <!-- <span class="nav__name">Mitchell</span> -->
+                  </div>
+              </a>
+
+              <div class="nav__menu">
+                  <ul class="nav__list">
+                      <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+
+                      <li class="nav__item dropdown">
+                          <a href="#" class="nav__link dropdown__link">About <i class='bx bx-chevron-down dropdown__icon'></i></a>
+
+
+                          <ul class="dropdown__menu">
+                              <li class="dropdown__item"><a href="#" class="nav__link">About Us</a></li>
+                              <li class="dropdown__item"><a href="#" class="nav__link">Location</a></li>
+                              <li class="dropdown__item"><a href="#" class="nav__link">Studies</a></li>
+                          </ul>
+                      </li>
+
+                      <li class="nav__item dropdown"><a href="#" class="nav__link">Skills <i class='bx bx-chevron-down dropdown__icon'></i></a>
+
+                        <ul class="dropdown__menu">
+                            <li class="dropdown__item"><a href="#" class="nav__link">Video Editing</a></li>
+                            <li class="dropdown__item"><a href="#" class="nav__link">Web Management</a></li>
+                            <li class="dropdown__item"><a href="#" class="nav__link">Programming Knowledge</a></li>
+                        </ul>
+                      </li>
+
+
+                      <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+<div class="header2">
+  <h1>#2K22 Mechanical Batch</h1>
+  <p>Unofficial Website</p>
 </div>
-<center>
-  <div class="modern-navigation">
-  <div class="modern-dash"></div><br>
-  <span class="menu-tooltip disabled" onclick="back()">
-    <span class="menu-tooltiptext">Back</span>
-  <i class="material-icons modern-nav-ic">arrow_back</i>
-</span>
-  <span class="menu-tooltip disabled" onclick="home()">
-    <span class="menu-tooltiptext">Home</span>
-    <i class="material-icons modern-nav-ic modern-nav-active">home</i>
-  </span>
-  <span class="menu-tooltip" onclick="search()">
-    <span class="menu-tooltiptext">Search</span>
-    <i class="material-icons modern-nav-ic">search</i>
-  </span>
-  <span class="menu-tooltip" onclick="select()">
-    <span class="menu-tooltiptext">Rooms</span>
-    <i class="material-icons modern-nav-ic">headphones</i>
-  </span>
-  <span class="menu-tooltip" onclick="info()">
-    <span class="menu-tooltiptext">Info</span>
-    <i class="material-icons modern-nav-ic">info</i>
-  </span>
-  </div></center>
 <!-- <nav class="custom-nav">
     <a class="">
       <img class="mech-avatar" src="img/avatar.jpg" draggable="false" /></span>  </a>
@@ -320,174 +285,170 @@ footer{
 <div class="main-container">
 <br><br><br><br>
   <h2 class="section-title">What's New!</h2>
-<div class="custom-mech-card" onclick="">
-    <div class="mech-card ">
-    <img class="mech-card-img" src="img/placeholder.png">
-    <h6 class="tags placeholder">#Tags</h6>
-    <h3 class="dr-title placeholder">Title Goes Here </h3>
+<div class="custom-mech-card">
+    <div class="mech-card " onclick="link1()">
+    <img class="mech-card-img" draggable="false" src="img/img1.jpg">
+    <h6 class="tags placeholder"> #scoe</h6>
+    <h3 class="dr-title placeholder">SANJIVANI COE Status Video | New </h3>
     <h6 class="dr-details placeholder">
-      Description Goes Here
-      <hr><p class="">ConcertEra <i class="fa fa-check-circle"></i> • 06 Mar 2022</p>
+      Credit - Satyajit Singar Patil
+      <hr><p class="">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 08 Jul 2022</p>
     </h6>
   </div>
-  <div class="mech-card">
-  <img class="mech-card-img" src="img/placeholder.png">
-  <h6 class="tags">#Tags</h6>
-  <h3 class="dr-title">Title Goes Here </h3>
+  <div class="mech-card" onclick="link2()">
+  <img class="mech-card-img" draggable="false" src="img/img2.jpg">
+  <h6 class="tags">#scoe</h6>
+  <h3 class="dr-title">SANJIVALI COE | STATUS VIDEO #3</h3>
   <h6 class="dr-details">
-    Description Goes Here
-    <hr><p class="">ConcertEra <i class="fa fa-check-circle"></i> • 06 Mar 2022</p>
+    Credit - Satyajit Singar Patil
+    <hr><p class="">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 26 Jun 2022</p>
   </h6>
 </div>
-<div class="mech-card">
-<img class="mech-card-img" src="img/placeholder.png">
-<h6 class="tags">#Tags</h6>
-<h3 class="dr-title">Title Goes Here </h3>
+<div class="mech-card" onclick="link3()">
+<img class="mech-card-img" draggable="false" src="img/img3.jpg">
+<h6 class="tags">#prank</h6>
+<h3 class="dr-title"> Oreo Biscuit Prank | Div B </h3>
 <h6 class="dr-details">
-  Description Goes Here
-  <hr><p class="">ConcertEra <i class="fa fa-check-circle"></i> • 06 Mar 2022</p>
+  Concept by Bhavik Raval
+  <hr><p class="">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 05 Jul 2022</p>
 </h6>
 </div>
-<div class="mech-card">
-<img class="mech-card-img" src="img/placeholder.png">
-<h6 class="tags">#Tags</h6>
-<h3 class="dr-title">Title Goes Here </h3>
+<div class="mech-card" onclick="link4()">
+<img class="mech-card-img" draggable="false" src="img/img4.jpg">
+<h6 class="tags">#prank</h6>
+<h3 class="dr-title"> Oreo Biscuit Prank | Div A </h3>
 <h6 class="dr-details">
-  Description Goes Here
-  <hr><p class="">ConcertEra <i class="fa fa-check-circle"></i> • 06 Mar 2022</p>
+  Concept by Sarthak Badjate
+  <hr><p class="">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 29 Jun 2022</p>
 </h6>
 </div>
   </div>
 
  <br><hr width="95%"><br>
 
-  <h2 class="section-title"> <i class="fa fa-user-circle"></i> Mechanical Engineering Students Association </h2><br>
+ <div class="container">
+  <img class="promo-img" src="img/avatar.jpg" align="left">
+  <p class="promo-txt">
+    <h2>UNOFFICIAL MECH <i class="fa fa-check-circle"></i> </h2>
+    <h5>0 subscribers</h5>
+    <h6>
+      Subscribe to Unofficial Mechanical Youtube Channel, <br>
+      where our memories are stored.<br><br>
+      • Created and Managed by Om Lokhande
+    </h6>
+    <a class="btn-subs" href="#">Subscribe</a>
+  </p>
+ </div>
+ <br>
+ <br><hr width="95%"><br>
+<section>
+  <h1>Unofficial Album</h1>
+ <div class="card">
+    <img class="card-img" draggable="false" oncontextmenu="return false;" src="memories/g3.jpg">
+ </div>
+ <div class="card">
+    <img class="card-img" draggable="false" oncontextmenu="return false;" src="memories/g5.jpg">
+ </div>
+ <div class="card">
+    <img class="card-img" draggable="false" oncontextmenu="return false;" src="memories/g4.jpg">
+ </div>
+</section>
+ <br><hr width="95%"><br>
+
+
 <div class="custom-mech-card" onclick="">
-<div class="mech-card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-    <h3 class="dr-title">Title Goes Here </h3>
-  <h6 class="dr-details">
-    Class: F.Y B.TECH<br>
-    Div: <br>
-  </h6>
-  <button class="mech-btn disabled">Contact Me</button>
-  <button class="mech-btn">Learn More</button><br>
+<!-- <center>
+  (hidden)
+</center> -->
+
+
+<div class="insta-container">
+  <img class="insta-promo-img" src="img/insta.jpg" align="left">
+  <p class="insta-promo-txt">
+    <h2>_sanjivani_group_of_institutes <i class="fa fa-check-circle"></i> </h2>
+    <h3>SANJIVANI COLLEGE OF ENGINEERING KOPARGAON</h3>
+    <h5>576 FOLLOWERS</h5>
+    <h6>
+      Follow to our Unofficial instagram page to stay updated<br>
+      with college fun.<br><br>
+      • Created and Managed by Sattu and Bhavik
+    </h6>
+    <a class="btn-follow" href="https://instagram.com/_sanjivani_group_of_institutes?igshid=YmMyMTA2M2Y=">Open</a>
+    <a class="btn-follow" href="https://instagram.com/_sanjivani_group_of_institutes?igshid=YmMyMTA2M2Y=">Follow</a>
+  </p>
+ </div>
+
 </div>
-</div>
-<div class="mech-card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-    <h3 class="dr-title">Title Goes Here </h3>
-  <h6 class="dr-details">
-    Class: F.Y B.TECH<br>
-    Div: <br>
-  </h6>
-  <button class="mech-btn">Contact Me</button>
-  <button class="mech-btn">Learn More</a><br>
-</div>
-</div>
-<div class="mech-card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-    <h3 class="dr-title">Title Goes Here </h3>
-  <h6 class="dr-details">
-    Class: F.Y B.TECH<br>
-    Div: <br>
-  </h6>
-  <button class="mech-btn">Contact Me</button>
-  <button class="mech-btn">Learn More</a><br>
-</div>
-</div>
-<div class="mech-card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-    <h3 class="dr-title">Title Goes Here </h3>
-  <h6 class="dr-details">
-    Class: F.Y B.TECH<br>
-    Div: <br>
-  </h6>
-  <button class="mech-btn">Contact Me</button>
-  <button class="mech-btn">Learn More</a><br>
-</div>
-</div></div>
-<br>
 <br><hr width="95%"><br>
 
-<h2 class="section-title">Useful Links <i class="fa fa-external-link-alt"></i> </h2>
+<div class="card-container">
+
+  <div class="card-mech">
+    <img class="avatar-img" src="img/profile-avatar.png">
+    <div class="card-header">
+      <h3>Sanjivani Mechanical  LMS</h3>
+    </div>
+    <div class="body">
+      <h6>
+        Subjects: BME & EG<br><br>
+        <p class=""> <i class="fa fa-clock"></i> 10:00 am to 10:00 pm</p>
+      </h6>
+      <a class="mech-btn" onclick="error()">Learn More</a><br><br>
+    </div>
+  </div>
+
+  <div class="card-mech">
+    <img class="avatar-img" src="img/profile-avatar.png">
+    <div class="card-header">
+      <h3>Sanjivani Mechanical  LMS</h3>
+    </div>
+    <div class="body">
+      <h6>
+        Subjects: BME & EG<br><br>
+        <p class=""> <i class="fa fa-clock"></i> 10:00 am to 10:00 pm</p>
+      </h6>
+      <a class="mech-btn" onclick="error()">Learn More</a><br><br>
+    </div>
+  </div>
+
+  <div class="card-mech">
+    <img class="avatar-img" src="img/profile-avatar.png">
+    <div class="card-header">
+      <h3>Sanjivani Mechanical  LMS</h3>
+    </div>
+    <div class="body">
+      <h6>
+        Subjects: BME & EG<br><br>
+        <p class=""> <i class="fa fa-clock"></i> 10:00 am to 10:00 pm</p>
+      </h6>
+      <a class="mech-btn" onclick="error()">Learn More</a><br><br>
+    </div>
+  </div>
+
+</div>
+
+<br><hr width="95%"><br>
+
+
 <div class="custom-mech-card" onclick="">
-<div class="mech-card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
+<center>
+  (hidden)
 </center>
-<div class="profile-body">
-  <h3 class="dr-title">Sanjivani Mechanical  LMS</h3>
-  <h6 class="dr-details">
-    Subjects: BME & EG<br><br>
-    <p class=""> <i class="fa fa-clock"></i> 06 Mar 2022</p>
-  </h6>
-  <button class="mech-btn" onclick="mechLMS()">Login</button>
-  <button class="mech-btn" onclick="error()">Learn More</a><br>
-</div>
-</div>
-<div class="mech-card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-  <h3 class="dr-title">Sanjivani Science LMS</h3>
-  <h6 class="dr-details">
-    Subjects: EM-1 & EP<br><br>
-    <p class=""> <i class="fa fa-clock"></i> 06 Mar 2022</p>
-  </h6>
-  <button class="mech-btn" onclick="esciLMS()">Login</button>
-  <button class="mech-btn" onclick="error()">Learn More</a><br>
-</div>
-</div>
-<div class="mech-card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-  <h3 class="dr-title">Sanjivani BEEE LMS</h3>
-  <h6 class="dr-details">
-    Subjects: BEE<br><br>
-    <p class=""> <i class="fa fa-clock"></i> 06 Mar 2022</p>
-  </h6>
-  <button class="mech-btn" onclick="eeeLMS()">Login</button>
-  <button class="mech-btn" onclick="error()">Learn More</a><br>
-</div>
-</div>
-<div class="mech-card">
-  <center>
-  <img class="profile-img" src="img/profile-avatar.png" draggable="false">
-</center>
-<div class="profile-body">
-  <h3 class="dr-title">LMS Username & Passwords</h3>
-  <h6 class="dr-details">
-    Username and password for LMS<br><br>
-    <p class=""> <i class="fa fa-clock"></i> 06 Mar 2022</p>
-  </h6>
-  <a class="mech-btn" data-mdb-toggle="modal" data-mdb-target="#login">Login</a>
-  <button class="mech-btn" onclick="error()">Learn More</a><br>
-</div>
+<br><hr width="95%"><br>
 </div></div>
 <br><br>
 <br><br>
 <br><br>
-<footer>
-  Made by rubyproducti9n
-</footer>
+<!-- <footer>
+  Made by Active Community of Mechanical Dept.
+</footer> -->
 </div>
 <script>
+function link1(){window.location = "https://youtube.com/shorts/qCETLdtGBp0";}
+function link2(){window.location = "https://youtube.com/shorts/ZTCLJVxjr8o";}
+function link3(){window.location = "https://youtube.com/shorts/9BaYEpmXZcs";}
+function link4(){window.location = "https://youtube.com/shorts/BCOoZgfmv90";}
+
 function materials(){window.location = "pages/materials.html";}
 function announcements(){window.location = "pages/announcements.html";}
 
@@ -495,8 +456,12 @@ function mechLMS(){window.location = "http://54.147.11.221/mech/login/index.php"
 function esciLMS(){window.location = "http://18.235.169.74/esci/login/index.php";}
 function eeeLMS(){window.location = "http://52.7.61.3/eee/login/index.php";}
 
-function error(){alert("Something went wrong, please contact our team or try again later.")}
+function error(){alert("Link expired")}
 </script>
+<link rel="stylesheet" href="lib/navbar/assets/css/styles.css">
+<link rel="stylesheet" href="lib/toast/assets/notify.min.css" />
+<script src="lib/toast/assets/notify.min.js"></script>
+<script src="lib/navbar/assets/js/main.js"></script>
 <script src="https://rubyproducti9n.github.io/concertera/mdb/js/global.min.js"></script>
 </body>
 </html>

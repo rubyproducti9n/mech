@@ -1,34 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@700&family=Jost&family=Montserrat+Alternates:wght@200;400&family=Red+Hat+Display&family=Roboto:wght@400;700&display=swap');
 
+:root{
+  --color: #6750A4;
+  --bgcolor: #eaddff;
+}
+body{
+  color: var(--color);
+  font-family: 'Roboto', sans-serif;
+}
+.header2{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 20%;
+  height: 70vh;
+}
 .mech-card{
     display: inline-block;
     margin: 0 10px;
     padding-bottom: 20px;
-    width: 22.8%;
+    width: 22.0vw;
     height: 30%;
-    color: rgb(39, 39, 39);
-    background: rgb(255, 255, 255);
+    color: #6750A4;
+    background: #eaddff00;
     /* backdrop-filter: blur(14px); */
     box-shadow: 0px 0px 00px rgba(0, 0, 0, 0.192);
-    border: 2px #ff026b00 solid;
-    border-radius: 10px;
+    border: 2px #eaddff solid;
+    border-radius: 28px;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor: pointer;
+    transition: all 0.1s ease;
     /* cursor: pointer; */
   }
   .mech-card:hover{
+    transform: scale(1.05);
+    color: #6750A4;
+    background: #eaddff;
     height: 33%;
     border: 2px #ff026b00 solid;
     box-shadow: 0px 0px 0px #00000031;
   }
   .mech-card-img{
     width: 100%;
-    border-radius: 0px;
+    border-radius: 28px;
+    padding: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0);
   }
   .tags{
       color: rgb(0, 145, 230);
       background: rgba(201, 32, 32, 0);
-      padding: 5px 10px;
+      padding: 0px 10px;
       width: fit-content;
       font-size: 13px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -40,10 +61,9 @@
     margin: 20px 0;
     padding: 0 10px;
     font-size: 15px;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Roboto', sans-serif;
   }
   .dr-details{
-    color: rgb(148, 148, 148);
     overflow: scroll;
     text-overflow: ellipsis;
     line-height: 15px;
@@ -75,7 +95,7 @@
 .profile-img{
     width: 50%;
     border-radius: 50%;
-    border: 4px #ffffff solid;
+    border: 4px #6750A4 solid;
     margin-top: 20px;
     box-shadow: 5px 5px 20px #00000057;
   }
@@ -84,38 +104,142 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   .mech-btn{
-    color: #5599ff;
-    background: #5599ff00;
-    border: 2px #5599ff00 solid;
-    border-radius: 0px;
-    margin: 5px 10px;
-    padding: 10px 15px;
-    font-size: 11px;
-    font-family: 'Comfortaa', cursive;
-    outline: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 28px;
+    color: #6750A4;
+    border: 2px #eaddff solid;
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaddff00;
+    cursor: pointer;
+    transition: all 0.1s ease;
   }
   .mech-btn:hover{
-    color: #5599ff;
-    background: #f3f3f3;
-    border: 2px #5599ff00 solid;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255);
-    box-shadow: 0px 0px 0px #5599ff;
+    color: #ffffff;
+    border: 2px #6650a400 solid;
+    background-color: #6750A4;
+    box-shadow: 3px 3px 8px #6650a470;
   }
   .mech-btn:active{
-    color: #ffffff;
-    background: #5599ff;
-    border: 2px #94000000 solid;
-    box-shadow: 0 0 0px #5599ff;
+    transition: all 0.1s ease;
   }
+  .container{
+    color: #9c4146;
+    background: #ffdad9;
+    border-radius: 28px;
+    margin: 10px 40px;
+    overflow: hidden;
+  }
+  .container .promo-img{
+    padding: 20px;
+    border-radius: 50%;
+  }
+  .container .promo-txt{
+    padding: 0 40px;
+  }
+  .btn-subs{
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: rgb(187, 0, 0);
+  }
+  section{
+    margin: 10px 40px;
+  }
+  .card{
+    display: inline-block;
+    width: 30%;
+    margin: 10px 15px;
+    border-radius: 0px;
+    padding-bottom: 30px;
+    background-color: #eaddff;
+    border: 9px #eaddff solid;
+    transform: rotate(3deg);
+    transition: all 0.2s ease;
+  }
+  .card-img{
+    width: 100%;
+  }
+  .card:hover{
+    transform: translateY(-20px);
+  }
+  .insta-container{
+    color: #6750A4;
+    background: #eaddff;
+    border-radius: 28px;
+    margin: 10px 40px;
+    overflow: hidden;
+  }
+  .insta-container .insta-promo-img{
+    padding: 20px;
+    width: 30%;
+    border-radius: 50%;
+  }
+  .insta-container .insta-promo-txt{
+    padding: 0 40px;
+  }
+  .btn-follow{
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 14px;
+    border-radius: 28px;
+    color: #6750A4;
+    border: 2px #6750A4 solid;
+    background-color: #eaddff;
+    transition: all 0.1s ease;
+  }
+  .btn-follow:hover{
+    color: #ffffff;
+    border: 2px #6650a400 solid;
+    background-color: #6750A4;
+    box-shadow: 3px 3px 8px #6650a470;
+  }
+
+  .card-container{
+    margin: 10px 40px;
+    border: 0px #6750A4 solid;
+    border-radius: 28px;
+    padding: 0px;
+  }
+  .card-container .card-mech{
+    display: inline-block;
+    border: 2px #dec9ff solid;
+    width: 30%;
+    margin: 0 20px;
+    border-radius: 28px;
+    overflow: hidden;
+  }
+  .card-container .card-header{
+    padding: 10px;
+  }
+  .card-container .body{
+    padding: 10px;
+  }
+  .avatar-img{
+    width: 100%;
+    border-radius: 16px;
+  }
+
   @media screen and (max-width: 768px) {
+    .header2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 50vh;
+  }
     .mech-card{
       display: inline-block;
-      margin: 20px 30px;
-      width: 80%;
+      margin: 20px 10px;
+      width: 95%;
       height: 100%;
-      background: rgb(29, 29, 29);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-      border-radius: 50px;
+      border-radius: 28px;
       overflow: hidden;
       word-wrap: break-word;
       text-overflow: ellipsis;
@@ -123,26 +247,25 @@
       transition: 0.5s ease;
     }
     .mech-card:hover{
+      transform: scale(1.02);
       transition: 0.5s ease;
     }
     .mech-card-img{
       width: 100%;
-      border-radius: 0px;
+      border-radius: 28px;
+      padding: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0);
     }
     .dr-title{
       margin: 20px 0;
       padding: 0 10px;
-      font-size: 11px;
-      font-family: 'Comfortaa', cursive;
-      color: rgb(255, 255, 255);
+      font-size: 14px;
     }
     .dr-details{
       overflow: hidden;
       text-overflow: ellipsis;
       padding: 0 10px;
       font-size: 10px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       width: 100%;
       height: 100%;
     }
@@ -170,5 +293,106 @@
     }
     .mech-btn-outline:hover{
       transition: 0.2s ease;
+    }
+    .container{
+      color: #9c4146;
+      background: #ffdad9;
+      border-radius: 28px;
+      margin: 10px 20px;
+      padding: 20px;
+      overflow: hidden;
+    }
+    .container .promo-img{
+      padding: 20px;
+      width: 60%;
+      border-radius: 50%;
+    }
+    .container .promo-txt{
+      padding: 0 20px;
+    }
+    .btn-subs{
+      text-transform: uppercase;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 40px 00px;
+      font-size: 14px;
+      background-color: rgb(187, 0, 0);
+    }section{
+      margin: 10px 20px;
+    }
+    .card{
+      display: inline-block;
+      width: 90%;
+      margin: 20px 15px;
+      border-radius: 0px;
+      padding-bottom: 30px;
+      background-color: #eaddff;
+      border: 9px #eaddff solid;
+      transform: rotate(3deg);
+      transition: all 0.2s ease;
+    }
+    .card-img{
+      width: 100%;
+    }
+    .card:hover{
+      transform: translateY(-20px);
+    }
+    .insta-container{
+      color: #6750A4;
+      background: #eaddff;
+      border-radius: 28px;
+      margin: 10px 20px;
+      padding: 20px;
+      overflow: hidden;
+    }
+    .insta-container .insta-promo-img{
+      padding: 20px;
+      width: 60%;
+      align-items: center;
+      border-radius: 50%;
+    }
+    .insta-container .insta-promo-txt{
+      padding: 0 40px;
+    }
+    .btn-follow{
+      text-transform: uppercase;
+      padding: 10px 20px;
+      margin: 0 5px;
+      font-size: 14px;
+      border-radius: 28px;
+      color: #6750A4;
+      border: 2px #6750A4 solid;
+      background-color: #eaddff;
+      transition: all 0.1s ease;
+    }
+    .btn-follow:hover{
+      color: #ffffff;
+      border: 2px #6650a400 solid;
+      background-color: #6750A4;
+      box-shadow: 3px 3px 8px #6650a470;
+    }
+    .card-container{
+      margin: 10px 20px;
+      border: 0px #6750A4 solid;
+      border-radius: 28px;
+      padding: 0px;
+    }
+    .card-container .card-mech{
+      display: inline-block;
+      border: 2px #dec9ff solid;
+      width: 100%;
+      margin: 20px 0px;
+      border-radius: 28px;
+      overflow: hidden;
+    }
+    .card-container .card-header{
+      padding: 10px;
+    }
+    .card-container .body{
+      padding: 10px;
+    }
+    .avatar-img{
+      width: 100%;
+      border-radius: 16px;
     }
   }
