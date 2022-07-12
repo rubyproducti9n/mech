@@ -15,7 +15,6 @@ body{
         }
         .nav-link{
             color: rgb(34, 34, 34);
-            background: #e4060600;
             margin: 10px 5px;
             padding: 15px 25px;
             border-radius: 28px;
@@ -43,13 +42,14 @@ body{
     border: 0px rgb(255, 255, 255) solid;
     border-radius: 28px;
     width: 21.8%;
-    height: 500px;
+    height: 600px;
     margin: 1vh 0.6vw;
     padding: 10px;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgb(206, 206, 206);
     transition: all 0.2s ease;
+    z-index: 0;
 }
 .card:nth-child(2){
     color: #fff;
