@@ -21,6 +21,8 @@
     ><br />
     <button id="register">Register</button>
 
+    <div id="getInfo"></div>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <!-- <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script> -->
 
@@ -53,66 +55,18 @@
       </script>
 
     <script>
-      const validateForm = () => {
-        const name = document.querySelector("#form-name").value;
-        const username = document.querySelector("#form-username").value;
-        const gender = document.querySelector("#form-gender").value;
-
-        if (name.trim() == "" || username.trim() == "" || gender == "") {
-          alert("form not completely filled");
-        } else {
-          writeToDatabase(name, username, gender);
-        }
-      };
-
-      const writeToDatabase = (name, username, gender) => {
-        firebase
-          .database()
-          .ref("Registration/" + Date.now())
-          .set({
-            name: name,
-            user: username,
-            gender: gender,
-          });
-      };
-
-      document.querySelector("#register").addEventListener("click", () => {
-        validateForm();
-      });
-
-      const readFromDatabaseOn = (id) => {
-        firebase
-          .database()
-          .ref(id)
-          .on("value", function (snapshot) {
-            console.log(snapshot.val().name);
-            console.log(snapshot.val().user);
-            console.log(snapshot.val().gender);
-          });
-      };
-
-      const readFromDatabaseOnce = (id) => {
-        firebase
-          .database()
-          .ref(id)
-          .once("value", function (snapshot) {
-            console.log(snapshot.val().name);
-            console.log(snapshot.val().user);
-            console.log(snapshot.val().gender);
-          });
-      };
+        const display = document.querySelector("#getInfo").value;
 
       const readMultipleNodesFromDatabase = () => {
         firebase
           .database()
-          .ref("Registration")
+          .ref("movie")
           .once("value", function (snapshot) {
             x = 0;
             snapshot.forEach(function (childSnapshot) {
-              console.log("user " + x);
-              console.log(childSnapshot.val().name);
-              console.log(childSnapshot.val().user);
-              console.log(childSnapshot.val().gender);
+              display.innerHTML = "user " + x + "<br>" + childSnapshot.val().Title + "<br>" + childSnapshot.val().Ratings;
+              console.log(childSnapshot.val().Title);
+              console.log(childSnapshot.val().Ratings);
               console.log(
                 childSnapshot.val().age == undefined
                   ? ""
@@ -122,22 +76,6 @@
               x++;
             });
           });
-      };
-
-      const updateUserDetails = (id, age) => {
-        firebase
-          .database()
-          .ref("Registration/" + id)
-          .update({
-            age: age,
-          });
-      };
-
-      const removeUserDetails = (id) => {
-        firebase
-          .database()
-          .ref("Registration/" + id)
-          .remove();
       };
 
     </script>
