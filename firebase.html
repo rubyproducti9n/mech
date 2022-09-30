@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Firebase Realtime Database</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+  </head>
+  <body>
+    Name<br />
+    <input type="text" id="form-name" /><br />
+    Username<br />
+    <input type="text" id="form-username" /><br />
+    Gender<br />
+    <select id="form-gender">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option> </select
+    ><br />
+    <button id="register">Register</button>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script> -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use-->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script> -->
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBSWHaANhwQPHvMt3ntzOlPP463uyMbEeQ",
+          authDomain: "mechanical-site.firebaseapp.com",
+          databaseURL: "https://mechanical-site-default-rtdb.firebaseio.com",
+          projectId: "mechanical-site",
+          storageBucket: "mechanical-site.appspot.com",
+          messagingSenderId: "964125778213",
+          appId: "1:964125778213:web:9cc75643f314ce85eb3acc",
+          measurementId: "G-V2H3Y13ETS"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+    <script>
+      const validateForm = () => {
+        const name = document.querySelector("#form-name").value;
+        const username = document.querySelector("#form-username").value;
+        const gender = document.querySelector("#form-gender").value;
+
+        if (name.trim() == "" || username.trim() == "" || gender == "") {
+          alert("form not completely filled");
+        } else {
+          writeToDatabase(name, username, gender);
+        }
+      };
+
+      const writeToDatabase = (name, username, gender) => {
+        firebase
+          .database()
+          .ref("Registration/" + Date.now())
+          .set({
+            name: name,
+            user: username,
+            gender: gender,
+          });
+      };
+
+      document.querySelector("#register").addEventListener("click", () => {
+        validateForm();
+      });
+
+      const readFromDatabaseOn = (id) => {
+        firebase
+          .database()
+          .ref(id)
+          .on("value", function (snapshot) {
+            console.log(snapshot.val().name);
+            console.log(snapshot.val().user);
+            console.log(snapshot.val().gender);
+          });
+      };
+
+      const readFromDatabaseOnce = (id) => {
+        firebase
+          .database()
+          .ref(id)
+          .once("value", function (snapshot) {
+            console.log(snapshot.val().name);
+            console.log(snapshot.val().user);
+            console.log(snapshot.val().gender);
+          });
+      };
+
+      const readMultipleNodesFromDatabase = () => {
+        firebase
+          .database()
+          .ref("Registration")
+          .once("value", function (snapshot) {
+            x = 0;
+            snapshot.forEach(function (childSnapshot) {
+              console.log("user " + x);
+              console.log(childSnapshot.val().name);
+              console.log(childSnapshot.val().user);
+              console.log(childSnapshot.val().gender);
+              console.log(
+                childSnapshot.val().age == undefined
+                  ? ""
+                  : childSnapshot.val().age
+              );
+              console.log(" ");
+              x++;
+            });
+          });
+      };
+
+      const updateUserDetails = (id, age) => {
+        firebase
+          .database()
+          .ref("Registration/" + id)
+          .update({
+            age: age,
+          });
+      };
+
+      const removeUserDetails = (id) => {
+        firebase
+          .database()
+          .ref("Registration/" + id)
+          .remove();
+      };
+
+    </script>
+  </body>
+</html>
