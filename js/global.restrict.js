@@ -1,4 +1,24 @@
 
+//Global Site Control
+var server_status = 0;
+var code = 423;
+var status = document.getElementById("status");
+var home = document.getElementById("home");
+var msg = document.getElementById("msg");
+home.style.display = "none";
+if (server_status == 0){
+    document.getElementById("status").innerHTML = "\
+    <h2>Something went wrong, try again later.</h2>\
+    <h6>(Error "+ code +")</h6>";
+    home.style.display = "none";
+    msg.style.display = "block";
+}
+else{
+    home.style.display = "block";
+    msg.style.display = "none";
+}
+
+
 document.onkeydown = function(e) {
     if (e.ctrlKey &&
         (e.keyCode === 67 ||
