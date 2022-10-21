@@ -133,6 +133,24 @@
 .update{
   margin: 10px 30px;
 }
+.upload-btn{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  color: #fff;
+  background: rgb(0, 140, 255);
+  padding: 20px 25px;
+  border-radius: 28px;
+  font-size: 14px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.384);
+  cursor: pointer;
+}
+.upload-btn:hover{
+  background: rgb(0, 116, 211);
+}
+.upload-ic{
+  padding-right: 10px;
+}
 .header2 {
     text-align: center;
     padding: 32px;
@@ -154,18 +172,22 @@
     padding: 0 8px;
   }
 
+  img::before{
+    content: '©LvJ-mech';
+    color: #fff;
+    padding: 10px;
+    opacity: .8;
+    position: relative;
+    top: 0px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
+    z-index: 100;
+  }
   .column img {
     margin-top: 10px;
     vertical-align: middle;
-    border-radius: 6px;
+    border-radius: 4px;
     width: 100%;
-    padding: 6px 0;
-  }
-  img::after{
-    content: ' sadsd';
-    color: rgb(255, 0, 0);
-    background: #000;
-    z-index: 14;
+    padding: 0px 0;
   }
 
   /* Responsive layout - makes a two column-layout instead of four columns */
@@ -189,57 +211,28 @@
 <script>
 
 </script>
-<body onload="login_show()">
-
-  <header class="header">
-    <a href="#" class="header__logo">MECHANICAL DEPT.</a>
-
-    <i class='bx bx-menu header__toggle' id="header-toggle"></i>
-
-    <nav class="nav" id="nav-menu">
-        <div class="nav__content bd-grid">
-            <a href="" class="nav__perfil">
-                <div class="nav__img">
-                    <img src="img/profile-avatar.png" alt="">
-                </div>
-
-                <div>
-                    <span id="user_name" class="nav__name">Log In</span>
-                    <!-- <span class="nav__name">Mitchell</span> -->
-                </div>
-            </a>
-
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-
-                    <li class="nav__item dropdown">
-                        <a href="#" class="nav__link dropdown__link">About <i class='bx bx-chevron-down dropdown__icon'></i></a>
+<!-- <body onload="login_show()"> -->
+  <body>
 
 
-                        <ul class="dropdown__menu">
-                            <li class="dropdown__item"><a href="#" class="nav__link">About Us</a></li>
-                            <li class="dropdown__item"><a href="#" class="nav__link">Location</a></li>
-                            <li class="dropdown__item"><a href="#" class="nav__link">Studies</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav__item dropdown"><a href="#" class="nav__link">Skills <i class='bx bx-chevron-down dropdown__icon'></i></a>
-
-                      <ul class="dropdown__menu">
-                          <li class="dropdown__item"><a href="#" class="nav__link">Video Editing</a></li>
-                          <li class="dropdown__item"><a href="#" class="nav__link">Web Management</a></li>
-                          <li class="dropdown__item"><a href="#" class="nav__link">Programming Knowledge</a></li>
-                      </ul>
-                    </li>
-
-
-                    <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+    <header class="header"> <a href="#" class="header__logo">UNOFFICIAL MECH</a> <i class='bx bx-menu header__toggle' id="header-toggle"></i>
+      <nav class="nav" id="nav-menu">
+          <div class="nav__content bd-grid"> <a href="" class="nav__perfil">
+                  <!-- <div class="nav__img"> <img src="img/profile-avatar.png" alt=""> </div> -->
+                  <div> <span id="user_name" class="nav__name">UNOFFICIAL MECH</span> <!-- <span class="nav__name">Mitchell</span> -->
+                  </div>
+              </a>
+              <div class="nav__menu">
+                  <ul class="nav__list">
+                      <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
+                      <li class="nav__item"> <a href="album.html" class="nav__link">ALBUM</a></li>
+                      <li class="nav__item"><a href="#" class="nav__link">VIDEOS</a></li>
+                      <li class="nav__item"><a href="about.html" class="nav__link">ABOUT</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
 <!-- <div class="nav-bar">
   <a class="link" onclick="home()">
   <img class="brand-lg" src="img/avatar.jpg">
@@ -257,15 +250,21 @@
     <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Coming Soon</h2>
     <br>
 </div> -->
+
+<div id="msg" class="status">
+  <center>
+  <div id="status"></div>
+</center>
+</div>
 <div id="home" class="main-container">
 
 <br><br><br><br>
-
 <!-- Header -->
-<div class="header2">
-    <h1>#2K22 Mechanical Batch</h1>
-    <p>Unofficial Album</p>
-  </div>
+
+<!-- <div class="header2">
+  <h3>UNOFFICIAL MECH</h3>
+  <h5>Album</h5>
+</div> -->
 
 <!--
   <h1>• Photos</h1> -->
@@ -273,59 +272,27 @@
   <!-- Photo Grid -->
   <div id="control" class="row">
     <div class="column">
-        <img draggable="false" src="memories/m (2).jpg" style="width:100%">
-        <img draggable="false" src="memories/g10.jpg" style="width:100%">
-      <img draggable="false" src="memories/g0.jpg" style="width:100%">
-      <img draggable="false" src="memories/g1.jpg" style="width:100%">
-      <img draggable="false" src="memories/g2.jpg" style="width:100%">
-      <img draggable="false" src="memories/g3.jpg" style="width:100%">
-      <img draggable="false" src="memories/g4.jpg" style="width:100%">
-      <img draggable="false" src="memories/g5.jpg" style="width:100%">
-      <!-- <img draggable="false" src="memories/g6.jpg" style="width:100%"> -->
+      <div id="c1"></div>
     </div>
     <div class="column">
-        <img draggable="false" src="memories/m (1).jpg" style="width:100%">
-        <img draggable="false" src="memories/m (5).jpg" style="width:100%">
-        <img draggable="false" src="memories/g5.jpg" style="width:100%">
-        <img draggable="false" src="memories/g2.jpg" style="width:100%">
-        <img draggable="false" src="memories/g0.jpg" style="width:100%">
-        <img draggable="false" src="memories/g4.jpg" style="width:100%">
-        <img draggable="false" src="memories/g1.jpg" style="width:100%">
-        <img draggable="false" src="memories/g3.jpg" style="width:100%">
-        <img draggable="false" src="memories/g6.jpg" style="width:100%">
+      <div id="c2"></div>
     </div>
     <div class="column">
-        <img draggable="false" src="memories/g3.jpg" style="width:100%">
-        <img draggable="false" src="memories/g1.jpg" style="width:100%">
-        <img draggable="false" src="memories/g4.jpg" style="width:100%">
-        <img draggable="false" src="memories/g0.jpg" style="width:100%">
-        <img draggable="false" src="memories/g2.jpg" style="width:100%">
-        <img draggable="false" src="memories/g6.jpg" style="width:100%">
-        <img draggable="false" src="memories/m (4).jpg" style="width:100%">
-        <img draggable="false" src="memories/m (3).jpg" style="width:100%">
-        <img draggable="false" src="memories/g5.jpg" style="width:100%">
+      <div id="c3"></div>
     </div>
     <div class="column">
-        <img draggable="false" src="memories/m (1).jpg" style="width:100%">
-        <img draggable="false" src="memories/g1.jpg" style="width:100%">
-        <img draggable="false" src="memories/g3.jpg" style="width:100%">
-        <img draggable="false" src="memories/g0.jpg" style="width:100%">
-        <img draggable="false" src="memories/g2.jpg" style="width:100%">
-        <img draggable="false" src="memories/g4.jpg" style="width:100%">
-        <img draggable="false" src="memories/g6.jpg" style="width:100%">
-        <img draggable="false" src="memories/g5.jpg" style="width:100%">
-        <img draggable="false" src="memories/m (6).jpg" style="width:100%">
+      <div id="c4"></div>
     </div>
+      <!-- <img draggable="false" oncontextmenu="return false;" src="memories/g6.jpg" style="width:100%"> -->
+
   </div>
 
     <!-- <div id="user_detail_container" class="user-detail">
       <img id="user_avatar" class="adjust" src="img/profile-avatar.png">
      <p class="adjust text"></p>
     </div> -->
-<div class="update primary-font">Last updated 29-Jun-22</div>
-<div class="management primary-font">
-  This website is managed by ACTIVE COMMUNITY OF MECH
-</div>
+<!-- <div class="update primary-font">Last updated 17-Sep-22</div> -->
+<a class="upload-btn" href="javascript:void(0)"><i class="fa fa-plus upload-ic"></i> Add to album</a>
   <!-- <hr width="80%">
   <h1>• Videos</h1>
   <div class="row">
@@ -430,6 +397,9 @@
     }
   }
 
+
+
+
 function materials(){window.location = "pages/materials.html";}
 function announcements(){window.location = "pages/announcements.html";}
 
@@ -443,6 +413,8 @@ function error(){alert("Something went wrong, please contact our team or try aga
 <link rel="stylesheet" href="lib/toast/assets/notify.min.css" />
 <script src="lib/toast/assets/notify.min.js"></script>
 <script src="lib/navbar/assets/js/main.js"></script>
+<script src="js/album.js"></script>
+<script src="js/global.restrict.js"></script>
 <!-- <script src="https://rubyproducti9n.github.io/concertera/mdb/js/global.min.js"></script> -->
 </body>
 </html>

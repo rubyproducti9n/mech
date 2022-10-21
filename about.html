@@ -21,6 +21,7 @@
     @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
     body{ background: rgb(255, 255, 255); user-select: none;}
     hr{background: rgba(196, 196, 196, 0.315);}
+
     .section-title{
       padding: 0 40px;
       color: var(--color);
@@ -30,11 +31,9 @@
     }
     .header-img{
       width: 20%;
-      border: 4px rgb(1, 141, 255) solid;
+      border: 2px rgb(77, 77, 77) solid;
       border-radius: 28px;
-      padding: 3px;
-      box-shadow: 0 0 2px rgba(0, 0, 0, 0.815);
-      transform: rotate(-2deg);
+      padding: 5px;
     }
     .header-img::after{
       content: 'name';
@@ -217,9 +216,6 @@
 <script> </script>
 
 <body>
-    <div class="note">
-        <marquee> Disclaimer: This web page is meant for educational purpose only. All copyrights to their official owner. Page was created by Om Lokhande. </marquee>
-    </div>
     <header class="header"> <a href="#" class="header__logo">UNOFFICIAL MECH</a> <i class='bx bx-menu header__toggle' id="header-toggle"></i>
         <nav class="nav" id="nav-menu">
             <div class="nav__content bd-grid"> <a href="" class="nav__perfil">
@@ -232,124 +228,57 @@
                         <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
                         <li class="nav__item"> <a href="album.html" class="nav__link">ALBUM</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">VIDEOS</a></li>
-                        <li class="nav__item"><a href="about.html" class="nav__link">ABOUT</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </header>
+    </header> <br>
     <div id="msg" class="status">
       <center>
       <div id="status"></div>
     </center>
     </div>
     <div id="home">
-    <div class="header2">
-        <center>
-            <div class="credit">
-        <img class="header-img" src="img/mech.jpg" draggable="false" oncontextmenu="return false;">
-    </div>
-    </center>
-        <h3>UNOFFICIAL MECH</h3>
-    </div>
-    <!-- <nav class="custom-nav">
-    <a class="">
-      <img class="mech-avatar" src="img/avatar.jpg" draggable="false" /></span>  </a>
-</nav> -->
-    <div class="maintain-container">
-        <center><br><br><br><br><img class="maintain-img" draggable="false" src="https://rubyproducti9n.github.io/concertera/maintenance/music.png"></center>
-        <center>
-            <p class="maintain-text">
-            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Coming Soon</h2> <br>
-    </div>
-    <div class="main-container"> <br><br><br><br>
-        <h2 class="section-title">Popular videos</h2>
-        <div class="custom-mech-card">
-            <div class="mech-card " onclick="link1()"> <img class="mech-card-img" draggable="false" src="img/img1.jpg">
-                <h3 class="dr-title placeholder">SANJIVANI COE Status Video | New </h3>
-                <h6 class="dr-details placeholder">
-                    <p class="">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 08 Jul 2022</p>
-                </h6>
-            </div>
-            <div class="mech-card" onclick="link2()"> <img class="mech-card-img" draggable="false" src="img/img2.jpg">
-                <h3 class="dr-title">SANJIVALI COE | STATUS VIDEO #3</h3>
-                <h6 class="dr-details">
-                    <p class="">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 26 Jun 2022</p>
-                </h6>
-            </div>
-            <div class="mech-card" onclick="link3()"> <img class="mech-card-img" draggable="false" src="img/img3.jpg">
-                <h3 class="dr-title"> Oreo Biscuit Prank | PART 2 </h3>
-                <h6 class="dr-details">
-                    <p class="">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 05 Jul 2022</p>
-                </h6>
-            </div>
-            <div class="mech-card" onclick="link4()"> <img class="mech-card-img" draggable="false" src="img/img4.jpg">
-                <h3 class="dr-title"> Oreo Biscuit Prank | PART 1 </h3>
-                <h6 class="dr-details">
-                    <p class="">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 29 Jun 2022</p>
-                </h6>
-            </div>
-        </div> <br>
-        <hr width="95%"><br>
-        <div class="container"> <img class="promo-img" src="img/avatar.jpg" align="left">
-            <p class="promo-txt">
-            <h2>UNOFFICIAL MECH <i class="fa fa-check-circle"></i> </h2>
-            <h5>0 subscribers</h5>
-            <h6> Subscribe to Unofficial Mechanical Youtube Channel, <br> where our memories are stored.<br><br> </h6> <a class="btn-subs" href="#">Subscribe</a> </p>
-        </div> <br> <br>
-        <hr width="95%"><br>
-        <section>
-            <h1>Unofficial Album</h1>
-            <h6>(Revealing 1st Nov)</h6>
-            <div class="card"> <img class="card-img blur" draggable="false" oncontextmenu="return false;" src="memories/g3.jpg"> </div>
-            <div class="card"> <img class="card-img blur" draggable="false" oncontextmenu="return false;" src="memories/g5.jpg"> </div>
-            <div class="card"> <img class="card-img blur" draggable="false" oncontextmenu="return false;" src="memories/g4.jpg"> </div>
-        </section> <br>
-        <hr width="95%"><br>
-        <div class="custom-mech-card" onclick="">
-            <!-- <center>
-  (hidden)
-</center> -->
-            <div class="insta-container"> <img class="insta-promo-img" src="img/insta.jpg" align="left">
-                <p class="insta-promo-txt">
-                <h2>_sanjivani_group_of_institutes <i class="fa fa-check-circle"></i> </h2>
-                <h3>SANJIVANI COLLEGE OF ENGINEERING KOPARGAON</h3>
-                <h5>1,633 FOLLOWERS</h5>
-                <h6> Follow to our Unofficial instagram page to stay updated<br> with college fun.<br><br> </h6> <a class="btn-follow" href="https://instagram.com/_sanjivani_group_of_institutes?igshid=YmMyMTA2M2Y=">Open</a> <a class="btn-follow" href="https://instagram.com/_sanjivani_group_of_institutes?igshid=YmMyMTA2M2Y=">Follow</a> </p>
-            </div>
-        </div> <br>
         <hr width="95%">
         <div id="6koSC"></div> <br>
         <hr width="95%"><br>
+        <center>
+            <h2>MANAGEMENT TEAM</h2>
+        </center>
         <div class="card-container">
-            <div class="card-mech"> <br> <img class="avatar-img" src="img/profile-avatar.png">
+            <div class="card-mech"> <br> <img class="avatar-img" src="img/avatar 1.png">
                 <div class="card-header">
-                    <h3>Sanjivani Mechanical LMS</h3>
+                    <h3>Om G. Lokhande</h3>
                 </div>
                 <div class="body">
-                    <h6> Subjects: BME & EG<br><br>
-                        <p class=""> <i class="fa fa-clock"></i> 10:00 am to 10:00 pm</p>
-                    </h6><br> <a class="mech-btn" onclick="error()">Learn More</a><br><br>
+                    <h6> Web Management<br>
+                        Email: om.lokhande34@gmail.com<br>
+                        <p class=""> <i class="fa fa-clock"></i> 08:00 pm - 11:00 pm</p>
+                    </h6>
                 </div>
             </div>
             <div class="card-mech"> <br> <img class="avatar-img" src="img/profile-avatar.png">
                 <div class="card-header">
-                    <h3>Sanjivani Mechanical LMS</h3>
+                    <h3>Empty Slot</h3>
                 </div>
                 <div class="body">
-                    <h6> Subjects: BME & EG<br><br>
-                        <p class=""> <i class="fa fa-clock"></i> 10:00 am to 10:00 pm</p>
-                    </h6> <br> <a class="mech-btn" onclick="error()">Learn More</a><br><br>
+                    <h6> for Web Designing<br>
+                        Email Address: -    <br>
+                        <p class=""> <i class="fa fa-clock"></i> 07:00 pm - 09:00 pm</p>
+                    </h6>
                 </div>
             </div>
             <div class="card-mech"> <br> <img class="avatar-img" src="img/profile-avatar.png">
                 <div class="card-header">
-                    <h3>Sanjivani Mechanical LMS</h3>
+                    <h3>Empty Slot</h3>
                 </div>
                 <div class="body">
-                    <h6> Subjects: BME & EG<br><br>
+                    <h6> -<br>
+                        Email Address: -
+                        <br>
                         <p class=""> <i class="fa fa-clock"></i> 10:00 am to 10:00 pm</p>
-                    </h6><br> <a class="mech-btn" onclick="error()">Learn More</a><br><br>
+                    </h6>
                 </div>
             </div>
         </div> <br>
@@ -359,12 +288,13 @@
                 <h6>That's it for today!</h6>
             </center>
         </div>
-    </div> <br><br> <br><br> <br><br>
+     <br><br> <br><br> <br><br>
+    </div>
     <!-- <footer>
   Made by Active Community of Mechanical Dept.
 </footer> -->
-    </div>
     <script>
+
         function link1(){window.location = "https://youtube.com/shorts/qCETLdtGBp0";}
         function link2(){window.location = "https://youtube.com/shorts/ZTCLJVxjr8o";}
         function link3(){window.location = "https://youtube.com/shorts/9BaYEpmXZcs";}
