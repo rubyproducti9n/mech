@@ -1,7 +1,7 @@
 
   var img = document.getElementById('c1');
   img.innerHTML = '\
-  <img draggable="false" oncontextmenu="return false;" src="memories/m (8).jpg" style="width:100%">\
+  <img draggable="false" oncontextmenu="return false;" src="memories/m (12).jpg" style="width:100%">\
   <img draggable="false" oncontextmenu="return false;" src="memories/g12.jpg" style="width:100%">\
   <img draggable="false" oncontextmenu="return false;" src="memories/m (2).jpg" style="width:100%">\
   <img draggable="false" oncontextmenu="return false;" src="memories/g10.jpg" style="width:100%">\
@@ -26,6 +26,7 @@
     ';
   var img = document.getElementById('c3');
   img.innerHTML = '\
+  <img draggable="false" oncontextmenu="return false;" src="memories/m (13).jpg" style="width:100%">\
   <img draggable="false" oncontextmenu="return false;" src="memories/m (10).jpg" style="width:100%">\
     <img draggable="false" oncontextmenu="return false;" src="memories/g3.jpg" style="width:100%">\
     <img draggable="false" oncontextmenu="return false;" src="memories/g0.jpg" style="width:100%">\
