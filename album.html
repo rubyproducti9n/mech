@@ -5,7 +5,7 @@
     <link href="css/global.min.css" rel="stylesheet">
     <!-- <link href="https://rubyproducti9n.github.io/concertera/mdb/css/global.min.css" rel="stylesheet"> -->
     <!-- <link href="https://rubyproducti9n.github.io/concertera/css/room.css" rel="stylesheet"> -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -173,7 +173,7 @@
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
     max-width: 25%;
-    padding: 0 8px;
+    padding: 0 6px;
   }
 
   img::before{
@@ -187,12 +187,21 @@
     z-index: 100;
   }
   .column img {
-    margin-top: 18px;
+    margin-top: 9px;
     vertical-align: middle;
-    border-radius: 18px;
+    border-radius: 0px;
     width: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.39);
     padding: 0px 0;
+  }
+
+  #loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
   }
 
   /* Responsive layout - makes a two column-layout instead of four columns */
@@ -207,19 +216,27 @@
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
     }
   }
 </style>
 <script>
-
+  $(window).load(function(){
+    $('#loading').hide();
+  });
 </script>
 <!-- <body onload="login_show()"> -->
   <body>
 
+    <div id="loading"></div>
 
+    <script>
+      $(window).on('load', function(){
+        $('#loading').hide();
+      })
+    </script>
     <!-- <header class="header"> <a href="#" class="header__logo">UNOFFICIAL MECH</a> <i class='bx bx-menu header__toggle' id="header-toggle"></i>
       <nav class="nav" id="nav-menu">
           <div class="nav__content bd-grid"> <a href="" class="nav__perfil">
@@ -337,6 +354,14 @@
   </div>
   </div>
 <script>
+
+  $(window).on('load', function(){
+    $("#loading").hide();
+  })
+
+  $(window).load(function(){
+    $("#loading").fadeOut();
+  });
 
   function login_show(){
     var login = document.getElementById('login-container');

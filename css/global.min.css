@@ -27,7 +27,7 @@ body{
   padding: 20% 40px;
 }
 .header2{
-  display: block;
+  display: none;
   color: var(--color);
   font-family: 'Catamaran', sans-serif;
   text-align: center;
@@ -58,7 +58,7 @@ body{
 }
 .custom-mech-card{
   background: rgba(255, 255, 255, 0);
-  border: 0px var(--color) solid;
+  border: 1px var(--color) solid;
   border-radius: 28px;
   padding: 20px 10px;
   margin: 20px 20px;
@@ -71,11 +71,10 @@ body{
     margin: 0 6px;
     padding-bottom: 20px;
     width: 22.5vw;
-    height: 30%;
     color: var(--color);
     background: var(--transparent);
     box-shadow: 0px 0px 0px var(--defaultShadow);
-    border: 0px #eaddff00 solid;
+    border: 1px #eaddffc2 solid;
     border-radius: 16px;
     overflow: visible;
     text-overflow: ellipsis;
@@ -83,12 +82,11 @@ body{
     transition: all 0.3s ease;
   }
   .mech-card-img:hover{
-    transform: scale(1.10);
+    transform: scale(1);
     color: var(--color);
     background: #eaddff00;
     height: 33%;
     border: 0px #ff026b00 solid;
-    box-shadow: 0px 0px 0px var(--defaultShadow);
   }
   .mech-card-img{
     width: 100%;
@@ -112,22 +110,46 @@ body{
   .tags:hover{
     text-decoration: underline;
   }
-  .dr-title{
-    margin: 0px 0;
-    padding: 0 10px;
-    border-bottom: 0px #000 solid;
-    font-size: 15px;
-    text-transform: uppercase;
+  .card-title{
+    position: relative;
+    top: -100px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.39);
+    width: 70%;
+    margin: 0px 10px;
+    padding: 10px 20px;
+    border: 0px #000 solid;
+    border-radius: 12px;
+    line-height: 24px;
+    font-size: 12px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+  .dr-title{
+    position: relative;
+    top: -110px;
+    left: 20px;
+    color: #fff;
+    width: 70%;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    border: 1px #000 solid;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
   }
   .dr-details{
+    display: none;
     overflow: none;
     text-overflow: ellipsis;
     line-height: 0px;
     padding: 0 10px;
-    font-size: 10px;
+    font-size: 12px;
+    border: 1px #000 solid;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
+    width: fit-content;
     height: 100%;
   }
   .rating{
@@ -223,7 +245,6 @@ body{
     padding-bottom: 30px;
     background-color: #eaddff00;
     border: 9px #eaddff00 solid;
-    transform: rotate(3deg);
     transition: all 0.2s ease;
   }
   .card::before{
@@ -237,9 +258,6 @@ body{
   }
   .card-img{
     width: 100%;
-  }
-  .card:hover{
-    transform: translateY(-20px);
   }
   .insta-container{
     color: var(--white);
@@ -403,20 +421,16 @@ body{
     }
     .card{
       display: inline-block;
-      width: 90%;
-      margin: 20px 15px;
+      width: 100%;
+      margin: 00px 0px;
       border-radius: 0px;
-      padding-bottom: 30px;
-      background-color: #eaddff;
-      border: 9px #eaddff solid;
-      transform: rotate(3deg);
+      padding-bottom: 10px;
+      background-color: #eaddff00;
+      border: 9px #eaddff00 solid;
       transition: all 0.2s ease;
     }
     .card-img{
       width: 100%;
-    }
-    .card:hover{
-      transform: translateY(-20px);
     }
     .insta-container{
       border-radius: 28px;
