@@ -21,13 +21,7 @@
     @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
     body{ background: rgb(255, 255, 255); user-select: none;}
     hr{background: rgba(196, 196, 196, 0.315);}
-    .section-title{
-      padding: 0 40px;
-      color: var(--color);
-      font-size: 22px;
-      font-weight: 600;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+
     .header-img{
       width: 20%;
       border: 4px rgb(1, 141, 255) solid;
@@ -42,7 +36,7 @@
       z-index: 10;
     }
     .blur{
-      filter: blur(8px);
+      filter: blur(0px);
     }
     .btn-upload{
       position: fixed;
@@ -70,7 +64,7 @@
         height: 100%;
         z-index: 30;}
     .main-container{display: block;
-    margin-top: 20px;
+    margin-top: 0px;
     border: 0px #000 solid;}
     .hover:hover{
         padding: 16px;
@@ -147,21 +141,29 @@
         overflow: hidden;
     }
     .ind-card{
-        margin: 20px 10px;
-        padding-bottom: 40px;
-        border: 2px rgba(0, 0, 0, 0.26) solid;
+        background-color: rgb(245, 245, 245);
+        margin: 30px 10px;
+        padding-bottom: 20px;
+        border: 0px rgba(0, 0, 0, 0.26) solid;
         border-radius: 28px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.199);
         overflow: hidden;
     }
     .ind-img{
         width: 100%;
         border-radius: 0px;
     }
+    .channel-img{
+        width: 10%;
+        border-radius: 50%;
+        margin: 10px;
+        float: left;
+    }
     .ind-details{
         color: rgb(36, 36, 36);
         background-color: rgba(255, 217, 0, 0);
-        width: 80%;
-        margin: 0px;
+        width: 90%;
+        margin-top: 10px;
         padding: 0px 10px;
         border-bottom: 0px #000 solid;
         border-radius: 0px;
@@ -288,26 +290,25 @@
     </center>
     </div>
     <div id="home">
-    <div class="header2">
+    <!-- <div class="header2">
         <h3>UNOFFICIAL MECH</h3>
-    </div>
+    </div> -->
     <!-- <nav class="custom-nav">
     <a class="">
       <img class="mech-avatar" src="img/avatar.jpg" draggable="false" /></span>  </a>
 </nav> -->
-    <div class="maintain-container">
+    <!-- <div class="maintain-container">
         <center><br><br><br><br><img class="maintain-img" draggable="false" src="https://rubyproducti9n.github.io/concertera/maintenance/music.png"></center>
         <center>
             <p class="maintain-text">
             <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Coming Soon</h2> <br>
-    </div>
+    </div> -->
     <div class="main-container">
-        <h2 class="section-title">Popular videos</h2>
-
         <div class="ind-cards-container">
 
             <div class="ind-card" onclick="link1()">
                 <img class="ind-img" src="img/img1.jpg">
+                <img class="channel-img" src="img/avatar.jpg">
                 <div class="ind-details">
                     <p class="ind-title">Sanjivani COE Status Video</p>
                     <p class="ind-other-detail">Unofficial Mech <i class="fa fa-check-circle"></i> • 08 Jul 2022</p>
@@ -316,6 +317,7 @@
 
             <div class="ind-card" onclick="link2()">
                 <img class="ind-img" src="img/img2.jpg">
+                <img class="channel-img" src="img/avatar.jpg">
                 <div class="ind-details">
                     <p class="ind-title">SANJIVANI COE | STATUS VIDEO #3</p>
                     <p class="ind-other-detail">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 26 Jun 2022</p>
@@ -324,6 +326,7 @@
 
             <div class="ind-card" onclick="link3()">
                 <img class="ind-img" src="img/img3.jpg">
+                <img class="channel-img" src="img/avatar.jpg">
                 <div class="ind-details">
                     <p class="ind-title">Oreo Biscuit Prank | PART 2</p>
                     <p class="ind-other-detail">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 05 Jul 2022</p>
@@ -332,6 +335,7 @@
 
             <div class="ind-card" onclick="link4()">
                 <img class="ind-img" src="img/img4.jpg">
+                <img class="channel-img" src="img/avatar.jpg">
                 <div class="ind-details">
                     <p class="ind-title">Oreo Biscuit Prank | PART 1</p>
                     <p class="ind-other-detail">UNOFFICIAL MECH <i class="fa fa-check-circle"></i> • 29 Jun 2022</p>
@@ -389,7 +393,7 @@
                 <h6>That's it for today!</h6>
             </center>
         </div>
-    </div> <br><br> <br><br> <br><br>
+    </div>
     <!-- <footer>
   Made by Active Community of Mechanical Dept.
 </footer> -->

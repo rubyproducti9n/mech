@@ -424,9 +424,9 @@ body{
       width: 100%;
       margin: 00px 0px;
       border-radius: 0px;
-      padding-bottom: 10px;
+      padding-bottom: 0px;
       background-color: #eaddff00;
-      border: 9px #eaddff00 solid;
+      border: 0px #eaddff00 solid;
       transition: all 0.2s ease;
     }
     .card-img{
