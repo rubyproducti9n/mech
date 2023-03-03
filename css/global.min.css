@@ -187,13 +187,13 @@ body{
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    padding: 10px 20px;
-    margin: 0 5px;
+    padding: 15px 20px;
+    margin: 0 0px;
     font-size: 12px;
     font-weight: 800;
-    border-radius: 6px;
+    border-radius: 28px;
     color: var(--white);
-    border: 2px var(--transparent) solid;
+    border: 1px var(--transparent) solid;
     font-family: 'Roboto', sans-serif;
     background-color: var(--color);
     cursor: pointer;
@@ -201,9 +201,9 @@ body{
   }
   .mech-btn:hover{
     color: var(--white);
-    border: 2px #6650a400 solid;
+    border: 1px #6650a400 solid;
     background-color: #161e1f;
-    box-shadow: 3px 3px 8px #6650a470;
+    box-shadow: 3px 3px 8px #6650a400;
   }
   .mech-btn:active{
     transition: all 0.1s ease;
@@ -302,7 +302,9 @@ body{
   }
   .card-container .card-mech{
     display: inline-block;
-    border: 2px var(--bgcolor) solid;
+    border: 0px var(--bgcolor) solid;
+    background-color: #3446480a;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.103);
     width: 30%;
     padding: 20px;
     margin: 0 17px;
@@ -420,13 +422,12 @@ body{
       margin: 10px 20px;
     }
     .card{
-      display: inline-block;
       width: 100%;
-      margin: 00px 0px;
-      border-radius: 0px;
-      padding-bottom: 0px;
-      background-color: #eaddff00;
-      border: 0px #eaddff00 solid;
+      margin: 10px 0px;
+      border-radius: 28px;
+      background-color: #663a3a;
+      border: 1px #eaddfff1 solid;
+      overflow: hidden;
       transition: all 0.2s ease;
     }
     .card-img{
@@ -459,26 +460,26 @@ body{
       transition: all 0.1s ease;
     }
     .card-container{
-      margin: 10px 20px;
+      margin: 10px 0px;
       border: 0px #6750A4 solid;
       border-radius: 28px;
       padding: 0px;
     }
     .card-container .card-mech{
       display: inline-block;
-      width: 100%;
-      margin: 20px 0px;
+      width: 45.4%;
+      margin: 20px 10px;
       border-radius: 28px;
       overflow: hidden;
     }
     .card-container .card-header{
-      padding: 10px;
+      padding: 0 10px;
     }
     .card-container .body{
-      padding: 10px;
+      padding: 0 10px;
     }
     .avatar-img{
-      width: 100%;
+      width: 50%;
       border-radius: 50%;
     }
   }
