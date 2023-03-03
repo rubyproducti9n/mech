@@ -467,8 +467,8 @@ body{
     }
     .card-container .card-mech{
       display: inline-block;
-      width: 45.4%;
-      margin: 20px 10px;
+      width: 80%;
+      margin: 20px 40px;
       border-radius: 28px;
       overflow: hidden;
     }
