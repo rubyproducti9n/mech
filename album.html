@@ -24,7 +24,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
     @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
-    body{ background: rgb(255, 255, 255); user-select: none;
+    body{ background: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
     }
     hr{background: rgb(75, 75, 75);}
@@ -189,7 +189,7 @@
   .column img {
     margin-top: 9px;
     vertical-align: middle;
-    border-radius: 0px;
+    border-radius: 24px;
     width: 100%;
     box-shadow: 0 0 0px rgba(0, 0, 0, 0.39);
     padding: 0px 0;
@@ -219,6 +219,14 @@
       -ms-flex: 50%;
       flex: 50%;
       max-width: 50%;
+    }
+    .column img {
+      margin-top: 9px;
+      vertical-align: middle;
+      border-radius: 18px;
+      width: 100%;
+      box-shadow: 0 0 0px rgba(0, 0, 0, 0.39);
+      padding: 0px 0;
     }
   }
 </style>
@@ -293,17 +301,28 @@
   <!-- Photo Grid -->
   <div id="control" class="row">
     <div class="column">
-      <div id="c1"></div>
+      <!-- <div id="c1"></div> -->
+       <img draggable="false" oncontextmenu="return false;" src="memories/manmad workshop/img1.jpg" style="width:100%">
+  <img draggable="false" oncontextmenu="return false;" src="memories/manmad workshop/img2.jpg" style="width:100%">
+  <img draggable="false" oncontextmenu="return false;" src="memories/manmad workshop/img7.jpg" style="width:100%">
+  <img draggable="false" oncontextmenu="return false;" src="memories/manmad workshop/img5.jpg" style="width:100%">
+
     </div>
     <div class="column">
-      <div id="c2"></div>
+      <!-- <div id="c2"></div> -->
+
+      <img draggable="false" oncontextmenu="return false;" src="memories/manmad workshop/img11.jpg" style="width:100%">
+
+      <img draggable="false" oncontextmenu="return false;" src="memories/img1.jpg" style="width:100%">
+      <img draggable="false" oncontextmenu="return false;" src="memories/m (12).jpg" style="width:100%">
+      <img draggable="false" oncontextmenu="return false;" src="memories/g12.jpg" style="width:100%">
     </div>
-    <div class="column">
+    <!-- <div class="column">
       <div id="c3"></div>
-    </div>
-    <div class="column">
+    </div> -->
+    <!-- <div class="column">
       <div id="c4"></div>
-    </div>
+    </div> -->
       <!-- <img draggable="false" oncontextmenu="return false;" src="memories/g6.jpg" style="width:100%"> -->
 
   </div>
@@ -353,6 +372,14 @@
   </center>
   </div>
   </div>
+
+<script>
+  window.onload = function() {
+    // Intensify all images with the 'intense' classname.
+      var elements = document.querySelectorAll( '.intense' );
+    Intense( elements );
+  }
+</script>
 <script>
 
   $(window).on('load', function(){
@@ -443,6 +470,7 @@ function error(){alert("Something went wrong, please contact our team or try aga
 <script src="lib/toast/assets/notify.min.js"></script>
 <script src="lib/navbar/assets/js/main.js"></script>
 <script src="js/album.js"></script>
+<script src="https://tholman.com/intense-images/js/intense.js"></script>
 <script src="https://rubyproducti9n.github.io/concertera/js/global.restrict.js"></script>
 <!-- <script src="https://rubyproducti9n.github.io/concertera/mdb/js/global.min.js"></script> -->
 </body>
