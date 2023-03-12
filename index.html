@@ -5,6 +5,8 @@
     <!-- <link href="../rubproducti9n/mdb/css/global.min.css" rel="stylesheet"> -->
     <link href="css/global.min.css" rel="stylesheet"> <!-- <link href="https://rubyproducti9n.github.io/concertera/mdb/css/global.min.css" rel="stylesheet"> -->
     <!-- <link href="https://rubyproducti9n.github.io/concertera/css/room.css" rel="stylesheet"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -314,11 +316,21 @@
     }
     }
 </style>
-<script> </script>
+<script>
+    $(window).on('load', function(){
+      $('#loading').hide();
+    })
+</script>
 
 <body>
-    <div class="note">
-        <marquee> Disclaimer: This web page is meant for educational purpose only. All copyrights to their official owner. Page was created by Om Lokhande. </marquee>
+    <div id="loading">
+      <center>
+      <p class="load-txt">
+        <h3>Loading...</h3>
+        <h6>This may take a minute or several</h6>
+
+      </p>
+    </center>
     </div>
     <!-- <header class="header"> <a href="#" class="header__logo">UNOFFICIAL MECH</a> <i class='bx bx-menu header__toggle' id="header-toggle"></i>
         <nav class="nav" id="nav-menu">

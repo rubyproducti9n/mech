@@ -195,14 +195,6 @@
     padding: 0px 0;
   }
 
-  #loading{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-  }
 
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
@@ -238,7 +230,15 @@
 <!-- <body onload="login_show()"> -->
   <body>
 
-    <!-- <div id="loading"></div> -->
+    <div id="loading">
+      <center>
+      <p class="load-txt">
+        <h3>Loading...</h3>
+        <h6>This may take a minute or several</h6>
+
+      </p>
+    </center>
+    </div>
 
     <script>
       $(window).on('load', function(){
