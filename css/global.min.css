@@ -333,10 +333,12 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
   }
   .load-txt{
     margin-top: 50vh;
+    font-family: none;
   }
 
   @media screen and (max-width: 768px) {
