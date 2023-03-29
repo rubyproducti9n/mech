@@ -342,6 +342,10 @@ body{
   }
 
   @media screen and (max-width: 768px) {
+    body{
+      width: 70vw;
+      margin: 10px;
+    }
     .header2{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -434,19 +438,22 @@ body{
       font-size: 14px;
       background-color: rgb(187, 0, 0);
     }section{
-      margin: 10px 20px;
+      width: 100%;
+      margin: 10px 10px;
+      border: 0px #6200fff1 solid;
     }
     .card{
       width: 100%;
-      margin: 10px 0px;
+      margin: 0px 0px;
       border-radius: 28px;
-      background-color: #663a3a;
-      border: 1px #eaddfff1 solid;
+      background-color: #663a3a00;
+      border: 0px #6200fff1 solid;
       overflow: hidden;
       transition: all 0.2s ease;
     }
     .card-img{
       width: 100%;
+      padding: 0px;
     }
     .insta-container{
       border-radius: 28px;
@@ -476,16 +483,16 @@ body{
     }
     .card-container{
       margin: 10px 0px;
-      border: 0px #6750A4 solid;
+      border: 1px #ff0606 solid;
       border-radius: 28px;
       padding: 0px;
+      width: 100%;
+      overflow: hidden;
     }
     .card-container .card-mech{
       display: inline-block;
-      width: 80%;
-      margin: 20px 40px;
+      margin: 20px 20px;
       border-radius: 28px;
-      overflow: hidden;
     }
     .card-container .card-header{
       padding: 0 10px;
