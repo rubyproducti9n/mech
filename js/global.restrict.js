@@ -1,6 +1,6 @@
 
 //Global Site Control
-var server_status = 1;
+var server_status = 0;
 var code = 503;
 var status = document.getElementById("status");
 var home = document.getElementById("home");
